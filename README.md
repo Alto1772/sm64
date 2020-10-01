@@ -13,6 +13,18 @@ It builds the following ROMs:
 This repo does not include all assets necessary for compiling the ROMs.
 A prior copy of the game is required to extract the assets.
 
+## Currently added levels
+
+**NOTE**: to view these levels, set ``gDebugLevelSelect`` on ``src/game/main.c`` to 1.
+
+- [ ] 1st
+- [ ] 2nd
+- [ ] 3rd
+- [ ] 32nd
+- [x] 35th (dummytest)
+- [ ] 37th
+- [ ] 38th
+
 ## Quick Start (for Ubuntu)
 
 1. Install prerequisites: `sudo apt install -y build-essential git binutils-mips-linux-gnu python3 libaudiofile-dev`
@@ -175,5 +187,3 @@ Pull requests are welcome. For major changes, please open an issue first to
 discuss what you would like to change.
 
 Run `clang-format` on your code to ensure it meets the project's coding standards.
-
-Official Discord: https://discord.gg/DuYH3Fh

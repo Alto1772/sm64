@@ -134,6 +134,7 @@ BUILD_DIR_BASE := build
 BUILD_DIR := $(BUILD_DIR_BASE)/$(VERSION)
 
 LIBULTRA := $(BUILD_DIR)/libultra.a
+PATCH := $(BUILD_DIR)/$(TARGET).bps
 ROM := $(BUILD_DIR)/$(TARGET).z64
 ELF := $(BUILD_DIR)/$(TARGET).elf
 LD_SCRIPT := sm64.ld
@@ -613,7 +614,12 @@ $(ROM): $(ELF)
 $(BUILD_DIR)/$(TARGET).objdump: $(ELF)
 	$(OBJDUMP) -D $< > $@
 
+ifdef FLIPS
+patch: $(PATCH)
 
+$(PATCH): $(ROM)
+	$(FLIPS) --create baserom.$(VERSION).z64 $< $@
+endif
 
 .PHONY: all clean distclean default diff test load libultra
 # with no prerequisites, .SECONDARY causes no intermediate target to be removed

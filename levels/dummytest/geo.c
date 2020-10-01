@@ -1,8 +1,3 @@
-/*********************************************************************************
- *            Geometry Include Data for dummytest (aka dummy test map)             *
- *                                                                               *
- *********************************************************************************/
-
 #include <ultra64.h>
 #include "sm64.h"
 #include "geo_commands.h"
