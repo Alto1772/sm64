@@ -9,5 +9,5 @@
 
 #include "make_const_nonconst.h"
 
-#include "levels/dummytest/areas/1/1/model.inc.c"
+#include "levels/dummytest/areas/1/model.inc.c"
 #include "levels/dummytest/areas/1/collision.inc.c"
