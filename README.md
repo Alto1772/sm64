@@ -18,7 +18,7 @@ A prior copy of the game is required to extract the assets.
 **NOTE**: to view these levels, set ``gDebugLevelSelect`` on ``src/game/main.c`` to 1.
 
 - [x] 1st (betacastle)
-- [ ] 2nd
+- [x] 2nd (slopes)
 - [ ] 3rd
 - [ ] 32nd
 - [x] 35th (dummytest)
