@@ -5,7 +5,7 @@ const GeoLayout geo_betacastle[] = {
         GEO_OPEN_NODE(),
             GEO_NODE_ORTHO(100),
             GEO_OPEN_NODE(),
-                GEO_BACKGROUND_COLOR(0x033F), //rgba(0, 12, 31, 1) * its just a blue sky *
+                GEO_BACKGROUND_COLOR(0x033F), //rgb(0, 12, 31) * its just a blue sky *
             GEO_CLOSE_NODE(),
         GEO_CLOSE_NODE(),
         GEO_ZBUFFER(1),

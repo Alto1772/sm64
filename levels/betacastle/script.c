@@ -22,9 +22,9 @@ const LevelScript level_betacastle_entry[] = {
 #ifdef REPLICATE_LEVEL
     // this has no use because there is no objects added in this level
     LOAD_MIO0(0x05, _group4_mio0SegmentRomStart,  _group4_mio0SegmentRomEnd),
-    LOAD_RAW (0x0C, _group4_geoSegmentRomStart,   _group4_geoSegmentRomEnd),
+    LOAD_RAW(0x0C, _group4_geoSegmentRomStart,   _group4_geoSegmentRomEnd),
     LOAD_MIO0(0x06, _group13_mio0SegmentRomStart, _group13_mio0SegmentRomEnd),
-    LOAD_RAW (0x0D, _group13_geoSegmentRomStart,  _group13_geoSegmentRomEnd),
+    LOAD_RAW(0x0D, _group13_geoSegmentRomStart,  _group13_geoSegmentRomEnd),
 #endif
 
     ALLOC_LEVEL_POOL(),
@@ -33,8 +33,8 @@ const LevelScript level_betacastle_entry[] = {
 #ifdef REPLICATE_LEVEL
     // ...and this also
     JUMP_LINK(script_func_global_1),
-    JUMP_LINK( script_func_global_2),
-    JUMP_LINK( script_func_global_16),
+    JUMP_LINK(script_func_global_2),
+    JUMP_LINK(script_func_global_16),
 #endif
 
     AREA(1, geo_betacastle),
