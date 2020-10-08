@@ -1,4 +1,4 @@
-const Collision dummy_seg7_collision[] = {
+const Collision dummy_seg7_collision_level[] = {
     COL_INIT(),
     COL_VERTEX_INIT(0x121),
     COL_VERTEX(-6143, 0, -8191),

@@ -1847,7 +1847,6 @@ const Gfx dummy_seg7_dl[] = {
     gsDPPipeSync(),
     gsDPSetCombineMode(G_CC_SHADE, G_CC_SHADE),
     gsSPClearGeometryMode(G_LIGHTING),
-
     gsSPVertex(dummy_seg7_vertex_000,  15, 0),
     gsSP2Triangles( 0,  1,  2, 0x0,  3,  4,  5, 0x0),
     gsSP2Triangles( 6,  7,  8, 0x0,  9, 10, 11, 0x0),
@@ -2258,7 +2257,6 @@ const Gfx dummy_seg7_dl[] = {
     gsSP1Triangle(12, 13, 14, 0x0),
     gsSPVertex(dummy_seg7_vertex_102,  6, 0),
     gsSP2Triangles( 0,  1,  2, 0x0,  3,  4,  5, 0x0),
-
     gsSPSetGeometryMode(G_LIGHTING),
     gsSPEndDisplayList() 
 };

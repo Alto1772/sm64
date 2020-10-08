@@ -19,7 +19,7 @@ A prior copy of the game is required to extract the assets.
 
 - [x] 1st (betacastle)
 - [x] 2nd (slopes)
-- [ ] 3rd
+- [x] 3rd (funhouse)
 - [ ] 32nd
 - [x] 35th (dummytest)
 - [ ] 37th
