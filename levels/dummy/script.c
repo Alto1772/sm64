@@ -22,8 +22,8 @@ const LevelScript level_dummy_entry[] = {
     ALLOC_LEVEL_POOL(),
     MARIO(MODEL_MARIO, 0x00000001, bhvMario),
 
-    AREA(1,dummy_geo),
-        TERRAIN(dummy_seg7_collision),
+    AREA(1, geo_dummy),
+        TERRAIN(dummy_seg7_collision_level),
     END_AREA(),
 
     FREE_LEVEL_POOL(),

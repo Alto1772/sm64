@@ -1,11 +1,3 @@
-/*********************************************************************************
- *              MOM! I COPIED THIS CODE FROM THE LEAKED SM64 CODE!!!             *
- *                 WILL I GET ARRESTED FOR DOING THIS??? MABYE...                *
- *                                                                               *
- *          Level Include for funhouse (aka castle interior named "donjon")        *
- *                                                                               *
- *********************************************************************************/
-
 #include <ultra64.h>
 #include "sm64.h"
 #include "surface_terrains.h"

@@ -15,13 +15,13 @@ A prior copy of the game is required to extract the assets.
 
 ## Currently added levels
 
-**NOTE**: to view these levels, set ``gDebugLevelSelect`` on ``src/game/main.c`` to 1.
+**NOTE**: to access these levels, set ``gDebugLevelSelect`` on ``src/game/main.c`` to 1.
 
 - [x] 1st (betacastle)
 - [x] 2nd (slopes)
 - [x] 3rd (funhouse)
 - [ ] 32nd
-- [x] 35th (dummytest)
+- [x] 35th (dummy)
 - [ ] 37th
 - [ ] 38th
 
