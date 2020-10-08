@@ -19,7 +19,7 @@
 // TODO: Figure something out for sZoomOutAreaMasks?
 DEFINE_LEVEL("BETA CASTLE",    LEVEL_UNKNOWN_1,        COURSE_NONE,     betacastle,       generic,  20000,    0x00, 0x00, 0x00, _,         _)
 DEFINE_LEVEL("SLIP TEST",      LEVEL_UNKNOWN_2,        COURSE_NONE,     slopes,           generic,  20000,    0x00, 0x00, 0x00, _,         _)
-STUB_LEVEL(  "",               LEVEL_UNKNOWN_3,        COURSE_NONE,                                 20000,    0x00, 0x00, 0x00, _,         _)
+DEFINE_LEVEL("C A S T L E",    LEVEL_UNKNOWN_3,        COURSE_NONE,     funhouse,         generic,  20000,    0x00, 0x00, 0x00, _,         _)
 DEFINE_LEVEL("TERESA OBAKE",   LEVEL_BBH,              COURSE_BBH,      bbh,              spooky,   28000,    0x28, 0x28, 0x28, sDynBbh,   sCamBBH)
 DEFINE_LEVEL("YYAMA1 % YSLD1", LEVEL_CCM,              COURSE_CCM,      ccm,              snow,     17000,    0x10, 0x38, 0x38, _,         sCamCCM)
 DEFINE_LEVEL("SELECT ROOM",    LEVEL_CASTLE,           COURSE_NONE,     castle_inside,    inside,   20000,    0x20, 0x20, 0x30, _,         sCamCastle)
