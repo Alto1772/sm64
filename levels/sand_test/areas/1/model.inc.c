@@ -1,4 +1,4 @@
-static const Vtx dummy_seg7_vertex_000[] = {
+static const Vtx dummy_unused38_vertex_000[] = {
     {{{ -6143,      0,  -8191}, 0, {     0,      0}, {0x35, 0xce, 0x16, 0xff}}},
     {{{ -7167,      0,  -8191}, 0, {     0,      0}, {0x35, 0xce, 0x16, 0xff}}},
     {{{ -7167,      0,  -7167}, 0, {     0,      0}, {0x35, 0xce, 0x16, 0xff}}},
@@ -16,7 +16,7 @@ static const Vtx dummy_seg7_vertex_000[] = {
     {{{ -6143,      0,  -7167}, 0, {     0,      0}, {0x35, 0xce, 0x16, 0xff}}},
 };
 
-static const Vtx dummy_seg7_vertex_001[] = {
+static const Vtx dummy_unused38_vertex_001[] = {
     {{{ -4095,      0,  -8191}, 0, {     0,      0}, {0x35, 0xce, 0x16, 0xff}}},
     {{{ -5119,      0,  -8191}, 0, {     0,      0}, {0x35, 0xce, 0x16, 0xff}}},
     {{{ -5119,      0,  -7167}, 0, {     0,      0}, {0x35, 0xce, 0x16, 0xff}}},
@@ -34,7 +34,7 @@ static const Vtx dummy_seg7_vertex_001[] = {
     {{{ -2047,      0,  -7167}, 0, {     0,      0}, {0x35, 0xce, 0x16, 0xff}}},
 };
 
-static const Vtx dummy_seg7_vertex_002[] = {
+static const Vtx dummy_unused38_vertex_002[] = {
     {{{ -2047,      0,  -8191}, 0, {     0,      0}, {0x35, 0xce, 0x16, 0xff}}},
     {{{ -3071,      0,  -8191}, 0, {     0,      0}, {0x35, 0xce, 0x16, 0xff}}},
     {{{ -3071,      0,  -7167}, 0, {     0,      0}, {0x35, 0xce, 0x16, 0xff}}},
@@ -52,7 +52,7 @@ static const Vtx dummy_seg7_vertex_002[] = {
     {{{ -1023,      0,  -7167}, 0, {     0,      0}, {0x35, 0xce, 0x16, 0xff}}},
 };
 
-static const Vtx dummy_seg7_vertex_003[] = {
+static const Vtx dummy_unused38_vertex_003[] = {
     {{{ -2047,      0,  -6143}, 0, {     0,      0}, {0x35, 0xce, 0x16, 0xff}}},
     {{{ -1023,      0,  -6143}, 0, {     0,      0}, {0x35, 0xce, 0x16, 0xff}}},
     {{{ -1023,      0,  -7167}, 0, {     0,      0}, {0x35, 0xce, 0x16, 0xff}}},
@@ -70,7 +70,7 @@ static const Vtx dummy_seg7_vertex_003[] = {
     {{{  1024,      0,  -7167}, 0, {     0,      0}, {0x35, 0xce, 0x16, 0xff}}},
 };
 
-static const Vtx dummy_seg7_vertex_004[] = {
+static const Vtx dummy_unused38_vertex_004[] = {
     {{{  2048,      0,  -6143}, 0, {     0,      0}, {0x35, 0xce, 0x16, 0xff}}},
     {{{  3072,      0,  -7167}, 0, {     0,      0}, {0x35, 0xce, 0x16, 0xff}}},
     {{{  2048,      0,  -7167}, 0, {     0,      0}, {0x35, 0xce, 0x16, 0xff}}},
@@ -88,7 +88,7 @@ static const Vtx dummy_seg7_vertex_004[] = {
     {{{  4096,      0,  -7167}, 0, {     0,      0}, {0x35, 0xce, 0x16, 0xff}}},
 };
 
-static const Vtx dummy_seg7_vertex_005[] = {
+static const Vtx dummy_unused38_vertex_005[] = {
     {{{  6144,      0,  -8191}, 0, {     0,      0}, {0x35, 0xce, 0x16, 0xff}}},
     {{{  5120,      0,  -8191}, 0, {     0,      0}, {0x35, 0xce, 0x16, 0xff}}},
     {{{  5120,      0,  -7167}, 0, {     0,      0}, {0x35, 0xce, 0x16, 0xff}}},
@@ -106,7 +106,7 @@ static const Vtx dummy_seg7_vertex_005[] = {
     {{{  7168,      0,  -7167}, 0, {     0,      0}, {0x35, 0xce, 0x16, 0xff}}},
 };
 
-static const Vtx dummy_seg7_vertex_006[] = {
+static const Vtx dummy_unused38_vertex_006[] = {
     {{{  8192,      0,  -8191}, 0, {     0,      0}, {0x35, 0xce, 0x16, 0xff}}},
     {{{  7168,      0,  -7167}, 0, {     0,      0}, {0x35, 0xce, 0x16, 0xff}}},
     {{{  8192,      0,  -7167}, 0, {     0,      0}, {0x35, 0xce, 0x16, 0xff}}},
@@ -124,7 +124,7 @@ static const Vtx dummy_seg7_vertex_006[] = {
     {{{  6144,      0,  -6143}, 0, {     0,      0}, {0x35, 0xce, 0x16, 0xff}}},
 };
 
-static const Vtx dummy_seg7_vertex_007[] = {
+static const Vtx dummy_unused38_vertex_007[] = {
     {{{  7168,      0,  -5119}, 0, {     0,      0}, {0x35, 0xce, 0x16, 0xff}}},
     {{{  8192,      0,  -6143}, 0, {     0,      0}, {0x35, 0xce, 0x16, 0xff}}},
     {{{  7168,      0,  -6143}, 0, {     0,      0}, {0x35, 0xce, 0x16, 0xff}}},
@@ -142,7 +142,7 @@ static const Vtx dummy_seg7_vertex_007[] = {
     {{{ -6143,      0,  -6143}, 0, {     0,      0}, {0x35, 0xce, 0x16, 0xff}}},
 };
 
-static const Vtx dummy_seg7_vertex_008[] = {
+static const Vtx dummy_unused38_vertex_008[] = {
     {{{ -1023,      0,  -5119}, 0, {     0,      0}, {0x35, 0xce, 0x16, 0xff}}},
     {{{     0,      0,  -6143}, 0, {     0,      0}, {0x35, 0xce, 0x16, 0xff}}},
     {{{ -1023,      0,  -6143}, 0, {     0,      0}, {0x35, 0xce, 0x16, 0xff}}},
@@ -160,7 +160,7 @@ static const Vtx dummy_seg7_vertex_008[] = {
     {{{ -5119,      0,  -6143}, 0, {     0,      0}, {0x35, 0xce, 0x16, 0xff}}},
 };
 
-static const Vtx dummy_seg7_vertex_009[] = {
+static const Vtx dummy_unused38_vertex_009[] = {
     {{{ -5119,      0,  -5119}, 0, {     0,      0}, {0x35, 0xce, 0x16, 0xff}}},
     {{{ -4095,      0,  -5119}, 0, {     0,      0}, {0x35, 0xce, 0x16, 0xff}}},
     {{{ -4095,      0,  -6143}, 0, {     0,      0}, {0x35, 0xce, 0x16, 0xff}}},
@@ -178,7 +178,7 @@ static const Vtx dummy_seg7_vertex_009[] = {
     {{{  8192,      0,  -6143}, 0, {     0,      0}, {0x35, 0xce, 0x16, 0xff}}},
 };
 
-static const Vtx dummy_seg7_vertex_010[] = {
+static const Vtx dummy_unused38_vertex_010[] = {
     {{{  4096,      0,  -4095}, 0, {     0,      0}, {0x35, 0xce, 0x16, 0xff}}},
     {{{  5120,      0,  -4095}, 0, {     0,      0}, {0x35, 0xce, 0x16, 0xff}}},
     {{{  5120,      0,  -5119}, 0, {     0,      0}, {0x35, 0xce, 0x16, 0xff}}},
@@ -196,7 +196,7 @@ static const Vtx dummy_seg7_vertex_010[] = {
     {{{  2048,      0,  -5119}, 0, {     0,      0}, {0x35, 0xce, 0x16, 0xff}}},
 };
 
-static const Vtx dummy_seg7_vertex_011[] = {
+static const Vtx dummy_unused38_vertex_011[] = {
     {{{     0,      0,  -4095}, 0, {     0,      0}, {0x35, 0xce, 0x16, 0xff}}},
     {{{  1024,      0,  -4095}, 0, {     0,      0}, {0x35, 0xce, 0x16, 0xff}}},
     {{{  1024,      0,  -5119}, 0, {     0,      0}, {0x35, 0xce, 0x16, 0xff}}},
@@ -214,7 +214,7 @@ static const Vtx dummy_seg7_vertex_011[] = {
     {{{  7168,      0,  -4095}, 0, {     0,      0}, {0x35, 0xce, 0x16, 0xff}}},
 };
 
-static const Vtx dummy_seg7_vertex_012[] = {
+static const Vtx dummy_unused38_vertex_012[] = {
     {{{ -6143,      0,  -4095}, 0, {     0,      0}, {0x35, 0xce, 0x16, 0xff}}},
     {{{ -5119,      0,  -5119}, 0, {     0,      0}, {0x35, 0xce, 0x16, 0xff}}},
     {{{ -6143,      0,  -5119}, 0, {     0,      0}, {0x35, 0xce, 0x16, 0xff}}},
@@ -232,7 +232,7 @@ static const Vtx dummy_seg7_vertex_012[] = {
     {{{  6144,      0,  -4095}, 0, {     0,      0}, {0x35, 0xce, 0x16, 0xff}}},
 };
 
-static const Vtx dummy_seg7_vertex_013[] = {
+static const Vtx dummy_unused38_vertex_013[] = {
     {{{  5120,      0,  -3071}, 0, {     0,      0}, {0x35, 0xce, 0x16, 0xff}}},
     {{{  6144,      0,  -4095}, 0, {     0,      0}, {0x35, 0xce, 0x16, 0xff}}},
     {{{  5120,      0,  -4095}, 0, {     0,      0}, {0x35, 0xce, 0x16, 0xff}}},
@@ -250,7 +250,7 @@ static const Vtx dummy_seg7_vertex_013[] = {
     {{{  2048,      0,  -4095}, 0, {     0,      0}, {0x35, 0xce, 0x16, 0xff}}},
 };
 
-static const Vtx dummy_seg7_vertex_014[] = {
+static const Vtx dummy_unused38_vertex_014[] = {
     {{{  1024,      0,  -3071}, 0, {     0,      0}, {0x35, 0xce, 0x16, 0xff}}},
     {{{  2048,      0,  -4095}, 0, {     0,      0}, {0x35, 0xce, 0x16, 0xff}}},
     {{{  1024,      0,  -4095}, 0, {     0,      0}, {0x35, 0xce, 0x16, 0xff}}},
@@ -268,7 +268,7 @@ static const Vtx dummy_seg7_vertex_014[] = {
     {{{ -3071,      0,  -5119}, 0, {     0,      0}, {0x35, 0xce, 0x16, 0xff}}},
 };
 
-static const Vtx dummy_seg7_vertex_015[] = {
+static const Vtx dummy_unused38_vertex_015[] = {
     {{{ -5119,      0,  -3071}, 0, {     0,      0}, {0x35, 0xce, 0x16, 0xff}}},
     {{{ -4095,      0,  -4095}, 0, {     0,      0}, {0x35, 0xce, 0x16, 0xff}}},
     {{{ -5119,      0,  -4095}, 0, {     0,      0}, {0x35, 0xce, 0x16, 0xff}}},
@@ -286,7 +286,7 @@ static const Vtx dummy_seg7_vertex_015[] = {
     {{{  8192,      0,  -4095}, 0, {     0,      0}, {0x35, 0xce, 0x16, 0xff}}},
 };
 
-static const Vtx dummy_seg7_vertex_016[] = {
+static const Vtx dummy_unused38_vertex_016[] = {
     {{{ -2047,      0,  -2047}, 0, {     0,      0}, {0x35, 0xce, 0x16, 0xff}}},
     {{{ -1023,      0,  -2047}, 0, {     0,      0}, {0x35, 0xce, 0x16, 0xff}}},
     {{{ -1023,      0,  -3071}, 0, {     0,      0}, {0x35, 0xce, 0x16, 0xff}}},
@@ -304,7 +304,7 @@ static const Vtx dummy_seg7_vertex_016[] = {
     {{{  3072,      0,  -3071}, 0, {     0,      0}, {0x35, 0xce, 0x16, 0xff}}},
 };
 
-static const Vtx dummy_seg7_vertex_017[] = {
+static const Vtx dummy_unused38_vertex_017[] = {
     {{{     0,      0,  -2047}, 0, {     0,      0}, {0x35, 0xce, 0x16, 0xff}}},
     {{{  1024,      0,  -3071}, 0, {     0,      0}, {0x35, 0xce, 0x16, 0xff}}},
     {{{     0,      0,  -3071}, 0, {     0,      0}, {0x35, 0xce, 0x16, 0xff}}},
@@ -322,7 +322,7 @@ static const Vtx dummy_seg7_vertex_017[] = {
     {{{ -4095,      0,  -3071}, 0, {     0,      0}, {0x35, 0xce, 0x16, 0xff}}},
 };
 
-static const Vtx dummy_seg7_vertex_018[] = {
+static const Vtx dummy_unused38_vertex_018[] = {
     {{{ -4095,      0,  -2047}, 0, {     0,      0}, {0x35, 0xce, 0x16, 0xff}}},
     {{{ -3071,      0,  -2047}, 0, {     0,      0}, {0x35, 0xce, 0x16, 0xff}}},
     {{{ -3071,      0,  -3071}, 0, {     0,      0}, {0x35, 0xce, 0x16, 0xff}}},
@@ -340,7 +340,7 @@ static const Vtx dummy_seg7_vertex_018[] = {
     {{{  1024,      0,  -2047}, 0, {     0,      0}, {0x35, 0xce, 0x16, 0xff}}},
 };
 
-static const Vtx dummy_seg7_vertex_019[] = {
+static const Vtx dummy_unused38_vertex_019[] = {
     {{{  5120,      0,  -1023}, 0, {     0,      0}, {0x35, 0xce, 0x16, 0xff}}},
     {{{  6144,      0,  -2047}, 0, {     0,      0}, {0x35, 0xce, 0x16, 0xff}}},
     {{{  5120,      0,  -2047}, 0, {     0,      0}, {0x35, 0xce, 0x16, 0xff}}},
@@ -358,7 +358,7 @@ static const Vtx dummy_seg7_vertex_019[] = {
     {{{  4096,      0,  -2047}, 0, {     0,      0}, {0x35, 0xce, 0x16, 0xff}}},
 };
 
-static const Vtx dummy_seg7_vertex_020[] = {
+static const Vtx dummy_unused38_vertex_020[] = {
     {{{  3072,      0,  -1023}, 0, {     0,      0}, {0x35, 0xce, 0x16, 0xff}}},
     {{{  4096,      0,  -2047}, 0, {     0,      0}, {0x35, 0xce, 0x16, 0xff}}},
     {{{  3072,      0,  -2047}, 0, {     0,      0}, {0x35, 0xce, 0x16, 0xff}}},
@@ -376,7 +376,7 @@ static const Vtx dummy_seg7_vertex_020[] = {
     {{{ -3071,      0,  -2047}, 0, {     0,      0}, {0x35, 0xce, 0x16, 0xff}}},
 };
 
-static const Vtx dummy_seg7_vertex_021[] = {
+static const Vtx dummy_unused38_vertex_021[] = {
     {{{ -3071,      0,  -1023}, 0, {     0,      0}, {0x35, 0xce, 0x16, 0xff}}},
     {{{ -2047,      0,  -1023}, 0, {     0,      0}, {0x35, 0xce, 0x16, 0xff}}},
     {{{ -2047,      0,  -2047}, 0, {     0,      0}, {0x35, 0xce, 0x16, 0xff}}},
@@ -394,7 +394,7 @@ static const Vtx dummy_seg7_vertex_021[] = {
     {{{ -7167,      0,  -3071}, 0, {     0,      0}, {0x35, 0xce, 0x16, 0xff}}},
 };
 
-static const Vtx dummy_seg7_vertex_022[] = {
+static const Vtx dummy_unused38_vertex_022[] = {
     {{{ -7167,      0,  -1023}, 0, {     0,      0}, {0x35, 0xce, 0x16, 0xff}}},
     {{{ -6143,      0,  -2047}, 0, {     0,      0}, {0x35, 0xce, 0x16, 0xff}}},
     {{{ -7167,      0,  -2047}, 0, {     0,      0}, {0x35, 0xce, 0x16, 0xff}}},
@@ -412,7 +412,7 @@ static const Vtx dummy_seg7_vertex_022[] = {
     {{{  4096,      0,  -1023}, 0, {     0,      0}, {0x35, 0xce, 0x16, 0xff}}},
 };
 
-static const Vtx dummy_seg7_vertex_023[] = {
+static const Vtx dummy_unused38_vertex_023[] = {
     {{{ -2047,      0,      0}, 0, {     0,      0}, {0x35, 0xce, 0x16, 0xff}}},
     {{{ -1023,      0,  -1023}, 0, {     0,      0}, {0x35, 0xce, 0x16, 0xff}}},
     {{{ -2047,      0,  -1023}, 0, {     0,      0}, {0x35, 0xce, 0x16, 0xff}}},
@@ -430,7 +430,7 @@ static const Vtx dummy_seg7_vertex_023[] = {
     {{{     0,      0,  -1023}, 0, {     0,      0}, {0x35, 0xce, 0x16, 0xff}}},
 };
 
-static const Vtx dummy_seg7_vertex_024[] = {
+static const Vtx dummy_unused38_vertex_024[] = {
     {{{     0,      0,      0}, 0, {     0,      0}, {0x35, 0xce, 0x16, 0xff}}},
     {{{  1024,      0,      0}, 0, {     0,      0}, {0x35, 0xce, 0x16, 0xff}}},
     {{{  1024,      0,  -1023}, 0, {     0,      0}, {0x35, 0xce, 0x16, 0xff}}},
@@ -448,7 +448,7 @@ static const Vtx dummy_seg7_vertex_024[] = {
     {{{ -3071,      0,  -1023}, 0, {     0,      0}, {0x35, 0xce, 0x16, 0xff}}},
 };
 
-static const Vtx dummy_seg7_vertex_025[] = {
+static const Vtx dummy_unused38_vertex_025[] = {
     {{{ -6143,      0,      0}, 0, {     0,      0}, {0x35, 0xce, 0x16, 0xff}}},
     {{{ -5119,      0,  -1023}, 0, {     0,      0}, {0x35, 0xce, 0x16, 0xff}}},
     {{{ -6143,      0,  -1023}, 0, {     0,      0}, {0x35, 0xce, 0x16, 0xff}}},
@@ -466,7 +466,7 @@ static const Vtx dummy_seg7_vertex_025[] = {
     {{{     0,      0,      0}, 0, {     0,      0}, {0x35, 0xce, 0x16, 0xff}}},
 };
 
-static const Vtx dummy_seg7_vertex_026[] = {
+static const Vtx dummy_unused38_vertex_026[] = {
     {{{  7168,      0,   1024}, 0, {     0,      0}, {0x35, 0xce, 0x16, 0xff}}},
     {{{  8192,      0,      0}, 0, {     0,      0}, {0x35, 0xce, 0x16, 0xff}}},
     {{{  7168,      0,      0}, 0, {     0,      0}, {0x35, 0xce, 0x16, 0xff}}},
@@ -484,7 +484,7 @@ static const Vtx dummy_seg7_vertex_026[] = {
     {{{  2048,      0,      0}, 0, {     0,      0}, {0x35, 0xce, 0x16, 0xff}}},
 };
 
-static const Vtx dummy_seg7_vertex_027[] = {
+static const Vtx dummy_unused38_vertex_027[] = {
     {{{ -1023,      0,   1024}, 0, {     0,      0}, {0x35, 0xce, 0x16, 0xff}}},
     {{{     0,      0,      0}, 0, {     0,      0}, {0x35, 0xce, 0x16, 0xff}}},
     {{{ -1023,      0,      0}, 0, {     0,      0}, {0x35, 0xce, 0x16, 0xff}}},
@@ -502,7 +502,7 @@ static const Vtx dummy_seg7_vertex_027[] = {
     {{{ -5119,      0,      0}, 0, {     0,      0}, {0x35, 0xce, 0x16, 0xff}}},
 };
 
-static const Vtx dummy_seg7_vertex_028[] = {
+static const Vtx dummy_unused38_vertex_028[] = {
     {{{ -5119,      0,   1024}, 0, {     0,      0}, {0x35, 0xce, 0x16, 0xff}}},
     {{{ -4095,      0,   1024}, 0, {     0,      0}, {0x35, 0xce, 0x16, 0xff}}},
     {{{ -4095,      0,      0}, 0, {     0,      0}, {0x35, 0xce, 0x16, 0xff}}},
@@ -520,7 +520,7 @@ static const Vtx dummy_seg7_vertex_028[] = {
     {{{  6144,      0,      0}, 0, {     0,      0}, {0x35, 0xce, 0x16, 0xff}}},
 };
 
-static const Vtx dummy_seg7_vertex_029[] = {
+static const Vtx dummy_unused38_vertex_029[] = {
     {{{  6144,      0,   2048}, 0, {     0,      0}, {0x35, 0xce, 0x16, 0xff}}},
     {{{  7168,      0,   1024}, 0, {     0,      0}, {0x35, 0xce, 0x16, 0xff}}},
     {{{  6144,      0,   1024}, 0, {     0,      0}, {0x35, 0xce, 0x16, 0xff}}},
@@ -538,7 +538,7 @@ static const Vtx dummy_seg7_vertex_029[] = {
     {{{  3072,      0,   1024}, 0, {     0,      0}, {0x35, 0xce, 0x16, 0xff}}},
 };
 
-static const Vtx dummy_seg7_vertex_030[] = {
+static const Vtx dummy_unused38_vertex_030[] = {
     {{{ -6143,      0,   2048}, 0, {     0,      0}, {0x35, 0xce, 0x16, 0xff}}},
     {{{ -5119,      0,   1024}, 0, {     0,      0}, {0x35, 0xce, 0x16, 0xff}}},
     {{{ -6143,      0,   1024}, 0, {     0,      0}, {0x35, 0xce, 0x16, 0xff}}},
@@ -556,7 +556,7 @@ static const Vtx dummy_seg7_vertex_030[] = {
     {{{ -1023,      0,   1024}, 0, {     0,      0}, {0x35, 0xce, 0x16, 0xff}}},
 };
 
-static const Vtx dummy_seg7_vertex_031[] = {
+static const Vtx dummy_unused38_vertex_031[] = {
     {{{ -4095,      0,   2048}, 0, {     0,      0}, {0x35, 0xce, 0x16, 0xff}}},
     {{{ -3071,      0,   2048}, 0, {     0,      0}, {0x35, 0xce, 0x16, 0xff}}},
     {{{ -3071,      0,   1024}, 0, {     0,      0}, {0x35, 0xce, 0x16, 0xff}}},
@@ -574,7 +574,7 @@ static const Vtx dummy_seg7_vertex_031[] = {
     {{{ -7167,      0,   1024}, 0, {     0,      0}, {0x35, 0xce, 0x16, 0xff}}},
 };
 
-static const Vtx dummy_seg7_vertex_032[] = {
+static const Vtx dummy_unused38_vertex_032[] = {
     {{{  5120,      0,   3072}, 0, {     0,      0}, {0x35, 0xce, 0x16, 0xff}}},
     {{{  6144,      0,   2048}, 0, {     0,      0}, {0x35, 0xce, 0x16, 0xff}}},
     {{{  5120,      0,   2048}, 0, {     0,      0}, {0x35, 0xce, 0x16, 0xff}}},
@@ -592,7 +592,7 @@ static const Vtx dummy_seg7_vertex_032[] = {
     {{{ -5119,      0,   2048}, 0, {     0,      0}, {0x35, 0xce, 0x16, 0xff}}},
 };
 
-static const Vtx dummy_seg7_vertex_033[] = {
+static const Vtx dummy_unused38_vertex_033[] = {
     {{{  1024,      0,   3072}, 0, {     0,      0}, {0x35, 0xce, 0x16, 0xff}}},
     {{{  2048,      0,   2048}, 0, {     0,      0}, {0x35, 0xce, 0x16, 0xff}}},
     {{{  1024,      0,   2048}, 0, {     0,      0}, {0x35, 0xce, 0x16, 0xff}}},
@@ -610,7 +610,7 @@ static const Vtx dummy_seg7_vertex_033[] = {
     {{{ -2047,      0,   2048}, 0, {     0,      0}, {0x35, 0xce, 0x16, 0xff}}},
 };
 
-static const Vtx dummy_seg7_vertex_034[] = {
+static const Vtx dummy_unused38_vertex_034[] = {
     {{{ -3071,      0,   3072}, 0, {     0,      0}, {0x35, 0xce, 0x16, 0xff}}},
     {{{ -2047,      0,   2048}, 0, {     0,      0}, {0x35, 0xce, 0x16, 0xff}}},
     {{{ -3071,      0,   2048}, 0, {     0,      0}, {0x35, 0xce, 0x16, 0xff}}},
@@ -628,7 +628,7 @@ static const Vtx dummy_seg7_vertex_034[] = {
     {{{ -7167,      0,   2048}, 0, {     0,      0}, {0x35, 0xce, 0x16, 0xff}}},
 };
 
-static const Vtx dummy_seg7_vertex_035[] = {
+static const Vtx dummy_unused38_vertex_035[] = {
     {{{  7168,      0,   3072}, 0, {     0,      0}, {0x35, 0xce, 0x16, 0xff}}},
     {{{  8192,      0,   3072}, 0, {     0,      0}, {0x35, 0xce, 0x16, 0xff}}},
     {{{  8192,      0,   2048}, 0, {     0,      0}, {0x35, 0xce, 0x16, 0xff}}},
@@ -646,7 +646,7 @@ static const Vtx dummy_seg7_vertex_035[] = {
     {{{  2048,      0,   3072}, 0, {     0,      0}, {0x35, 0xce, 0x16, 0xff}}},
 };
 
-static const Vtx dummy_seg7_vertex_036[] = {
+static const Vtx dummy_unused38_vertex_036[] = {
     {{{  2048,      0,   4096}, 0, {     0,      0}, {0x35, 0xce, 0x16, 0xff}}},
     {{{  3072,      0,   4096}, 0, {     0,      0}, {0x35, 0xce, 0x16, 0xff}}},
     {{{  3072,      0,   3072}, 0, {     0,      0}, {0x35, 0xce, 0x16, 0xff}}},
@@ -664,7 +664,7 @@ static const Vtx dummy_seg7_vertex_036[] = {
     {{{ -1023,      0,   3072}, 0, {     0,      0}, {0x35, 0xce, 0x16, 0xff}}},
 };
 
-static const Vtx dummy_seg7_vertex_037[] = {
+static const Vtx dummy_unused38_vertex_037[] = {
     {{{  5120,      0,   5120}, 0, {     0,      0}, {0x35, 0xce, 0x16, 0xff}}},
     {{{  6144,      0,   4096}, 0, {     0,      0}, {0x35, 0xce, 0x16, 0xff}}},
     {{{  5120,      0,   4096}, 0, {     0,      0}, {0x35, 0xce, 0x16, 0xff}}},
@@ -682,7 +682,7 @@ static const Vtx dummy_seg7_vertex_037[] = {
     {{{ -4095,      0,   2048}, 0, {     0,      0}, {0x35, 0xce, 0x16, 0xff}}},
 };
 
-static const Vtx dummy_seg7_vertex_038[] = {
+static const Vtx dummy_unused38_vertex_038[] = {
     {{{ -8191,      0,   4096}, 0, {     0,      0}, {0x35, 0xce, 0x16, 0xff}}},
     {{{ -7167,      0,   4096}, 0, {     0,      0}, {0x35, 0xce, 0x16, 0xff}}},
     {{{ -7167,      0,   3072}, 0, {     0,      0}, {0x35, 0xce, 0x16, 0xff}}},
@@ -700,7 +700,7 @@ static const Vtx dummy_seg7_vertex_038[] = {
     {{{  4096,      0,   4096}, 0, {     0,      0}, {0x35, 0xce, 0x16, 0xff}}},
 };
 
-static const Vtx dummy_seg7_vertex_039[] = {
+static const Vtx dummy_unused38_vertex_039[] = {
     {{{  3072,      0,   5120}, 0, {     0,      0}, {0x35, 0xce, 0x16, 0xff}}},
     {{{  4096,      0,   4096}, 0, {     0,      0}, {0x35, 0xce, 0x16, 0xff}}},
     {{{  3072,      0,   4096}, 0, {     0,      0}, {0x35, 0xce, 0x16, 0xff}}},
@@ -718,7 +718,7 @@ static const Vtx dummy_seg7_vertex_039[] = {
     {{{ -1023,      0,   4096}, 0, {     0,      0}, {0x35, 0xce, 0x16, 0xff}}},
 };
 
-static const Vtx dummy_seg7_vertex_040[] = {
+static const Vtx dummy_unused38_vertex_040[] = {
     {{{ -1023,      0,   5120}, 0, {     0,      0}, {0x35, 0xce, 0x16, 0xff}}},
     {{{     0,      0,   5120}, 0, {     0,      0}, {0x35, 0xce, 0x16, 0xff}}},
     {{{     0,      0,   4096}, 0, {     0,      0}, {0x35, 0xce, 0x16, 0xff}}},
@@ -736,7 +736,7 @@ static const Vtx dummy_seg7_vertex_040[] = {
     {{{ -4095,      0,   4096}, 0, {     0,      0}, {0x35, 0xce, 0x16, 0xff}}},
 };
 
-static const Vtx dummy_seg7_vertex_041[] = {
+static const Vtx dummy_unused38_vertex_041[] = {
     {{{  5120,      0,   5120}, 0, {     0,      0}, {0x35, 0xce, 0x16, 0xff}}},
     {{{  6144,      0,   5120}, 0, {     0,      0}, {0x35, 0xce, 0x16, 0xff}}},
     {{{  6144,      0,   4096}, 0, {     0,      0}, {0x35, 0xce, 0x16, 0xff}}},
@@ -754,7 +754,7 @@ static const Vtx dummy_seg7_vertex_041[] = {
     {{{  8192,      0,   4096}, 0, {     0,      0}, {0x35, 0xce, 0x16, 0xff}}},
 };
 
-static const Vtx dummy_seg7_vertex_042[] = {
+static const Vtx dummy_unused38_vertex_042[] = {
     {{{  4096,      0,   6144}, 0, {     0,      0}, {0x35, 0xce, 0x16, 0xff}}},
     {{{  5120,      0,   5120}, 0, {     0,      0}, {0x35, 0xce, 0x16, 0xff}}},
     {{{  4096,      0,   5120}, 0, {     0,      0}, {0x35, 0xce, 0x16, 0xff}}},
@@ -772,7 +772,7 @@ static const Vtx dummy_seg7_vertex_042[] = {
     {{{  3072,      0,   5120}, 0, {     0,      0}, {0x35, 0xce, 0x16, 0xff}}},
 };
 
-static const Vtx dummy_seg7_vertex_043[] = {
+static const Vtx dummy_unused38_vertex_043[] = {
     {{{     0,      0,   6144}, 0, {     0,      0}, {0x35, 0xce, 0x16, 0xff}}},
     {{{  1024,      0,   5120}, 0, {     0,      0}, {0x35, 0xce, 0x16, 0xff}}},
     {{{     0,      0,   5120}, 0, {     0,      0}, {0x35, 0xce, 0x16, 0xff}}},
@@ -790,7 +790,7 @@ static const Vtx dummy_seg7_vertex_043[] = {
     {{{  6144,      0,   6144}, 0, {     0,      0}, {0x35, 0xce, 0x16, 0xff}}},
 };
 
-static const Vtx dummy_seg7_vertex_044[] = {
+static const Vtx dummy_unused38_vertex_044[] = {
     {{{ -4095,      0,   6144}, 0, {     0,      0}, {0x35, 0xce, 0x16, 0xff}}},
     {{{ -3071,      0,   5120}, 0, {     0,      0}, {0x35, 0xce, 0x16, 0xff}}},
     {{{ -4095,      0,   5120}, 0, {     0,      0}, {0x35, 0xce, 0x16, 0xff}}},
@@ -808,7 +808,7 @@ static const Vtx dummy_seg7_vertex_044[] = {
     {{{ -7167,      0,   5120}, 0, {     0,      0}, {0x35, 0xce, 0x16, 0xff}}},
 };
 
-static const Vtx dummy_seg7_vertex_045[] = {
+static const Vtx dummy_unused38_vertex_045[] = {
     {{{  5120,      0,   7168}, 0, {     0,      0}, {0x35, 0xce, 0x16, 0xff}}},
     {{{  6144,      0,   6144}, 0, {     0,      0}, {0x35, 0xce, 0x16, 0xff}}},
     {{{  5120,      0,   6144}, 0, {     0,      0}, {0x35, 0xce, 0x16, 0xff}}},
@@ -826,7 +826,7 @@ static const Vtx dummy_seg7_vertex_045[] = {
     {{{  3072,      0,   6144}, 0, {     0,      0}, {0x35, 0xce, 0x16, 0xff}}},
 };
 
-static const Vtx dummy_seg7_vertex_046[] = {
+static const Vtx dummy_unused38_vertex_046[] = {
     {{{  1024,      0,   7168}, 0, {     0,      0}, {0x35, 0xce, 0x16, 0xff}}},
     {{{  2048,      0,   6144}, 0, {     0,      0}, {0x35, 0xce, 0x16, 0xff}}},
     {{{  1024,      0,   6144}, 0, {     0,      0}, {0x35, 0xce, 0x16, 0xff}}},
@@ -844,7 +844,7 @@ static const Vtx dummy_seg7_vertex_046[] = {
     {{{ -2047,      0,   6144}, 0, {     0,      0}, {0x35, 0xce, 0x16, 0xff}}},
 };
 
-static const Vtx dummy_seg7_vertex_047[] = {
+static const Vtx dummy_unused38_vertex_047[] = {
     {{{ -3071,      0,   7168}, 0, {     0,      0}, {0x35, 0xce, 0x16, 0xff}}},
     {{{ -2047,      0,   6144}, 0, {     0,      0}, {0x35, 0xce, 0x16, 0xff}}},
     {{{ -3071,      0,   6144}, 0, {     0,      0}, {0x35, 0xce, 0x16, 0xff}}},
@@ -862,7 +862,7 @@ static const Vtx dummy_seg7_vertex_047[] = {
     {{{ -7167,      0,   6144}, 0, {     0,      0}, {0x35, 0xce, 0x16, 0xff}}},
 };
 
-static const Vtx dummy_seg7_vertex_048[] = {
+static const Vtx dummy_unused38_vertex_048[] = {
     {{{     0,      0,   8192}, 0, {     0,      0}, {0x35, 0xce, 0x16, 0xff}}},
     {{{  1024,      0,   8192}, 0, {     0,      0}, {0x35, 0xce, 0x16, 0xff}}},
     {{{  1024,      0,   7168}, 0, {     0,      0}, {0x35, 0xce, 0x16, 0xff}}},
@@ -880,7 +880,7 @@ static const Vtx dummy_seg7_vertex_048[] = {
     {{{  2048,      0,   7168}, 0, {     0,      0}, {0x35, 0xce, 0x16, 0xff}}},
 };
 
-static const Vtx dummy_seg7_vertex_049[] = {
+static const Vtx dummy_unused38_vertex_049[] = {
     {{{  2048,      0,   8192}, 0, {     0,      0}, {0x35, 0xce, 0x16, 0xff}}},
     {{{  3072,      0,   8192}, 0, {     0,      0}, {0x35, 0xce, 0x16, 0xff}}},
     {{{  3072,      0,   7168}, 0, {     0,      0}, {0x35, 0xce, 0x16, 0xff}}},
@@ -898,7 +898,7 @@ static const Vtx dummy_seg7_vertex_049[] = {
     {{{ -1023,      0,   7168}, 0, {     0,      0}, {0x35, 0xce, 0x16, 0xff}}},
 };
 
-static const Vtx dummy_seg7_vertex_050[] = {
+static const Vtx dummy_unused38_vertex_050[] = {
     {{{ -4095,      0,   8192}, 0, {     0,      0}, {0x35, 0xce, 0x16, 0xff}}},
     {{{ -3071,      0,   8192}, 0, {     0,      0}, {0x35, 0xce, 0x16, 0xff}}},
     {{{ -3071,      0,   7168}, 0, {     0,      0}, {0x35, 0xce, 0x16, 0xff}}},
@@ -916,7 +916,7 @@ static const Vtx dummy_seg7_vertex_050[] = {
     {{{ -7167,      0,   7168}, 0, {     0,      0}, {0x35, 0xce, 0x16, 0xff}}},
 };
 
-static const Vtx dummy_seg7_vertex_051[] = {
+static const Vtx dummy_unused38_vertex_051[] = {
     {{{  6144,      0,   8192}, 0, {     0,      0}, {0x35, 0xce, 0x16, 0xff}}},
     {{{  7168,      0,   8192}, 0, {     0,      0}, {0x35, 0xce, 0x16, 0xff}}},
     {{{  7168,      0,   7168}, 0, {     0,      0}, {0x35, 0xce, 0x16, 0xff}}},
@@ -934,7 +934,7 @@ static const Vtx dummy_seg7_vertex_051[] = {
     {{{ -7167,      0,  -7167}, 0, {     0,      0}, {0xff, 0xff, 0xff, 0xff}}},
 };
 
-static const Vtx dummy_seg7_vertex_052[] = {
+static const Vtx dummy_unused38_vertex_052[] = {
     {{{ -5119,      0,  -8191}, 0, {     0,      0}, {0xff, 0xff, 0xff, 0xff}}},
     {{{ -6143,      0,  -8191}, 0, {     0,      0}, {0xff, 0xff, 0xff, 0xff}}},
     {{{ -6143,      0,  -7167}, 0, {     0,      0}, {0xff, 0xff, 0xff, 0xff}}},
@@ -952,7 +952,7 @@ static const Vtx dummy_seg7_vertex_052[] = {
     {{{ -3071,      0,  -7167}, 0, {     0,      0}, {0xff, 0xff, 0xff, 0xff}}},
 };
 
-static const Vtx dummy_seg7_vertex_053[] = {
+static const Vtx dummy_unused38_vertex_053[] = {
     {{{ -5119,      0,  -6143}, 0, {     0,      0}, {0xff, 0xff, 0xff, 0xff}}},
     {{{ -4095,      0,  -6143}, 0, {     0,      0}, {0xff, 0xff, 0xff, 0xff}}},
     {{{ -4095,      0,  -7167}, 0, {     0,      0}, {0xff, 0xff, 0xff, 0xff}}},
@@ -970,7 +970,7 @@ static const Vtx dummy_seg7_vertex_053[] = {
     {{{ -2047,      0,  -7167}, 0, {     0,      0}, {0xff, 0xff, 0xff, 0xff}}},
 };
 
-static const Vtx dummy_seg7_vertex_054[] = {
+static const Vtx dummy_unused38_vertex_054[] = {
     {{{ -1023,      0,  -6143}, 0, {     0,      0}, {0xff, 0xff, 0xff, 0xff}}},
     {{{     0,      0,  -7167}, 0, {     0,      0}, {0xff, 0xff, 0xff, 0xff}}},
     {{{ -1023,      0,  -7167}, 0, {     0,      0}, {0xff, 0xff, 0xff, 0xff}}},
@@ -988,7 +988,7 @@ static const Vtx dummy_seg7_vertex_054[] = {
     {{{  1024,      0,  -7167}, 0, {     0,      0}, {0xff, 0xff, 0xff, 0xff}}},
 };
 
-static const Vtx dummy_seg7_vertex_055[] = {
+static const Vtx dummy_unused38_vertex_055[] = {
     {{{  3072,      0,  -8191}, 0, {     0,      0}, {0xff, 0xff, 0xff, 0xff}}},
     {{{  2048,      0,  -8191}, 0, {     0,      0}, {0xff, 0xff, 0xff, 0xff}}},
     {{{  2048,      0,  -7167}, 0, {     0,      0}, {0xff, 0xff, 0xff, 0xff}}},
@@ -1006,7 +1006,7 @@ static const Vtx dummy_seg7_vertex_055[] = {
     {{{  5120,      0,  -7167}, 0, {     0,      0}, {0xff, 0xff, 0xff, 0xff}}},
 };
 
-static const Vtx dummy_seg7_vertex_056[] = {
+static const Vtx dummy_unused38_vertex_056[] = {
     {{{  5120,      0,  -8191}, 0, {     0,      0}, {0xff, 0xff, 0xff, 0xff}}},
     {{{  4096,      0,  -8191}, 0, {     0,      0}, {0xff, 0xff, 0xff, 0xff}}},
     {{{  4096,      0,  -7167}, 0, {     0,      0}, {0xff, 0xff, 0xff, 0xff}}},
@@ -1024,7 +1024,7 @@ static const Vtx dummy_seg7_vertex_056[] = {
     {{{  6144,      0,  -7167}, 0, {     0,      0}, {0xff, 0xff, 0xff, 0xff}}},
 };
 
-static const Vtx dummy_seg7_vertex_057[] = {
+static const Vtx dummy_unused38_vertex_057[] = {
     {{{  7168,      0,  -8191}, 0, {     0,      0}, {0xff, 0xff, 0xff, 0xff}}},
     {{{  6144,      0,  -7167}, 0, {     0,      0}, {0xff, 0xff, 0xff, 0xff}}},
     {{{  7168,      0,  -7167}, 0, {     0,      0}, {0xff, 0xff, 0xff, 0xff}}},
@@ -1042,7 +1042,7 @@ static const Vtx dummy_seg7_vertex_057[] = {
     {{{  6144,      0,  -6143}, 0, {     0,      0}, {0xff, 0xff, 0xff, 0xff}}},
 };
 
-static const Vtx dummy_seg7_vertex_058[] = {
+static const Vtx dummy_unused38_vertex_058[] = {
     {{{ -2047,      0,  -5119}, 0, {     0,      0}, {0xff, 0xff, 0xff, 0xff}}},
     {{{ -1023,      0,  -5119}, 0, {     0,      0}, {0xff, 0xff, 0xff, 0xff}}},
     {{{ -1023,      0,  -6143}, 0, {     0,      0}, {0xff, 0xff, 0xff, 0xff}}},
@@ -1060,7 +1060,7 @@ static const Vtx dummy_seg7_vertex_058[] = {
     {{{  3072,      0,  -6143}, 0, {     0,      0}, {0xff, 0xff, 0xff, 0xff}}},
 };
 
-static const Vtx dummy_seg7_vertex_059[] = {
+static const Vtx dummy_unused38_vertex_059[] = {
     {{{     0,      0,  -5119}, 0, {     0,      0}, {0xff, 0xff, 0xff, 0xff}}},
     {{{  1024,      0,  -6143}, 0, {     0,      0}, {0xff, 0xff, 0xff, 0xff}}},
     {{{     0,      0,  -6143}, 0, {     0,      0}, {0xff, 0xff, 0xff, 0xff}}},
@@ -1078,7 +1078,7 @@ static const Vtx dummy_seg7_vertex_059[] = {
     {{{ -3071,      0,  -6143}, 0, {     0,      0}, {0xff, 0xff, 0xff, 0xff}}},
 };
 
-static const Vtx dummy_seg7_vertex_060[] = {
+static const Vtx dummy_unused38_vertex_060[] = {
     {{{ -2047,      0,  -5119}, 0, {     0,      0}, {0xff, 0xff, 0xff, 0xff}}},
     {{{ -1023,      0,  -6143}, 0, {     0,      0}, {0xff, 0xff, 0xff, 0xff}}},
     {{{ -2047,      0,  -6143}, 0, {     0,      0}, {0xff, 0xff, 0xff, 0xff}}},
@@ -1096,7 +1096,7 @@ static const Vtx dummy_seg7_vertex_060[] = {
     {{{  2048,      0,  -5119}, 0, {     0,      0}, {0xff, 0xff, 0xff, 0xff}}},
 };
 
-static const Vtx dummy_seg7_vertex_061[] = {
+static const Vtx dummy_unused38_vertex_061[] = {
     {{{  5120,      0,  -4095}, 0, {     0,      0}, {0xff, 0xff, 0xff, 0xff}}},
     {{{  6144,      0,  -5119}, 0, {     0,      0}, {0xff, 0xff, 0xff, 0xff}}},
     {{{  5120,      0,  -5119}, 0, {     0,      0}, {0xff, 0xff, 0xff, 0xff}}},
@@ -1114,7 +1114,7 @@ static const Vtx dummy_seg7_vertex_061[] = {
     {{{  4096,      0,  -5119}, 0, {     0,      0}, {0xff, 0xff, 0xff, 0xff}}},
 };
 
-static const Vtx dummy_seg7_vertex_062[] = {
+static const Vtx dummy_unused38_vertex_062[] = {
     {{{  1024,      0,  -4095}, 0, {     0,      0}, {0xff, 0xff, 0xff, 0xff}}},
     {{{  2048,      0,  -5119}, 0, {     0,      0}, {0xff, 0xff, 0xff, 0xff}}},
     {{{  1024,      0,  -5119}, 0, {     0,      0}, {0xff, 0xff, 0xff, 0xff}}},
@@ -1132,7 +1132,7 @@ static const Vtx dummy_seg7_vertex_062[] = {
     {{{ -3071,      0,  -5119}, 0, {     0,      0}, {0xff, 0xff, 0xff, 0xff}}},
 };
 
-static const Vtx dummy_seg7_vertex_063[] = {
+static const Vtx dummy_unused38_vertex_063[] = {
     {{{ -3071,      0,  -4095}, 0, {     0,      0}, {0xff, 0xff, 0xff, 0xff}}},
     {{{ -2047,      0,  -4095}, 0, {     0,      0}, {0xff, 0xff, 0xff, 0xff}}},
     {{{ -2047,      0,  -5119}, 0, {     0,      0}, {0xff, 0xff, 0xff, 0xff}}},
@@ -1150,7 +1150,7 @@ static const Vtx dummy_seg7_vertex_063[] = {
     {{{  6144,      0,  -4095}, 0, {     0,      0}, {0xff, 0xff, 0xff, 0xff}}},
 };
 
-static const Vtx dummy_seg7_vertex_064[] = {
+static const Vtx dummy_unused38_vertex_064[] = {
     {{{  6144,      0,  -3071}, 0, {     0,      0}, {0xff, 0xff, 0xff, 0xff}}},
     {{{  7168,      0,  -3071}, 0, {     0,      0}, {0xff, 0xff, 0xff, 0xff}}},
     {{{  7168,      0,  -4095}, 0, {     0,      0}, {0xff, 0xff, 0xff, 0xff}}},
@@ -1168,7 +1168,7 @@ static const Vtx dummy_seg7_vertex_064[] = {
     {{{  3072,      0,  -4095}, 0, {     0,      0}, {0xff, 0xff, 0xff, 0xff}}},
 };
 
-static const Vtx dummy_seg7_vertex_065[] = {
+static const Vtx dummy_unused38_vertex_065[] = {
     {{{ -6143,      0,  -3071}, 0, {     0,      0}, {0xff, 0xff, 0xff, 0xff}}},
     {{{ -5119,      0,  -4095}, 0, {     0,      0}, {0xff, 0xff, 0xff, 0xff}}},
     {{{ -6143,      0,  -4095}, 0, {     0,      0}, {0xff, 0xff, 0xff, 0xff}}},
@@ -1186,7 +1186,7 @@ static const Vtx dummy_seg7_vertex_065[] = {
     {{{ -2047,      0,  -4095}, 0, {     0,      0}, {0xff, 0xff, 0xff, 0xff}}},
 };
 
-static const Vtx dummy_seg7_vertex_066[] = {
+static const Vtx dummy_unused38_vertex_066[] = {
     {{{ -4095,      0,  -3071}, 0, {     0,      0}, {0xff, 0xff, 0xff, 0xff}}},
     {{{ -3071,      0,  -3071}, 0, {     0,      0}, {0xff, 0xff, 0xff, 0xff}}},
     {{{ -3071,      0,  -4095}, 0, {     0,      0}, {0xff, 0xff, 0xff, 0xff}}},
@@ -1204,7 +1204,7 @@ static const Vtx dummy_seg7_vertex_066[] = {
     {{{ -8191,      0,  -4095}, 0, {     0,      0}, {0xff, 0xff, 0xff, 0xff}}},
 };
 
-static const Vtx dummy_seg7_vertex_067[] = {
+static const Vtx dummy_unused38_vertex_067[] = {
     {{{  5120,      0,  -2047}, 0, {     0,      0}, {0xff, 0xff, 0xff, 0xff}}},
     {{{  6144,      0,  -2047}, 0, {     0,      0}, {0xff, 0xff, 0xff, 0xff}}},
     {{{  6144,      0,  -3071}, 0, {     0,      0}, {0xff, 0xff, 0xff, 0xff}}},
@@ -1222,7 +1222,7 @@ static const Vtx dummy_seg7_vertex_067[] = {
     {{{  4096,      0,  -3071}, 0, {     0,      0}, {0xff, 0xff, 0xff, 0xff}}},
 };
 
-static const Vtx dummy_seg7_vertex_068[] = {
+static const Vtx dummy_unused38_vertex_068[] = {
     {{{  3072,      0,  -2047}, 0, {     0,      0}, {0xff, 0xff, 0xff, 0xff}}},
     {{{  4096,      0,  -3071}, 0, {     0,      0}, {0xff, 0xff, 0xff, 0xff}}},
     {{{  3072,      0,  -3071}, 0, {     0,      0}, {0xff, 0xff, 0xff, 0xff}}},
@@ -1240,7 +1240,7 @@ static const Vtx dummy_seg7_vertex_068[] = {
     {{{ -1023,      0,  -3071}, 0, {     0,      0}, {0xff, 0xff, 0xff, 0xff}}},
 };
 
-static const Vtx dummy_seg7_vertex_069[] = {
+static const Vtx dummy_unused38_vertex_069[] = {
     {{{  6144,      0,  -1023}, 0, {     0,      0}, {0xff, 0xff, 0xff, 0xff}}},
     {{{  7168,      0,  -1023}, 0, {     0,      0}, {0xff, 0xff, 0xff, 0xff}}},
     {{{  7168,      0,  -2047}, 0, {     0,      0}, {0xff, 0xff, 0xff, 0xff}}},
@@ -1258,7 +1258,7 @@ static const Vtx dummy_seg7_vertex_069[] = {
     {{{ -5119,      0,  -3071}, 0, {     0,      0}, {0xff, 0xff, 0xff, 0xff}}},
 };
 
-static const Vtx dummy_seg7_vertex_070[] = {
+static const Vtx dummy_unused38_vertex_070[] = {
     {{{ -7167,      0,  -2047}, 0, {     0,      0}, {0xff, 0xff, 0xff, 0xff}}},
     {{{ -6143,      0,  -3071}, 0, {     0,      0}, {0xff, 0xff, 0xff, 0xff}}},
     {{{ -7167,      0,  -3071}, 0, {     0,      0}, {0xff, 0xff, 0xff, 0xff}}},
@@ -1276,7 +1276,7 @@ static const Vtx dummy_seg7_vertex_070[] = {
     {{{  5120,      0,  -2047}, 0, {     0,      0}, {0xff, 0xff, 0xff, 0xff}}},
 };
 
-static const Vtx dummy_seg7_vertex_071[] = {
+static const Vtx dummy_unused38_vertex_071[] = {
     {{{  6144,      0,  -1023}, 0, {     0,      0}, {0xff, 0xff, 0xff, 0xff}}},
     {{{  7168,      0,  -2047}, 0, {     0,      0}, {0xff, 0xff, 0xff, 0xff}}},
     {{{  6144,      0,  -2047}, 0, {     0,      0}, {0xff, 0xff, 0xff, 0xff}}},
@@ -1294,7 +1294,7 @@ static const Vtx dummy_seg7_vertex_071[] = {
     {{{  1024,      0,  -2047}, 0, {     0,      0}, {0xff, 0xff, 0xff, 0xff}}},
 };
 
-static const Vtx dummy_seg7_vertex_072[] = {
+static const Vtx dummy_unused38_vertex_072[] = {
     {{{     0,      0,  -1023}, 0, {     0,      0}, {0xff, 0xff, 0xff, 0xff}}},
     {{{  1024,      0,  -2047}, 0, {     0,      0}, {0xff, 0xff, 0xff, 0xff}}},
     {{{     0,      0,  -2047}, 0, {     0,      0}, {0xff, 0xff, 0xff, 0xff}}},
@@ -1312,7 +1312,7 @@ static const Vtx dummy_seg7_vertex_072[] = {
     {{{ -4095,      0,  -2047}, 0, {     0,      0}, {0xff, 0xff, 0xff, 0xff}}},
 };
 
-static const Vtx dummy_seg7_vertex_073[] = {
+static const Vtx dummy_unused38_vertex_073[] = {
     {{{ -8191,      0,  -1023}, 0, {     0,      0}, {0xff, 0xff, 0xff, 0xff}}},
     {{{ -7167,      0,  -1023}, 0, {     0,      0}, {0xff, 0xff, 0xff, 0xff}}},
     {{{ -7167,      0,  -2047}, 0, {     0,      0}, {0xff, 0xff, 0xff, 0xff}}},
@@ -1330,7 +1330,7 @@ static const Vtx dummy_seg7_vertex_073[] = {
     {{{  5120,      0,  -1023}, 0, {     0,      0}, {0xff, 0xff, 0xff, 0xff}}},
 };
 
-static const Vtx dummy_seg7_vertex_074[] = {
+static const Vtx dummy_unused38_vertex_074[] = {
     {{{  7168,      0,      0}, 0, {     0,      0}, {0xff, 0xff, 0xff, 0xff}}},
     {{{  8192,      0,  -1023}, 0, {     0,      0}, {0xff, 0xff, 0xff, 0xff}}},
     {{{  7168,      0,  -1023}, 0, {     0,      0}, {0xff, 0xff, 0xff, 0xff}}},
@@ -1348,7 +1348,7 @@ static const Vtx dummy_seg7_vertex_074[] = {
     {{{  2048,      0,  -1023}, 0, {     0,      0}, {0xff, 0xff, 0xff, 0xff}}},
 };
 
-static const Vtx dummy_seg7_vertex_075[] = {
+static const Vtx dummy_unused38_vertex_075[] = {
     {{{  1024,      0,      0}, 0, {     0,      0}, {0xff, 0xff, 0xff, 0xff}}},
     {{{  2048,      0,  -1023}, 0, {     0,      0}, {0xff, 0xff, 0xff, 0xff}}},
     {{{  1024,      0,  -1023}, 0, {     0,      0}, {0xff, 0xff, 0xff, 0xff}}},
@@ -1366,7 +1366,7 @@ static const Vtx dummy_seg7_vertex_075[] = {
     {{{ -5119,      0,  -1023}, 0, {     0,      0}, {0xff, 0xff, 0xff, 0xff}}},
 };
 
-static const Vtx dummy_seg7_vertex_076[] = {
+static const Vtx dummy_unused38_vertex_076[] = {
     {{{ -5119,      0,      0}, 0, {     0,      0}, {0xff, 0xff, 0xff, 0xff}}},
     {{{ -4095,      0,      0}, 0, {     0,      0}, {0xff, 0xff, 0xff, 0xff}}},
     {{{ -4095,      0,  -1023}, 0, {     0,      0}, {0xff, 0xff, 0xff, 0xff}}},
@@ -1384,7 +1384,7 @@ static const Vtx dummy_seg7_vertex_076[] = {
     {{{     0,      0,      0}, 0, {     0,      0}, {0xff, 0xff, 0xff, 0xff}}},
 };
 
-static const Vtx dummy_seg7_vertex_077[] = {
+static const Vtx dummy_unused38_vertex_077[] = {
     {{{  4096,      0,   1024}, 0, {     0,      0}, {0xff, 0xff, 0xff, 0xff}}},
     {{{  5120,      0,      0}, 0, {     0,      0}, {0xff, 0xff, 0xff, 0xff}}},
     {{{  4096,      0,      0}, 0, {     0,      0}, {0xff, 0xff, 0xff, 0xff}}},
@@ -1402,7 +1402,7 @@ static const Vtx dummy_seg7_vertex_077[] = {
     {{{  3072,      0,      0}, 0, {     0,      0}, {0xff, 0xff, 0xff, 0xff}}},
 };
 
-static const Vtx dummy_seg7_vertex_078[] = {
+static const Vtx dummy_unused38_vertex_078[] = {
     {{{     0,      0,   1024}, 0, {     0,      0}, {0xff, 0xff, 0xff, 0xff}}},
     {{{  1024,      0,   1024}, 0, {     0,      0}, {0xff, 0xff, 0xff, 0xff}}},
     {{{  1024,      0,      0}, 0, {     0,      0}, {0xff, 0xff, 0xff, 0xff}}},
@@ -1420,7 +1420,7 @@ static const Vtx dummy_seg7_vertex_078[] = {
     {{{ -3071,      0,      0}, 0, {     0,      0}, {0xff, 0xff, 0xff, 0xff}}},
 };
 
-static const Vtx dummy_seg7_vertex_079[] = {
+static const Vtx dummy_unused38_vertex_079[] = {
     {{{ -4095,      0,   1024}, 0, {     0,      0}, {0xff, 0xff, 0xff, 0xff}}},
     {{{ -3071,      0,      0}, 0, {     0,      0}, {0xff, 0xff, 0xff, 0xff}}},
     {{{ -4095,      0,      0}, 0, {     0,      0}, {0xff, 0xff, 0xff, 0xff}}},
@@ -1438,7 +1438,7 @@ static const Vtx dummy_seg7_vertex_079[] = {
     {{{  7168,      0,      0}, 0, {     0,      0}, {0xff, 0xff, 0xff, 0xff}}},
 };
 
-static const Vtx dummy_seg7_vertex_080[] = {
+static const Vtx dummy_unused38_vertex_080[] = {
     {{{  5120,      0,   2048}, 0, {     0,      0}, {0xff, 0xff, 0xff, 0xff}}},
     {{{  6144,      0,   2048}, 0, {     0,      0}, {0xff, 0xff, 0xff, 0xff}}},
     {{{  6144,      0,   1024}, 0, {     0,      0}, {0xff, 0xff, 0xff, 0xff}}},
@@ -1456,7 +1456,7 @@ static const Vtx dummy_seg7_vertex_080[] = {
     {{{  4096,      0,   1024}, 0, {     0,      0}, {0xff, 0xff, 0xff, 0xff}}},
 };
 
-static const Vtx dummy_seg7_vertex_081[] = {
+static const Vtx dummy_unused38_vertex_081[] = {
     {{{ -7167,      0,   2048}, 0, {     0,      0}, {0xff, 0xff, 0xff, 0xff}}},
     {{{ -6143,      0,   2048}, 0, {     0,      0}, {0xff, 0xff, 0xff, 0xff}}},
     {{{ -6143,      0,   1024}, 0, {     0,      0}, {0xff, 0xff, 0xff, 0xff}}},
@@ -1474,7 +1474,7 @@ static const Vtx dummy_seg7_vertex_081[] = {
     {{{ -3071,      0,   1024}, 0, {     0,      0}, {0xff, 0xff, 0xff, 0xff}}},
 };
 
-static const Vtx dummy_seg7_vertex_082[] = {
+static const Vtx dummy_unused38_vertex_082[] = {
     {{{ -5119,      0,   2048}, 0, {     0,      0}, {0xff, 0xff, 0xff, 0xff}}},
     {{{ -4095,      0,   2048}, 0, {     0,      0}, {0xff, 0xff, 0xff, 0xff}}},
     {{{ -4095,      0,   1024}, 0, {     0,      0}, {0xff, 0xff, 0xff, 0xff}}},
@@ -1492,7 +1492,7 @@ static const Vtx dummy_seg7_vertex_082[] = {
     {{{  8192,      0,   1024}, 0, {     0,      0}, {0xff, 0xff, 0xff, 0xff}}},
 };
 
-static const Vtx dummy_seg7_vertex_083[] = {
+static const Vtx dummy_unused38_vertex_083[] = {
     {{{  6144,      0,   3072}, 0, {     0,      0}, {0xff, 0xff, 0xff, 0xff}}},
     {{{  7168,      0,   3072}, 0, {     0,      0}, {0xff, 0xff, 0xff, 0xff}}},
     {{{  7168,      0,   2048}, 0, {     0,      0}, {0xff, 0xff, 0xff, 0xff}}},
@@ -1510,7 +1510,7 @@ static const Vtx dummy_seg7_vertex_083[] = {
     {{{  2048,      0,   1024}, 0, {     0,      0}, {0xff, 0xff, 0xff, 0xff}}},
 };
 
-static const Vtx dummy_seg7_vertex_084[] = {
+static const Vtx dummy_unused38_vertex_084[] = {
     {{{  2048,      0,   3072}, 0, {     0,      0}, {0xff, 0xff, 0xff, 0xff}}},
     {{{  3072,      0,   3072}, 0, {     0,      0}, {0xff, 0xff, 0xff, 0xff}}},
     {{{  3072,      0,   2048}, 0, {     0,      0}, {0xff, 0xff, 0xff, 0xff}}},
@@ -1528,7 +1528,7 @@ static const Vtx dummy_seg7_vertex_084[] = {
     {{{  1024,      0,   2048}, 0, {     0,      0}, {0xff, 0xff, 0xff, 0xff}}},
 };
 
-static const Vtx dummy_seg7_vertex_085[] = {
+static const Vtx dummy_unused38_vertex_085[] = {
     {{{ -8191,      0,   3072}, 0, {     0,      0}, {0xff, 0xff, 0xff, 0xff}}},
     {{{ -7167,      0,   2048}, 0, {     0,      0}, {0xff, 0xff, 0xff, 0xff}}},
     {{{ -8191,      0,   2048}, 0, {     0,      0}, {0xff, 0xff, 0xff, 0xff}}},
@@ -1546,7 +1546,7 @@ static const Vtx dummy_seg7_vertex_085[] = {
     {{{ -5119,      0,   2048}, 0, {     0,      0}, {0xff, 0xff, 0xff, 0xff}}},
 };
 
-static const Vtx dummy_seg7_vertex_086[] = {
+static const Vtx dummy_unused38_vertex_086[] = {
     {{{ -6143,      0,   3072}, 0, {     0,      0}, {0xff, 0xff, 0xff, 0xff}}},
     {{{ -5119,      0,   2048}, 0, {     0,      0}, {0xff, 0xff, 0xff, 0xff}}},
     {{{ -6143,      0,   2048}, 0, {     0,      0}, {0xff, 0xff, 0xff, 0xff}}},
@@ -1564,7 +1564,7 @@ static const Vtx dummy_seg7_vertex_086[] = {
     {{{  5120,      0,   3072}, 0, {     0,      0}, {0xff, 0xff, 0xff, 0xff}}},
 };
 
-static const Vtx dummy_seg7_vertex_087[] = {
+static const Vtx dummy_unused38_vertex_087[] = {
     {{{  7168,      0,   4096}, 0, {     0,      0}, {0xff, 0xff, 0xff, 0xff}}},
     {{{  8192,      0,   3072}, 0, {     0,      0}, {0xff, 0xff, 0xff, 0xff}}},
     {{{  7168,      0,   3072}, 0, {     0,      0}, {0xff, 0xff, 0xff, 0xff}}},
@@ -1582,7 +1582,7 @@ static const Vtx dummy_seg7_vertex_087[] = {
     {{{ -6143,      0,   3072}, 0, {     0,      0}, {0xff, 0xff, 0xff, 0xff}}},
 };
 
-static const Vtx dummy_seg7_vertex_088[] = {
+static const Vtx dummy_unused38_vertex_088[] = {
     {{{ -1023,      0,   4096}, 0, {     0,      0}, {0xff, 0xff, 0xff, 0xff}}},
     {{{     0,      0,   3072}, 0, {     0,      0}, {0xff, 0xff, 0xff, 0xff}}},
     {{{ -1023,      0,   3072}, 0, {     0,      0}, {0xff, 0xff, 0xff, 0xff}}},
@@ -1600,7 +1600,7 @@ static const Vtx dummy_seg7_vertex_088[] = {
     {{{ -4095,      0,   3072}, 0, {     0,      0}, {0xff, 0xff, 0xff, 0xff}}},
 };
 
-static const Vtx dummy_seg7_vertex_089[] = {
+static const Vtx dummy_unused38_vertex_089[] = {
     {{{ -5119,      0,   4096}, 0, {     0,      0}, {0xff, 0xff, 0xff, 0xff}}},
     {{{ -4095,      0,   3072}, 0, {     0,      0}, {0xff, 0xff, 0xff, 0xff}}},
     {{{ -5119,      0,   3072}, 0, {     0,      0}, {0xff, 0xff, 0xff, 0xff}}},
@@ -1618,7 +1618,7 @@ static const Vtx dummy_seg7_vertex_089[] = {
     {{{  8192,      0,   3072}, 0, {     0,      0}, {0xff, 0xff, 0xff, 0xff}}},
 };
 
-static const Vtx dummy_seg7_vertex_090[] = {
+static const Vtx dummy_unused38_vertex_090[] = {
     {{{  4096,      0,   5120}, 0, {     0,      0}, {0xff, 0xff, 0xff, 0xff}}},
     {{{  5120,      0,   5120}, 0, {     0,      0}, {0xff, 0xff, 0xff, 0xff}}},
     {{{  5120,      0,   4096}, 0, {     0,      0}, {0xff, 0xff, 0xff, 0xff}}},
@@ -1636,7 +1636,7 @@ static const Vtx dummy_seg7_vertex_090[] = {
     {{{  2048,      0,   4096}, 0, {     0,      0}, {0xff, 0xff, 0xff, 0xff}}},
 };
 
-static const Vtx dummy_seg7_vertex_091[] = {
+static const Vtx dummy_unused38_vertex_091[] = {
     {{{     0,      0,   5120}, 0, {     0,      0}, {0xff, 0xff, 0xff, 0xff}}},
     {{{  1024,      0,   5120}, 0, {     0,      0}, {0xff, 0xff, 0xff, 0xff}}},
     {{{  1024,      0,   4096}, 0, {     0,      0}, {0xff, 0xff, 0xff, 0xff}}},
@@ -1654,7 +1654,7 @@ static const Vtx dummy_seg7_vertex_091[] = {
     {{{  5120,      0,   5120}, 0, {     0,      0}, {0xff, 0xff, 0xff, 0xff}}},
 };
 
-static const Vtx dummy_seg7_vertex_092[] = {
+static const Vtx dummy_unused38_vertex_092[] = {
     {{{ -4095,      0,   5120}, 0, {     0,      0}, {0xff, 0xff, 0xff, 0xff}}},
     {{{ -3071,      0,   4096}, 0, {     0,      0}, {0xff, 0xff, 0xff, 0xff}}},
     {{{ -4095,      0,   4096}, 0, {     0,      0}, {0xff, 0xff, 0xff, 0xff}}},
@@ -1672,7 +1672,7 @@ static const Vtx dummy_seg7_vertex_092[] = {
     {{{ -7167,      0,   4096}, 0, {     0,      0}, {0xff, 0xff, 0xff, 0xff}}},
 };
 
-static const Vtx dummy_seg7_vertex_093[] = {
+static const Vtx dummy_unused38_vertex_093[] = {
     {{{  5120,      0,   6144}, 0, {     0,      0}, {0xff, 0xff, 0xff, 0xff}}},
     {{{  6144,      0,   6144}, 0, {     0,      0}, {0xff, 0xff, 0xff, 0xff}}},
     {{{  6144,      0,   5120}, 0, {     0,      0}, {0xff, 0xff, 0xff, 0xff}}},
@@ -1690,7 +1690,7 @@ static const Vtx dummy_seg7_vertex_093[] = {
     {{{  3072,      0,   5120}, 0, {     0,      0}, {0xff, 0xff, 0xff, 0xff}}},
 };
 
-static const Vtx dummy_seg7_vertex_094[] = {
+static const Vtx dummy_unused38_vertex_094[] = {
     {{{  1024,      0,   6144}, 0, {     0,      0}, {0xff, 0xff, 0xff, 0xff}}},
     {{{  2048,      0,   6144}, 0, {     0,      0}, {0xff, 0xff, 0xff, 0xff}}},
     {{{  2048,      0,   5120}, 0, {     0,      0}, {0xff, 0xff, 0xff, 0xff}}},
@@ -1708,7 +1708,7 @@ static const Vtx dummy_seg7_vertex_094[] = {
     {{{ -2047,      0,   5120}, 0, {     0,      0}, {0xff, 0xff, 0xff, 0xff}}},
 };
 
-static const Vtx dummy_seg7_vertex_095[] = {
+static const Vtx dummy_unused38_vertex_095[] = {
     {{{ -3071,      0,   6144}, 0, {     0,      0}, {0xff, 0xff, 0xff, 0xff}}},
     {{{ -2047,      0,   5120}, 0, {     0,      0}, {0xff, 0xff, 0xff, 0xff}}},
     {{{ -3071,      0,   5120}, 0, {     0,      0}, {0xff, 0xff, 0xff, 0xff}}},
@@ -1726,7 +1726,7 @@ static const Vtx dummy_seg7_vertex_095[] = {
     {{{ -6143,      0,   5120}, 0, {     0,      0}, {0xff, 0xff, 0xff, 0xff}}},
 };
 
-static const Vtx dummy_seg7_vertex_096[] = {
+static const Vtx dummy_unused38_vertex_096[] = {
     {{{     0,      0,   7168}, 0, {     0,      0}, {0xff, 0xff, 0xff, 0xff}}},
     {{{  1024,      0,   6144}, 0, {     0,      0}, {0xff, 0xff, 0xff, 0xff}}},
     {{{     0,      0,   6144}, 0, {     0,      0}, {0xff, 0xff, 0xff, 0xff}}},
@@ -1744,7 +1744,7 @@ static const Vtx dummy_seg7_vertex_096[] = {
     {{{  3072,      0,   6144}, 0, {     0,      0}, {0xff, 0xff, 0xff, 0xff}}},
 };
 
-static const Vtx dummy_seg7_vertex_097[] = {
+static const Vtx dummy_unused38_vertex_097[] = {
     {{{  2048,      0,   7168}, 0, {     0,      0}, {0xff, 0xff, 0xff, 0xff}}},
     {{{  3072,      0,   6144}, 0, {     0,      0}, {0xff, 0xff, 0xff, 0xff}}},
     {{{  2048,      0,   6144}, 0, {     0,      0}, {0xff, 0xff, 0xff, 0xff}}},
@@ -1762,7 +1762,7 @@ static const Vtx dummy_seg7_vertex_097[] = {
     {{{ -1023,      0,   6144}, 0, {     0,      0}, {0xff, 0xff, 0xff, 0xff}}},
 };
 
-static const Vtx dummy_seg7_vertex_098[] = {
+static const Vtx dummy_unused38_vertex_098[] = {
     {{{ -4095,      0,   7168}, 0, {     0,      0}, {0xff, 0xff, 0xff, 0xff}}},
     {{{ -3071,      0,   7168}, 0, {     0,      0}, {0xff, 0xff, 0xff, 0xff}}},
     {{{ -3071,      0,   6144}, 0, {     0,      0}, {0xff, 0xff, 0xff, 0xff}}},
@@ -1780,7 +1780,7 @@ static const Vtx dummy_seg7_vertex_098[] = {
     {{{  2048,      0,   7168}, 0, {     0,      0}, {0xff, 0xff, 0xff, 0xff}}},
 };
 
-static const Vtx dummy_seg7_vertex_099[] = {
+static const Vtx dummy_unused38_vertex_099[] = {
     {{{  6144,      0,   7168}, 0, {     0,      0}, {0xff, 0xff, 0xff, 0xff}}},
     {{{  7168,      0,   7168}, 0, {     0,      0}, {0xff, 0xff, 0xff, 0xff}}},
     {{{  7168,      0,   6144}, 0, {     0,      0}, {0xff, 0xff, 0xff, 0xff}}},
@@ -1798,7 +1798,7 @@ static const Vtx dummy_seg7_vertex_099[] = {
     {{{  4096,      0,   7168}, 0, {     0,      0}, {0xff, 0xff, 0xff, 0xff}}},
 };
 
-static const Vtx dummy_seg7_vertex_100[] = {
+static const Vtx dummy_unused38_vertex_100[] = {
     {{{  3072,      0,   8192}, 0, {     0,      0}, {0xff, 0xff, 0xff, 0xff}}},
     {{{  4096,      0,   7168}, 0, {     0,      0}, {0xff, 0xff, 0xff, 0xff}}},
     {{{  3072,      0,   7168}, 0, {     0,      0}, {0xff, 0xff, 0xff, 0xff}}},
@@ -1816,7 +1816,7 @@ static const Vtx dummy_seg7_vertex_100[] = {
     {{{ -1023,      0,   7168}, 0, {     0,      0}, {0xff, 0xff, 0xff, 0xff}}},
 };
 
-static const Vtx dummy_seg7_vertex_101[] = {
+static const Vtx dummy_unused38_vertex_101[] = {
     {{{ -3071,      0,   8192}, 0, {     0,      0}, {0xff, 0xff, 0xff, 0xff}}},
     {{{ -2047,      0,   8192}, 0, {     0,      0}, {0xff, 0xff, 0xff, 0xff}}},
     {{{ -2047,      0,   7168}, 0, {     0,      0}, {0xff, 0xff, 0xff, 0xff}}},
@@ -1834,7 +1834,7 @@ static const Vtx dummy_seg7_vertex_101[] = {
     {{{ -6143,      0,   7168}, 0, {     0,      0}, {0xff, 0xff, 0xff, 0xff}}},
 };
 
-static const Vtx dummy_seg7_vertex_102[] = {
+static const Vtx dummy_unused38_vertex_102[] = {
     {{{ -7167,      0,   8192}, 0, {     0,      0}, {0xff, 0xff, 0xff, 0xff}}},
     {{{ -6143,      0,   7168}, 0, {     0,      0}, {0xff, 0xff, 0xff, 0xff}}},
     {{{ -7167,      0,   7168}, 0, {     0,      0}, {0xff, 0xff, 0xff, 0xff}}},
@@ -1843,419 +1843,419 @@ static const Vtx dummy_seg7_vertex_102[] = {
     {{{  8192,      0,   7168}, 0, {     0,      0}, {0xff, 0xff, 0xff, 0xff}}},
 };
 
-const Gfx dummy_seg7_dl[] = {
+const Gfx dummy_unused38_dl[] = {
     gsDPPipeSync(),
     gsDPSetCombineMode(G_CC_SHADE, G_CC_SHADE),
     gsSPClearGeometryMode(G_LIGHTING),
-    gsSPVertex(dummy_seg7_vertex_000,  15, 0),
+    gsSPVertex(dummy_unused38_vertex_000,  15, 0),
     gsSP2Triangles( 0,  1,  2, 0x0,  3,  4,  5, 0x0),
     gsSP2Triangles( 6,  7,  8, 0x0,  9, 10, 11, 0x0),
     gsSP1Triangle(12, 13, 14, 0x0),
-    gsSPVertex(dummy_seg7_vertex_001,  15, 0),
+    gsSPVertex(dummy_unused38_vertex_001,  15, 0),
     gsSP2Triangles( 0,  1,  2, 0x0,  3,  4,  5, 0x0),
     gsSP2Triangles( 6,  7,  8, 0x0,  9, 10, 11, 0x0),
     gsSP1Triangle(12, 13, 14, 0x0),
-    gsSPVertex(dummy_seg7_vertex_002,  15, 0),
+    gsSPVertex(dummy_unused38_vertex_002,  15, 0),
     gsSP2Triangles( 0,  1,  2, 0x0,  3,  4,  5, 0x0),
     gsSP2Triangles( 6,  7,  8, 0x0,  9, 10, 11, 0x0),
     gsSP1Triangle(12, 13, 14, 0x0),
-    gsSPVertex(dummy_seg7_vertex_003,  15, 0),
+    gsSPVertex(dummy_unused38_vertex_003,  15, 0),
     gsSP2Triangles( 0,  1,  2, 0x0,  3,  4,  5, 0x0),
     gsSP2Triangles( 6,  7,  8, 0x0,  9, 10, 11, 0x0),
     gsSP1Triangle(12, 13, 14, 0x0),
-    gsSPVertex(dummy_seg7_vertex_004,  15, 0),
+    gsSPVertex(dummy_unused38_vertex_004,  15, 0),
     gsSP2Triangles( 0,  1,  2, 0x0,  3,  4,  5, 0x0),
     gsSP2Triangles( 6,  7,  8, 0x0,  9, 10, 11, 0x0),
     gsSP1Triangle(12, 13, 14, 0x0),
-    gsSPVertex(dummy_seg7_vertex_005,  15, 0),
+    gsSPVertex(dummy_unused38_vertex_005,  15, 0),
     gsSP2Triangles( 0,  1,  2, 0x0,  3,  4,  5, 0x0),
     gsSP2Triangles( 6,  7,  8, 0x0,  9, 10, 11, 0x0),
     gsSP1Triangle(12, 13, 14, 0x0),
-    gsSPVertex(dummy_seg7_vertex_006,  15, 0),
+    gsSPVertex(dummy_unused38_vertex_006,  15, 0),
     gsSP2Triangles( 0,  1,  2, 0x0,  3,  4,  5, 0x0),
     gsSP2Triangles( 6,  7,  8, 0x0,  9, 10, 11, 0x0),
     gsSP1Triangle(12, 13, 14, 0x0),
-    gsSPVertex(dummy_seg7_vertex_007,  15, 0),
+    gsSPVertex(dummy_unused38_vertex_007,  15, 0),
     gsSP2Triangles( 0,  1,  2, 0x0,  3,  4,  5, 0x0),
     gsSP2Triangles( 6,  7,  8, 0x0,  9, 10, 11, 0x0),
     gsSP1Triangle(12, 13, 14, 0x0),
-    gsSPVertex(dummy_seg7_vertex_008,  15, 0),
+    gsSPVertex(dummy_unused38_vertex_008,  15, 0),
     gsSP2Triangles( 0,  1,  2, 0x0,  3,  4,  5, 0x0),
     gsSP2Triangles( 6,  7,  8, 0x0,  9, 10, 11, 0x0),
     gsSP1Triangle(12, 13, 14, 0x0),
-    gsSPVertex(dummy_seg7_vertex_009,  15, 0),
+    gsSPVertex(dummy_unused38_vertex_009,  15, 0),
     gsSP2Triangles( 0,  1,  2, 0x0,  3,  4,  5, 0x0),
     gsSP2Triangles( 6,  7,  8, 0x0,  9, 10, 11, 0x0),
     gsSP1Triangle(12, 13, 14, 0x0),
-    gsSPVertex(dummy_seg7_vertex_010,  15, 0),
+    gsSPVertex(dummy_unused38_vertex_010,  15, 0),
     gsSP2Triangles( 0,  1,  2, 0x0,  3,  4,  5, 0x0),
     gsSP2Triangles( 6,  7,  8, 0x0,  9, 10, 11, 0x0),
     gsSP1Triangle(12, 13, 14, 0x0),
-    gsSPVertex(dummy_seg7_vertex_011,  15, 0),
+    gsSPVertex(dummy_unused38_vertex_011,  15, 0),
     gsSP2Triangles( 0,  1,  2, 0x0,  3,  4,  5, 0x0),
     gsSP2Triangles( 6,  7,  8, 0x0,  9, 10, 11, 0x0),
     gsSP1Triangle(12, 13, 14, 0x0),
-    gsSPVertex(dummy_seg7_vertex_012,  15, 0),
+    gsSPVertex(dummy_unused38_vertex_012,  15, 0),
     gsSP2Triangles( 0,  1,  2, 0x0,  3,  4,  5, 0x0),
     gsSP2Triangles( 6,  7,  8, 0x0,  9, 10, 11, 0x0),
     gsSP1Triangle(12, 13, 14, 0x0),
-    gsSPVertex(dummy_seg7_vertex_013,  15, 0),
+    gsSPVertex(dummy_unused38_vertex_013,  15, 0),
     gsSP2Triangles( 0,  1,  2, 0x0,  3,  4,  5, 0x0),
     gsSP2Triangles( 6,  7,  8, 0x0,  9, 10, 11, 0x0),
     gsSP1Triangle(12, 13, 14, 0x0),
-    gsSPVertex(dummy_seg7_vertex_014,  15, 0),
+    gsSPVertex(dummy_unused38_vertex_014,  15, 0),
     gsSP2Triangles( 0,  1,  2, 0x0,  3,  4,  5, 0x0),
     gsSP2Triangles( 6,  7,  8, 0x0,  9, 10, 11, 0x0),
     gsSP1Triangle(12, 13, 14, 0x0),
-    gsSPVertex(dummy_seg7_vertex_015,  15, 0),
+    gsSPVertex(dummy_unused38_vertex_015,  15, 0),
     gsSP2Triangles( 0,  1,  2, 0x0,  3,  4,  5, 0x0),
     gsSP2Triangles( 6,  7,  8, 0x0,  9, 10, 11, 0x0),
     gsSP1Triangle(12, 13, 14, 0x0),
-    gsSPVertex(dummy_seg7_vertex_016,  15, 0),
+    gsSPVertex(dummy_unused38_vertex_016,  15, 0),
     gsSP2Triangles( 0,  1,  2, 0x0,  3,  4,  5, 0x0),
     gsSP2Triangles( 6,  7,  8, 0x0,  9, 10, 11, 0x0),
     gsSP1Triangle(12, 13, 14, 0x0),
-    gsSPVertex(dummy_seg7_vertex_017,  15, 0),
+    gsSPVertex(dummy_unused38_vertex_017,  15, 0),
     gsSP2Triangles( 0,  1,  2, 0x0,  3,  4,  5, 0x0),
     gsSP2Triangles( 6,  7,  8, 0x0,  9, 10, 11, 0x0),
     gsSP1Triangle(12, 13, 14, 0x0),
-    gsSPVertex(dummy_seg7_vertex_018,  15, 0),
+    gsSPVertex(dummy_unused38_vertex_018,  15, 0),
     gsSP2Triangles( 0,  1,  2, 0x0,  3,  4,  5, 0x0),
     gsSP2Triangles( 6,  7,  8, 0x0,  9, 10, 11, 0x0),
     gsSP1Triangle(12, 13, 14, 0x0),
-    gsSPVertex(dummy_seg7_vertex_019,  15, 0),
+    gsSPVertex(dummy_unused38_vertex_019,  15, 0),
     gsSP2Triangles( 0,  1,  2, 0x0,  3,  4,  5, 0x0),
     gsSP2Triangles( 6,  7,  8, 0x0,  9, 10, 11, 0x0),
     gsSP1Triangle(12, 13, 14, 0x0),
-    gsSPVertex(dummy_seg7_vertex_020,  15, 0),
+    gsSPVertex(dummy_unused38_vertex_020,  15, 0),
     gsSP2Triangles( 0,  1,  2, 0x0,  3,  4,  5, 0x0),
     gsSP2Triangles( 6,  7,  8, 0x0,  9, 10, 11, 0x0),
     gsSP1Triangle(12, 13, 14, 0x0),
-    gsSPVertex(dummy_seg7_vertex_021,  15, 0),
+    gsSPVertex(dummy_unused38_vertex_021,  15, 0),
     gsSP2Triangles( 0,  1,  2, 0x0,  3,  4,  5, 0x0),
     gsSP2Triangles( 6,  7,  8, 0x0,  9, 10, 11, 0x0),
     gsSP1Triangle(12, 13, 14, 0x0),
-    gsSPVertex(dummy_seg7_vertex_022,  15, 0),
+    gsSPVertex(dummy_unused38_vertex_022,  15, 0),
     gsSP2Triangles( 0,  1,  2, 0x0,  3,  4,  5, 0x0),
     gsSP2Triangles( 6,  7,  8, 0x0,  9, 10, 11, 0x0),
     gsSP1Triangle(12, 13, 14, 0x0),
-    gsSPVertex(dummy_seg7_vertex_023,  15, 0),
+    gsSPVertex(dummy_unused38_vertex_023,  15, 0),
     gsSP2Triangles( 0,  1,  2, 0x0,  3,  4,  5, 0x0),
     gsSP2Triangles( 6,  7,  8, 0x0,  9, 10, 11, 0x0),
     gsSP1Triangle(12, 13, 14, 0x0),
-    gsSPVertex(dummy_seg7_vertex_024,  15, 0),
+    gsSPVertex(dummy_unused38_vertex_024,  15, 0),
     gsSP2Triangles( 0,  1,  2, 0x0,  3,  4,  5, 0x0),
     gsSP2Triangles( 6,  7,  8, 0x0,  9, 10, 11, 0x0),
     gsSP1Triangle(12, 13, 14, 0x0),
-    gsSPVertex(dummy_seg7_vertex_025,  15, 0),
+    gsSPVertex(dummy_unused38_vertex_025,  15, 0),
     gsSP2Triangles( 0,  1,  2, 0x0,  3,  4,  5, 0x0),
     gsSP2Triangles( 6,  7,  8, 0x0,  9, 10, 11, 0x0),
     gsSP1Triangle(12, 13, 14, 0x0),
-    gsSPVertex(dummy_seg7_vertex_026,  15, 0),
+    gsSPVertex(dummy_unused38_vertex_026,  15, 0),
     gsSP2Triangles( 0,  1,  2, 0x0,  3,  4,  5, 0x0),
     gsSP2Triangles( 6,  7,  8, 0x0,  9, 10, 11, 0x0),
     gsSP1Triangle(12, 13, 14, 0x0),
-    gsSPVertex(dummy_seg7_vertex_027,  15, 0),
+    gsSPVertex(dummy_unused38_vertex_027,  15, 0),
     gsSP2Triangles( 0,  1,  2, 0x0,  3,  4,  5, 0x0),
     gsSP2Triangles( 6,  7,  8, 0x0,  9, 10, 11, 0x0),
     gsSP1Triangle(12, 13, 14, 0x0),
-    gsSPVertex(dummy_seg7_vertex_028,  15, 0),
+    gsSPVertex(dummy_unused38_vertex_028,  15, 0),
     gsSP2Triangles( 0,  1,  2, 0x0,  3,  4,  5, 0x0),
     gsSP2Triangles( 6,  7,  8, 0x0,  9, 10, 11, 0x0),
     gsSP1Triangle(12, 13, 14, 0x0),
-    gsSPVertex(dummy_seg7_vertex_029,  15, 0),
+    gsSPVertex(dummy_unused38_vertex_029,  15, 0),
     gsSP2Triangles( 0,  1,  2, 0x0,  3,  4,  5, 0x0),
     gsSP2Triangles( 6,  7,  8, 0x0,  9, 10, 11, 0x0),
     gsSP1Triangle(12, 13, 14, 0x0),
-    gsSPVertex(dummy_seg7_vertex_030,  15, 0),
+    gsSPVertex(dummy_unused38_vertex_030,  15, 0),
     gsSP2Triangles( 0,  1,  2, 0x0,  3,  4,  5, 0x0),
     gsSP2Triangles( 6,  7,  8, 0x0,  9, 10, 11, 0x0),
     gsSP1Triangle(12, 13, 14, 0x0),
-    gsSPVertex(dummy_seg7_vertex_031,  15, 0),
+    gsSPVertex(dummy_unused38_vertex_031,  15, 0),
     gsSP2Triangles( 0,  1,  2, 0x0,  3,  4,  5, 0x0),
     gsSP2Triangles( 6,  7,  8, 0x0,  9, 10, 11, 0x0),
     gsSP1Triangle(12, 13, 14, 0x0),
-    gsSPVertex(dummy_seg7_vertex_032,  15, 0),
+    gsSPVertex(dummy_unused38_vertex_032,  15, 0),
     gsSP2Triangles( 0,  1,  2, 0x0,  3,  4,  5, 0x0),
     gsSP2Triangles( 6,  7,  8, 0x0,  9, 10, 11, 0x0),
     gsSP1Triangle(12, 13, 14, 0x0),
-    gsSPVertex(dummy_seg7_vertex_033,  15, 0),
+    gsSPVertex(dummy_unused38_vertex_033,  15, 0),
     gsSP2Triangles( 0,  1,  2, 0x0,  3,  4,  5, 0x0),
     gsSP2Triangles( 6,  7,  8, 0x0,  9, 10, 11, 0x0),
     gsSP1Triangle(12, 13, 14, 0x0),
-    gsSPVertex(dummy_seg7_vertex_034,  15, 0),
+    gsSPVertex(dummy_unused38_vertex_034,  15, 0),
     gsSP2Triangles( 0,  1,  2, 0x0,  3,  4,  5, 0x0),
     gsSP2Triangles( 6,  7,  8, 0x0,  9, 10, 11, 0x0),
     gsSP1Triangle(12, 13, 14, 0x0),
-    gsSPVertex(dummy_seg7_vertex_035,  15, 0),
+    gsSPVertex(dummy_unused38_vertex_035,  15, 0),
     gsSP2Triangles( 0,  1,  2, 0x0,  3,  4,  5, 0x0),
     gsSP2Triangles( 6,  7,  8, 0x0,  9, 10, 11, 0x0),
     gsSP1Triangle(12, 13, 14, 0x0),
-    gsSPVertex(dummy_seg7_vertex_036,  15, 0),
+    gsSPVertex(dummy_unused38_vertex_036,  15, 0),
     gsSP2Triangles( 0,  1,  2, 0x0,  3,  4,  5, 0x0),
     gsSP2Triangles( 6,  7,  8, 0x0,  9, 10, 11, 0x0),
     gsSP1Triangle(12, 13, 14, 0x0),
-    gsSPVertex(dummy_seg7_vertex_037,  15, 0),
+    gsSPVertex(dummy_unused38_vertex_037,  15, 0),
     gsSP2Triangles( 0,  1,  2, 0x0,  3,  4,  5, 0x0),
     gsSP2Triangles( 6,  7,  8, 0x0,  9, 10, 11, 0x0),
     gsSP1Triangle(12, 13, 14, 0x0),
-    gsSPVertex(dummy_seg7_vertex_038,  15, 0),
+    gsSPVertex(dummy_unused38_vertex_038,  15, 0),
     gsSP2Triangles( 0,  1,  2, 0x0,  3,  4,  5, 0x0),
     gsSP2Triangles( 6,  7,  8, 0x0,  9, 10, 11, 0x0),
     gsSP1Triangle(12, 13, 14, 0x0),
-    gsSPVertex(dummy_seg7_vertex_039,  15, 0),
+    gsSPVertex(dummy_unused38_vertex_039,  15, 0),
     gsSP2Triangles( 0,  1,  2, 0x0,  3,  4,  5, 0x0),
     gsSP2Triangles( 6,  7,  8, 0x0,  9, 10, 11, 0x0),
     gsSP1Triangle(12, 13, 14, 0x0),
-    gsSPVertex(dummy_seg7_vertex_040,  15, 0),
+    gsSPVertex(dummy_unused38_vertex_040,  15, 0),
     gsSP2Triangles( 0,  1,  2, 0x0,  3,  4,  5, 0x0),
     gsSP2Triangles( 6,  7,  8, 0x0,  9, 10, 11, 0x0),
     gsSP1Triangle(12, 13, 14, 0x0),
-    gsSPVertex(dummy_seg7_vertex_041,  15, 0),
+    gsSPVertex(dummy_unused38_vertex_041,  15, 0),
     gsSP2Triangles( 0,  1,  2, 0x0,  3,  4,  5, 0x0),
     gsSP2Triangles( 6,  7,  8, 0x0,  9, 10, 11, 0x0),
     gsSP1Triangle(12, 13, 14, 0x0),
-    gsSPVertex(dummy_seg7_vertex_042,  15, 0),
+    gsSPVertex(dummy_unused38_vertex_042,  15, 0),
     gsSP2Triangles( 0,  1,  2, 0x0,  3,  4,  5, 0x0),
     gsSP2Triangles( 6,  7,  8, 0x0,  9, 10, 11, 0x0),
     gsSP1Triangle(12, 13, 14, 0x0),
-    gsSPVertex(dummy_seg7_vertex_043,  15, 0),
+    gsSPVertex(dummy_unused38_vertex_043,  15, 0),
     gsSP2Triangles( 0,  1,  2, 0x0,  3,  4,  5, 0x0),
     gsSP2Triangles( 6,  7,  8, 0x0,  9, 10, 11, 0x0),
     gsSP1Triangle(12, 13, 14, 0x0),
-    gsSPVertex(dummy_seg7_vertex_044,  15, 0),
+    gsSPVertex(dummy_unused38_vertex_044,  15, 0),
     gsSP2Triangles( 0,  1,  2, 0x0,  3,  4,  5, 0x0),
     gsSP2Triangles( 6,  7,  8, 0x0,  9, 10, 11, 0x0),
     gsSP1Triangle(12, 13, 14, 0x0),
-    gsSPVertex(dummy_seg7_vertex_045,  15, 0),
+    gsSPVertex(dummy_unused38_vertex_045,  15, 0),
     gsSP2Triangles( 0,  1,  2, 0x0,  3,  4,  5, 0x0),
     gsSP2Triangles( 6,  7,  8, 0x0,  9, 10, 11, 0x0),
     gsSP1Triangle(12, 13, 14, 0x0),
-    gsSPVertex(dummy_seg7_vertex_046,  15, 0),
+    gsSPVertex(dummy_unused38_vertex_046,  15, 0),
     gsSP2Triangles( 0,  1,  2, 0x0,  3,  4,  5, 0x0),
     gsSP2Triangles( 6,  7,  8, 0x0,  9, 10, 11, 0x0),
     gsSP1Triangle(12, 13, 14, 0x0),
-    gsSPVertex(dummy_seg7_vertex_047,  15, 0),
+    gsSPVertex(dummy_unused38_vertex_047,  15, 0),
     gsSP2Triangles( 0,  1,  2, 0x0,  3,  4,  5, 0x0),
     gsSP2Triangles( 6,  7,  8, 0x0,  9, 10, 11, 0x0),
     gsSP1Triangle(12, 13, 14, 0x0),
-    gsSPVertex(dummy_seg7_vertex_048,  15, 0),
+    gsSPVertex(dummy_unused38_vertex_048,  15, 0),
     gsSP2Triangles( 0,  1,  2, 0x0,  3,  4,  5, 0x0),
     gsSP2Triangles( 6,  7,  8, 0x0,  9, 10, 11, 0x0),
     gsSP1Triangle(12, 13, 14, 0x0),
-    gsSPVertex(dummy_seg7_vertex_049,  15, 0),
+    gsSPVertex(dummy_unused38_vertex_049,  15, 0),
     gsSP2Triangles( 0,  1,  2, 0x0,  3,  4,  5, 0x0),
     gsSP2Triangles( 6,  7,  8, 0x0,  9, 10, 11, 0x0),
     gsSP1Triangle(12, 13, 14, 0x0),
-    gsSPVertex(dummy_seg7_vertex_050,  15, 0),
+    gsSPVertex(dummy_unused38_vertex_050,  15, 0),
     gsSP2Triangles( 0,  1,  2, 0x0,  3,  4,  5, 0x0),
     gsSP2Triangles( 6,  7,  8, 0x0,  9, 10, 11, 0x0),
     gsSP1Triangle(12, 13, 14, 0x0),
-    gsSPVertex(dummy_seg7_vertex_051,  15, 0),
+    gsSPVertex(dummy_unused38_vertex_051,  15, 0),
     gsSP2Triangles( 0,  1,  2, 0x0,  3,  4,  5, 0x0),
     gsSP2Triangles( 6,  7,  8, 0x0,  9, 10, 11, 0x0),
     gsSP1Triangle(12, 13, 14, 0x0),
-    gsSPVertex(dummy_seg7_vertex_052,  15, 0),
+    gsSPVertex(dummy_unused38_vertex_052,  15, 0),
     gsSP2Triangles( 0,  1,  2, 0x0,  3,  4,  5, 0x0),
     gsSP2Triangles( 6,  7,  8, 0x0,  9, 10, 11, 0x0),
     gsSP1Triangle(12, 13, 14, 0x0),
-    gsSPVertex(dummy_seg7_vertex_053,  15, 0),
+    gsSPVertex(dummy_unused38_vertex_053,  15, 0),
     gsSP2Triangles( 0,  1,  2, 0x0,  3,  4,  5, 0x0),
     gsSP2Triangles( 6,  7,  8, 0x0,  9, 10, 11, 0x0),
     gsSP1Triangle(12, 13, 14, 0x0),
-    gsSPVertex(dummy_seg7_vertex_054,  15, 0),
+    gsSPVertex(dummy_unused38_vertex_054,  15, 0),
     gsSP2Triangles( 0,  1,  2, 0x0,  3,  4,  5, 0x0),
     gsSP2Triangles( 6,  7,  8, 0x0,  9, 10, 11, 0x0),
     gsSP1Triangle(12, 13, 14, 0x0),
-    gsSPVertex(dummy_seg7_vertex_055,  15, 0),
+    gsSPVertex(dummy_unused38_vertex_055,  15, 0),
     gsSP2Triangles( 0,  1,  2, 0x0,  3,  4,  5, 0x0),
     gsSP2Triangles( 6,  7,  8, 0x0,  9, 10, 11, 0x0),
     gsSP1Triangle(12, 13, 14, 0x0),
-    gsSPVertex(dummy_seg7_vertex_056,  15, 0),
+    gsSPVertex(dummy_unused38_vertex_056,  15, 0),
     gsSP2Triangles( 0,  1,  2, 0x0,  3,  4,  5, 0x0),
     gsSP2Triangles( 6,  7,  8, 0x0,  9, 10, 11, 0x0),
     gsSP1Triangle(12, 13, 14, 0x0),
-    gsSPVertex(dummy_seg7_vertex_057,  15, 0),
+    gsSPVertex(dummy_unused38_vertex_057,  15, 0),
     gsSP2Triangles( 0,  1,  2, 0x0,  3,  4,  5, 0x0),
     gsSP2Triangles( 6,  7,  8, 0x0,  9, 10, 11, 0x0),
     gsSP1Triangle(12, 13, 14, 0x0),
-    gsSPVertex(dummy_seg7_vertex_058,  15, 0),
+    gsSPVertex(dummy_unused38_vertex_058,  15, 0),
     gsSP2Triangles( 0,  1,  2, 0x0,  3,  4,  5, 0x0),
     gsSP2Triangles( 6,  7,  8, 0x0,  9, 10, 11, 0x0),
     gsSP1Triangle(12, 13, 14, 0x0),
-    gsSPVertex(dummy_seg7_vertex_059,  15, 0),
+    gsSPVertex(dummy_unused38_vertex_059,  15, 0),
     gsSP2Triangles( 0,  1,  2, 0x0,  3,  4,  5, 0x0),
     gsSP2Triangles( 6,  7,  8, 0x0,  9, 10, 11, 0x0),
     gsSP1Triangle(12, 13, 14, 0x0),
-    gsSPVertex(dummy_seg7_vertex_060,  15, 0),
+    gsSPVertex(dummy_unused38_vertex_060,  15, 0),
     gsSP2Triangles( 0,  1,  2, 0x0,  3,  4,  5, 0x0),
     gsSP2Triangles( 6,  7,  8, 0x0,  9, 10, 11, 0x0),
     gsSP1Triangle(12, 13, 14, 0x0),
-    gsSPVertex(dummy_seg7_vertex_061,  15, 0),
+    gsSPVertex(dummy_unused38_vertex_061,  15, 0),
     gsSP2Triangles( 0,  1,  2, 0x0,  3,  4,  5, 0x0),
     gsSP2Triangles( 6,  7,  8, 0x0,  9, 10, 11, 0x0),
     gsSP1Triangle(12, 13, 14, 0x0),
-    gsSPVertex(dummy_seg7_vertex_062,  15, 0),
+    gsSPVertex(dummy_unused38_vertex_062,  15, 0),
     gsSP2Triangles( 0,  1,  2, 0x0,  3,  4,  5, 0x0),
     gsSP2Triangles( 6,  7,  8, 0x0,  9, 10, 11, 0x0),
     gsSP1Triangle(12, 13, 14, 0x0),
-    gsSPVertex(dummy_seg7_vertex_063,  15, 0),
+    gsSPVertex(dummy_unused38_vertex_063,  15, 0),
     gsSP2Triangles( 0,  1,  2, 0x0,  3,  4,  5, 0x0),
     gsSP2Triangles( 6,  7,  8, 0x0,  9, 10, 11, 0x0),
     gsSP1Triangle(12, 13, 14, 0x0),
-    gsSPVertex(dummy_seg7_vertex_064,  15, 0),
+    gsSPVertex(dummy_unused38_vertex_064,  15, 0),
     gsSP2Triangles( 0,  1,  2, 0x0,  3,  4,  5, 0x0),
     gsSP2Triangles( 6,  7,  8, 0x0,  9, 10, 11, 0x0),
     gsSP1Triangle(12, 13, 14, 0x0),
-    gsSPVertex(dummy_seg7_vertex_065,  15, 0),
+    gsSPVertex(dummy_unused38_vertex_065,  15, 0),
     gsSP2Triangles( 0,  1,  2, 0x0,  3,  4,  5, 0x0),
     gsSP2Triangles( 6,  7,  8, 0x0,  9, 10, 11, 0x0),
     gsSP1Triangle(12, 13, 14, 0x0),
-    gsSPVertex(dummy_seg7_vertex_066,  15, 0),
+    gsSPVertex(dummy_unused38_vertex_066,  15, 0),
     gsSP2Triangles( 0,  1,  2, 0x0,  3,  4,  5, 0x0),
     gsSP2Triangles( 6,  7,  8, 0x0,  9, 10, 11, 0x0),
     gsSP1Triangle(12, 13, 14, 0x0),
-    gsSPVertex(dummy_seg7_vertex_067,  15, 0),
+    gsSPVertex(dummy_unused38_vertex_067,  15, 0),
     gsSP2Triangles( 0,  1,  2, 0x0,  3,  4,  5, 0x0),
     gsSP2Triangles( 6,  7,  8, 0x0,  9, 10, 11, 0x0),
     gsSP1Triangle(12, 13, 14, 0x0),
-    gsSPVertex(dummy_seg7_vertex_068,  15, 0),
+    gsSPVertex(dummy_unused38_vertex_068,  15, 0),
     gsSP2Triangles( 0,  1,  2, 0x0,  3,  4,  5, 0x0),
     gsSP2Triangles( 6,  7,  8, 0x0,  9, 10, 11, 0x0),
     gsSP1Triangle(12, 13, 14, 0x0),
-    gsSPVertex(dummy_seg7_vertex_069,  15, 0),
+    gsSPVertex(dummy_unused38_vertex_069,  15, 0),
     gsSP2Triangles( 0,  1,  2, 0x0,  3,  4,  5, 0x0),
     gsSP2Triangles( 6,  7,  8, 0x0,  9, 10, 11, 0x0),
     gsSP1Triangle(12, 13, 14, 0x0),
-    gsSPVertex(dummy_seg7_vertex_070,  15, 0),
+    gsSPVertex(dummy_unused38_vertex_070,  15, 0),
     gsSP2Triangles( 0,  1,  2, 0x0,  3,  4,  5, 0x0),
     gsSP2Triangles( 6,  7,  8, 0x0,  9, 10, 11, 0x0),
     gsSP1Triangle(12, 13, 14, 0x0),
-    gsSPVertex(dummy_seg7_vertex_071,  15, 0),
+    gsSPVertex(dummy_unused38_vertex_071,  15, 0),
     gsSP2Triangles( 0,  1,  2, 0x0,  3,  4,  5, 0x0),
     gsSP2Triangles( 6,  7,  8, 0x0,  9, 10, 11, 0x0),
     gsSP1Triangle(12, 13, 14, 0x0),
-    gsSPVertex(dummy_seg7_vertex_072,  15, 0),
+    gsSPVertex(dummy_unused38_vertex_072,  15, 0),
     gsSP2Triangles( 0,  1,  2, 0x0,  3,  4,  5, 0x0),
     gsSP2Triangles( 6,  7,  8, 0x0,  9, 10, 11, 0x0),
     gsSP1Triangle(12, 13, 14, 0x0),
-    gsSPVertex(dummy_seg7_vertex_073,  15, 0),
+    gsSPVertex(dummy_unused38_vertex_073,  15, 0),
     gsSP2Triangles( 0,  1,  2, 0x0,  3,  4,  5, 0x0),
     gsSP2Triangles( 6,  7,  8, 0x0,  9, 10, 11, 0x0),
     gsSP1Triangle(12, 13, 14, 0x0),
-    gsSPVertex(dummy_seg7_vertex_074,  15, 0),
+    gsSPVertex(dummy_unused38_vertex_074,  15, 0),
     gsSP2Triangles( 0,  1,  2, 0x0,  3,  4,  5, 0x0),
     gsSP2Triangles( 6,  7,  8, 0x0,  9, 10, 11, 0x0),
     gsSP1Triangle(12, 13, 14, 0x0),
-    gsSPVertex(dummy_seg7_vertex_075,  15, 0),
+    gsSPVertex(dummy_unused38_vertex_075,  15, 0),
     gsSP2Triangles( 0,  1,  2, 0x0,  3,  4,  5, 0x0),
     gsSP2Triangles( 6,  7,  8, 0x0,  9, 10, 11, 0x0),
     gsSP1Triangle(12, 13, 14, 0x0),
-    gsSPVertex(dummy_seg7_vertex_076,  15, 0),
+    gsSPVertex(dummy_unused38_vertex_076,  15, 0),
     gsSP2Triangles( 0,  1,  2, 0x0,  3,  4,  5, 0x0),
     gsSP2Triangles( 6,  7,  8, 0x0,  9, 10, 11, 0x0),
     gsSP1Triangle(12, 13, 14, 0x0),
-    gsSPVertex(dummy_seg7_vertex_077,  15, 0),
+    gsSPVertex(dummy_unused38_vertex_077,  15, 0),
     gsSP2Triangles( 0,  1,  2, 0x0,  3,  4,  5, 0x0),
     gsSP2Triangles( 6,  7,  8, 0x0,  9, 10, 11, 0x0),
     gsSP1Triangle(12, 13, 14, 0x0),
-    gsSPVertex(dummy_seg7_vertex_078,  15, 0),
+    gsSPVertex(dummy_unused38_vertex_078,  15, 0),
     gsSP2Triangles( 0,  1,  2, 0x0,  3,  4,  5, 0x0),
     gsSP2Triangles( 6,  7,  8, 0x0,  9, 10, 11, 0x0),
     gsSP1Triangle(12, 13, 14, 0x0),
-    gsSPVertex(dummy_seg7_vertex_079,  15, 0),
+    gsSPVertex(dummy_unused38_vertex_079,  15, 0),
     gsSP2Triangles( 0,  1,  2, 0x0,  3,  4,  5, 0x0),
     gsSP2Triangles( 6,  7,  8, 0x0,  9, 10, 11, 0x0),
     gsSP1Triangle(12, 13, 14, 0x0),
-    gsSPVertex(dummy_seg7_vertex_080,  15, 0),
+    gsSPVertex(dummy_unused38_vertex_080,  15, 0),
     gsSP2Triangles( 0,  1,  2, 0x0,  3,  4,  5, 0x0),
     gsSP2Triangles( 6,  7,  8, 0x0,  9, 10, 11, 0x0),
     gsSP1Triangle(12, 13, 14, 0x0),
-    gsSPVertex(dummy_seg7_vertex_081,  15, 0),
+    gsSPVertex(dummy_unused38_vertex_081,  15, 0),
     gsSP2Triangles( 0,  1,  2, 0x0,  3,  4,  5, 0x0),
     gsSP2Triangles( 6,  7,  8, 0x0,  9, 10, 11, 0x0),
     gsSP1Triangle(12, 13, 14, 0x0),
-    gsSPVertex(dummy_seg7_vertex_082,  15, 0),
+    gsSPVertex(dummy_unused38_vertex_082,  15, 0),
     gsSP2Triangles( 0,  1,  2, 0x0,  3,  4,  5, 0x0),
     gsSP2Triangles( 6,  7,  8, 0x0,  9, 10, 11, 0x0),
     gsSP1Triangle(12, 13, 14, 0x0),
-    gsSPVertex(dummy_seg7_vertex_083,  15, 0),
+    gsSPVertex(dummy_unused38_vertex_083,  15, 0),
     gsSP2Triangles( 0,  1,  2, 0x0,  3,  4,  5, 0x0),
     gsSP2Triangles( 6,  7,  8, 0x0,  9, 10, 11, 0x0),
     gsSP1Triangle(12, 13, 14, 0x0),
-    gsSPVertex(dummy_seg7_vertex_084,  15, 0),
+    gsSPVertex(dummy_unused38_vertex_084,  15, 0),
     gsSP2Triangles( 0,  1,  2, 0x0,  3,  4,  5, 0x0),
     gsSP2Triangles( 6,  7,  8, 0x0,  9, 10, 11, 0x0),
     gsSP1Triangle(12, 13, 14, 0x0),
-    gsSPVertex(dummy_seg7_vertex_085,  15, 0),
+    gsSPVertex(dummy_unused38_vertex_085,  15, 0),
     gsSP2Triangles( 0,  1,  2, 0x0,  3,  4,  5, 0x0),
     gsSP2Triangles( 6,  7,  8, 0x0,  9, 10, 11, 0x0),
     gsSP1Triangle(12, 13, 14, 0x0),
-    gsSPVertex(dummy_seg7_vertex_086,  15, 0),
+    gsSPVertex(dummy_unused38_vertex_086,  15, 0),
     gsSP2Triangles( 0,  1,  2, 0x0,  3,  4,  5, 0x0),
     gsSP2Triangles( 6,  7,  8, 0x0,  9, 10, 11, 0x0),
     gsSP1Triangle(12, 13, 14, 0x0),
-    gsSPVertex(dummy_seg7_vertex_087,  15, 0),
+    gsSPVertex(dummy_unused38_vertex_087,  15, 0),
     gsSP2Triangles( 0,  1,  2, 0x0,  3,  4,  5, 0x0),
     gsSP2Triangles( 6,  7,  8, 0x0,  9, 10, 11, 0x0),
     gsSP1Triangle(12, 13, 14, 0x0),
-    gsSPVertex(dummy_seg7_vertex_088,  15, 0),
+    gsSPVertex(dummy_unused38_vertex_088,  15, 0),
     gsSP2Triangles( 0,  1,  2, 0x0,  3,  4,  5, 0x0),
     gsSP2Triangles( 6,  7,  8, 0x0,  9, 10, 11, 0x0),
     gsSP1Triangle(12, 13, 14, 0x0),
-    gsSPVertex(dummy_seg7_vertex_089,  15, 0),
+    gsSPVertex(dummy_unused38_vertex_089,  15, 0),
     gsSP2Triangles( 0,  1,  2, 0x0,  3,  4,  5, 0x0),
     gsSP2Triangles( 6,  7,  8, 0x0,  9, 10, 11, 0x0),
     gsSP1Triangle(12, 13, 14, 0x0),
-    gsSPVertex(dummy_seg7_vertex_090,  15, 0),
+    gsSPVertex(dummy_unused38_vertex_090,  15, 0),
     gsSP2Triangles( 0,  1,  2, 0x0,  3,  4,  5, 0x0),
     gsSP2Triangles( 6,  7,  8, 0x0,  9, 10, 11, 0x0),
     gsSP1Triangle(12, 13, 14, 0x0),
-    gsSPVertex(dummy_seg7_vertex_091,  15, 0),
+    gsSPVertex(dummy_unused38_vertex_091,  15, 0),
     gsSP2Triangles( 0,  1,  2, 0x0,  3,  4,  5, 0x0),
     gsSP2Triangles( 6,  7,  8, 0x0,  9, 10, 11, 0x0),
     gsSP1Triangle(12, 13, 14, 0x0),
-    gsSPVertex(dummy_seg7_vertex_092,  15, 0),
+    gsSPVertex(dummy_unused38_vertex_092,  15, 0),
     gsSP2Triangles( 0,  1,  2, 0x0,  3,  4,  5, 0x0),
     gsSP2Triangles( 6,  7,  8, 0x0,  9, 10, 11, 0x0),
     gsSP1Triangle(12, 13, 14, 0x0),
-    gsSPVertex(dummy_seg7_vertex_093,  15, 0),
+    gsSPVertex(dummy_unused38_vertex_093,  15, 0),
     gsSP2Triangles( 0,  1,  2, 0x0,  3,  4,  5, 0x0),
     gsSP2Triangles( 6,  7,  8, 0x0,  9, 10, 11, 0x0),
     gsSP1Triangle(12, 13, 14, 0x0),
-    gsSPVertex(dummy_seg7_vertex_094,  15, 0),
+    gsSPVertex(dummy_unused38_vertex_094,  15, 0),
     gsSP2Triangles( 0,  1,  2, 0x0,  3,  4,  5, 0x0),
     gsSP2Triangles( 6,  7,  8, 0x0,  9, 10, 11, 0x0),
     gsSP1Triangle(12, 13, 14, 0x0),
-    gsSPVertex(dummy_seg7_vertex_095,  15, 0),
+    gsSPVertex(dummy_unused38_vertex_095,  15, 0),
     gsSP2Triangles( 0,  1,  2, 0x0,  3,  4,  5, 0x0),
     gsSP2Triangles( 6,  7,  8, 0x0,  9, 10, 11, 0x0),
     gsSP1Triangle(12, 13, 14, 0x0),
-    gsSPVertex(dummy_seg7_vertex_096,  15, 0),
+    gsSPVertex(dummy_unused38_vertex_096,  15, 0),
     gsSP2Triangles( 0,  1,  2, 0x0,  3,  4,  5, 0x0),
     gsSP2Triangles( 6,  7,  8, 0x0,  9, 10, 11, 0x0),
     gsSP1Triangle(12, 13, 14, 0x0),
-    gsSPVertex(dummy_seg7_vertex_097,  15, 0),
+    gsSPVertex(dummy_unused38_vertex_097,  15, 0),
     gsSP2Triangles( 0,  1,  2, 0x0,  3,  4,  5, 0x0),
     gsSP2Triangles( 6,  7,  8, 0x0,  9, 10, 11, 0x0),
     gsSP1Triangle(12, 13, 14, 0x0),
-    gsSPVertex(dummy_seg7_vertex_098,  15, 0),
+    gsSPVertex(dummy_unused38_vertex_098,  15, 0),
     gsSP2Triangles( 0,  1,  2, 0x0,  3,  4,  5, 0x0),
     gsSP2Triangles( 6,  7,  8, 0x0,  9, 10, 11, 0x0),
     gsSP1Triangle(12, 13, 14, 0x0),
-    gsSPVertex(dummy_seg7_vertex_099,  15, 0),
+    gsSPVertex(dummy_unused38_vertex_099,  15, 0),
     gsSP2Triangles( 0,  1,  2, 0x0,  3,  4,  5, 0x0),
     gsSP2Triangles( 6,  7,  8, 0x0,  9, 10, 11, 0x0),
     gsSP1Triangle(12, 13, 14, 0x0),
-    gsSPVertex(dummy_seg7_vertex_100,  15, 0),
+    gsSPVertex(dummy_unused38_vertex_100,  15, 0),
     gsSP2Triangles( 0,  1,  2, 0x0,  3,  4,  5, 0x0),
     gsSP2Triangles( 6,  7,  8, 0x0,  9, 10, 11, 0x0),
     gsSP1Triangle(12, 13, 14, 0x0),
-    gsSPVertex(dummy_seg7_vertex_101,  15, 0),
+    gsSPVertex(dummy_unused38_vertex_101,  15, 0),
     gsSP2Triangles( 0,  1,  2, 0x0,  3,  4,  5, 0x0),
     gsSP2Triangles( 6,  7,  8, 0x0,  9, 10, 11, 0x0),
     gsSP1Triangle(12, 13, 14, 0x0),
-    gsSPVertex(dummy_seg7_vertex_102,  6, 0),
+    gsSPVertex(dummy_unused38_vertex_102,  6, 0),
     gsSP2Triangles( 0,  1,  2, 0x0,  3,  4,  5, 0x0),
     gsSPSetGeometryMode(G_LIGHTING),
     gsSPEndDisplayList(),

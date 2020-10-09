@@ -23,7 +23,7 @@ A prior copy of the game is required to extract the assets.
 - [ ] 32nd
 - [x] 35th (dummy)
 - [ ] 37th
-- [ ] 38th
+- [x] 38th (sand_test)
 
 ## Quick Start (for Ubuntu)
 

@@ -54,4 +54,4 @@ DEFINE_LEVEL("KUPPA3",         LEVEL_BOWSER_3,         COURSE_BITS,     bowser_3
 DEFINE_LEVEL("DUMMYTEST",      LEVEL_UNKNOWN_35,       COURSE_NONE,     dummy,            generic,  20000,    0x00, 0x00, 0x00, _,         _)
 DEFINE_LEVEL("DONKEY % SLID2", LEVEL_TTM,              COURSE_TTM,      ttm,              mountain, 15000,    0x08, 0x08, 0x08, _,         _)
 STUB_LEVEL(  "",               LEVEL_UNKNOWN_37,       COURSE_NONE,                                 20000,    0x00, 0x00, 0x00, _,         _)
-STUB_LEVEL(  "",               LEVEL_UNKNOWN_38,       COURSE_NONE,                                 20000,    0x00, 0x00, 0x00, sDynUnk38, _)
+DEFINE_LEVEL("SAND % MIRROR",  LEVEL_UNKNOWN_38,       COURSE_NONE,     sand_test,        generic,  20000,    0x00, 0x00, 0x00, sDynUnk38, _)
