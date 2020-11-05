@@ -1,35 +1,35 @@
-ALIGNED8 static const u8 betacastle_seg7_texture_0[] = {
-#include "levels/betacastle/0.rgba16.inc.c"
+ALIGNED8 static const u8 betacastle_rock1_texture[] = {
+#include "levels/betacastle/rock1.rgba16.inc.c"
 };
 
-ALIGNED8 static const u8 betacastle_seg7_texture_1[] = {
-#include "levels/betacastle/1.rgba16.inc.c"
+ALIGNED8 static const u8 betacastle_rock3_texture[] = {
+#include "levels/betacastle/rock3.rgba16.inc.c"
 };
 
-ALIGNED8 static const u8 betacastle_seg7_texture_2[] = {
-#include "levels/betacastle/2.rgba16.inc.c"
+ALIGNED8 static const u8 betacastle_wall1_texture[] = {
+#include "levels/betacastle/wall1.rgba16.inc.c"
 };
 
-ALIGNED8 static const u8 betacastle_seg7_texture_3[] = {
-#include "levels/betacastle/3.rgba16.inc.c"
+ALIGNED8 static const u8 betacastle_wall2_texture[] = {
+#include "levels/betacastle/wall2.rgba16.inc.c"
 };
 
-ALIGNED8 static const u8 betacastle_seg7_texture_4[] = {
-#include "levels/betacastle/4.rgba16.inc.c"
+ALIGNED8 static const u8 betacastle_wall3_texture[] = {
+#include "levels/betacastle/wall3.rgba16.inc.c"
 };
 
-ALIGNED8 static const u8 betacastle_seg7_texture_5[] = {
-#include "levels/betacastle/5.rgba16.inc.c"
+ALIGNED8 static const u8 betacastle_map2_texture[] = {
+#include "levels/betacastle/map2.rgba16.inc.c"
 };
 
-ALIGNED8 static const u8 betacastle_seg7_texture_6[] = {
-#include "levels/betacastle/6.rgba16.inc.c"
+ALIGNED8 static const u8 betacastle_map8_texture[] = {
+#include "levels/betacastle/map8.rgba16.inc.c"
 };
 
-ALIGNED8 static const u8 betacastle_seg7_texture_7[] = {
-#include "levels/betacastle/7.rgba16.inc.c"
+ALIGNED8 static const u8 betacastle_METAL1_texture[] = {
+#include "levels/betacastle/METAL1.rgba16.inc.c"
 };
 
-ALIGNED8 static const u8 betacastle_seg7_texture_8[] = {
-#include "levels/betacastle/8.rgba16.inc.c"
+ALIGNED8 static const u8 betacastle_slope2_texture[] = {
+#include "levels/betacastle/slope2.rgba16.inc.c"
 };

@@ -1155,7 +1155,7 @@ static const Vtx slopes_vertex_070[] = {
 };
 
 static const Gfx slopes_seg7_dl_part0[] = {
-    gsDPSetTextureImage(G_IM_FMT_RGBA, G_IM_SIZ_16b, 1, slopes_seg7_texture_6),
+    gsDPSetTextureImage(G_IM_FMT_RGBA, G_IM_SIZ_16b, 1, slopes_cloud_wallE_texture),
     gsDPLoadSync(),
     gsDPLoadBlock(G_TX_LOADTILE, 0, 0, 32 * 32 - 1, CALC_DXT(32, G_IM_SIZ_16b_BYTES)),
     gsSPLight(&slopes_seg7_lights_0.l, 1),
@@ -1203,7 +1203,7 @@ static const Gfx slopes_seg7_dl_part0[] = {
 };
 
 static const Gfx slopes_seg7_dl_part1[] = {
-    gsDPSetTextureImage(G_IM_FMT_RGBA, G_IM_SIZ_16b, 1, slopes_seg7_texture_7),
+    gsDPSetTextureImage(G_IM_FMT_RGBA, G_IM_SIZ_16b, 1, slopes_cloud_wllA_texture),
     gsDPLoadSync(),
     gsDPLoadBlock(G_TX_LOADTILE, 0, 0, 32 * 32 - 1, CALC_DXT(32, G_IM_SIZ_16b_BYTES)),
     gsSPLight(&slopes_seg7_lights_0.l, 1),
@@ -1324,7 +1324,7 @@ static const Gfx slopes_seg7_dl_part1[] = {
 };
 
 static const Gfx slopes_seg7_dl_part2[] = {
-    gsDPSetTextureImage(G_IM_FMT_RGBA, G_IM_SIZ_16b, 1, slopes_seg7_texture_0),
+    gsDPSetTextureImage(G_IM_FMT_RGBA, G_IM_SIZ_16b, 1, slopes_cloud_blockA_texture),
     gsDPLoadSync(),
     gsDPLoadBlock(G_TX_LOADTILE, 0, 0, 32 * 32 - 1, CALC_DXT(32, G_IM_SIZ_16b_BYTES)),
     gsSPVertex(slopes_vertex_030, 15, 0),
@@ -1386,7 +1386,7 @@ static const Gfx slopes_seg7_dl_part2[] = {
 };
 
 static const Gfx slopes_seg7_dl_part3[] = {
-    gsDPSetTextureImage(G_IM_FMT_RGBA, G_IM_SIZ_16b, 1, slopes_seg7_texture_5),
+    gsDPSetTextureImage(G_IM_FMT_RGBA, G_IM_SIZ_16b, 1, slopes_cloud_wallD_texture),
     gsDPLoadSync(),
     gsDPLoadBlock(G_TX_LOADTILE, 0, 0, 32 * 32 - 1, CALC_DXT(32, G_IM_SIZ_16b_BYTES)),
     gsSPVertex(slopes_vertex_042, 16, 0),
@@ -1422,7 +1422,7 @@ static const Gfx slopes_seg7_dl_part3[] = {
 };
 
 static const Gfx slopes_seg7_dl_part4[] = {
-    gsDPSetTextureImage(G_IM_FMT_RGBA, G_IM_SIZ_16b, 1, slopes_seg7_texture_1),
+    gsDPSetTextureImage(G_IM_FMT_RGBA, G_IM_SIZ_16b, 1, slopes_cloud_blockB_texture),
     gsDPLoadSync(),
     gsDPLoadBlock(G_TX_LOADTILE, 0, 0, 32 * 64 - 1, CALC_DXT(32, G_IM_SIZ_16b_BYTES)),
     gsSPVertex(slopes_vertex_047, 16, 0),
@@ -1434,7 +1434,7 @@ static const Gfx slopes_seg7_dl_part4[] = {
 };
 
 static const Gfx slopes_seg7_dl_part5[] = {
-    gsDPSetTextureImage(G_IM_FMT_RGBA, G_IM_SIZ_16b, 1, slopes_seg7_texture_2),
+    gsDPSetTextureImage(G_IM_FMT_RGBA, G_IM_SIZ_16b, 1, slopes_cloud_blockC_texture),
     gsDPLoadSync(),
     gsDPLoadBlock(G_TX_LOADTILE, 0, 0, 32 * 64 - 1, CALC_DXT(32, G_IM_SIZ_16b_BYTES)),
     gsSPVertex(slopes_vertex_048, 15, 0),
@@ -1455,7 +1455,7 @@ static const Gfx slopes_seg7_dl_part5[] = {
 };
 
 static const Gfx slopes_seg7_dl_part6[] = {
-    gsDPSetTextureImage(G_IM_FMT_RGBA, G_IM_SIZ_16b, 1, slopes_seg7_texture_3),
+    gsDPSetTextureImage(G_IM_FMT_RGBA, G_IM_SIZ_16b, 1, slopes_cloud_tile_texture),
     gsDPLoadSync(),
     gsDPLoadBlock(G_TX_LOADTILE, 0, 0, 32 * 64 - 1, CALC_DXT(32, G_IM_SIZ_16b_BYTES)),
     gsSPVertex(slopes_vertex_051, 12, 0),
@@ -1466,7 +1466,7 @@ static const Gfx slopes_seg7_dl_part6[] = {
 };
 
 static const Gfx slopes_seg7_dl_part7[] = {
-    gsDPSetTextureImage(G_IM_FMT_RGBA, G_IM_SIZ_16b, 1, slopes_seg7_texture_4),
+    gsDPSetTextureImage(G_IM_FMT_RGBA, G_IM_SIZ_16b, 1, slopes_cloud_wallB_texture),
     gsDPLoadSync(),
     gsDPLoadBlock(G_TX_LOADTILE, 0, 0, 32 * 64 - 1, CALC_DXT(32, G_IM_SIZ_16b_BYTES)),
     gsSPVertex(slopes_vertex_052, 15, 0),
