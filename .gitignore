@@ -70,3 +70,10 @@ build/*
 !/sound/**/*custom*/**/*.aiff
 !/assets/**/*custom*.bin
 !/assets/**/*custom*/**/*.bin
+
+# removed (don't call them "beta") levels
+!/levels/betacastle/*.png
+!/levels/slopes/*.png
+!/levels/funhouse/*.png
+#!/levels/dummy/*.png
+#!/levels/sand_test/*.png

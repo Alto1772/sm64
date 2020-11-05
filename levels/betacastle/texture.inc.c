@@ -1,10 +1,3 @@
-// you will need the map's textures in order to compile this
-// because i dont wanna do something illegal,
-// also they arent found in the rom, obtain it from somewhere else.
-
-// i dont say the texture names,
-// but the order is the same as the texture.h file.
-
 ALIGNED8 static const u8 betacastle_seg7_texture_0[] = {
 #include "levels/betacastle/0.rgba16.inc.c"
 };
