@@ -14,7 +14,7 @@ const GeoLayout geo_dummy[] = {
             GEO_OPEN_NODE(),
                 GEO_CAMERA(1, 0, 2000, 6000, 0,0,0, geo_camera_main),
                 GEO_OPEN_NODE(),
-                    //GEO_DISPLAY_LIST(LAYER_OPAQUE, dummy_seg7_dl),
+                    GEO_DISPLAY_LIST(LAYER_OPAQUE, dummy_seg7_dl),
                     GEO_RENDER_OBJ(),
                     GEO_ASM(0,geo_envfx_main),
                     GEO_CLOSE_NODE(),
