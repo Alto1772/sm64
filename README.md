@@ -19,6 +19,8 @@ A prior copy of the game is required to extract the assets.
 - [ ] 37th
 - [x] 38th (sand_test)
 
+*This is still unfinished because the 32nd and 37th levels are just object test maps and some of the objects it contains are missing.*
+
 ## Quick Start (for Ubuntu)
 
 1. Install prerequisites: `sudo apt install -y build-essential git binutils-mips-linux-gnu python3`
@@ -38,7 +40,7 @@ We recommend either Debian or Ubuntu 18.04 Linux distributions under WSL.
 Note: WSL1 does not currently support Ubuntu 20.04.
 
 Next, clone the SM64 repo from within the Linux shell:
-`git clone https://github.com/n64decomp/sm64.git`
+`git clone https://github.com/Alto1772/sm64.git -b newlevels`
 
 Then continue following the directions in the [Linux](#linux) installation section below.
 
