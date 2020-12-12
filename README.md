@@ -1,13 +1,10 @@
 # Super Mario 64
 
-- This repo contains a full decompilation of Super Mario 64 (J), (U), (E), and (SH).
+- This repo contains a full decompilation of Super Mario 64 ~~(J), (U), (E), and~~ (SH).
 - Naming and documentation of the source code and data structures are in progress.
 
 It builds the following ROMs:
 
-* sm64.jp.z64 `sha1: 8a20a5c83d6ceb0f0506cfc9fa20d8f438cafe51`
-* sm64.us.z64 `sha1: 9bef1128717f958171a4afac3ed78ee2bb4e86ce`
-* sm64.eu.z64 `sha1: 4ac5721683d0e0b6bbb561b58a71740845dceea9`
 * sm64.sh.z64 `sha1: 3f319ae697533a255a1003d09202379d78d5a2e0`
 
 This repo does not include all assets necessary for compiling the ROMs.
@@ -32,9 +29,11 @@ We recommend either Debian or Ubuntu 18.04 Linux distributions under WSL.
 Note: WSL1 does not currently support Ubuntu 20.04.
 
 Next, clone the SM64 repo from within the Linux shell:
-`git clone https://github.com/n64decomp/sm64.git`
+`git clone https://github.com/Alto1772/sm64.git`
 
 Then continue following the directions in the [Linux](#linux) installation section below.
+
+_NOTE: also works on MSYS2 but needs some tweaks to work it right._
 
 ### Linux
 
@@ -166,7 +165,7 @@ Resulting artifacts can be found in the `build` directory.
 	├── build: output directory
 	├── data: behavior scripts, misc. data
 	├── doxygen: documentation infrastructure
-	├── enhancements: example source modifications
+	├── enhancements: example source modifications (might not work on this fork.)
 	├── include: header files
 	├── levels: level scripts, geo layout, and display lists
 	├── lib: SDK library code
@@ -189,5 +188,3 @@ Pull requests are welcome. For major changes, please open an issue first to
 discuss what you would like to change.
 
 Run `clang-format` on your code to ensure it meets the project's coding standards.
-
-Official Discord: [discord.gg/DuYH3Fh](https://discord.gg/DuYH3Fh)
