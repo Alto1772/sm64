@@ -115,19 +115,6 @@ s32 set_pole_position(struct MarioState *m, f32 offsetY) {
 s32 act_holding_pole(struct MarioState *m) {
     struct Object *marioObj = m->marioObj;
 
-#ifdef VERSION_JP
-    if (m->input & INPUT_A_PRESSED) {
-        add_tree_leaf_particles(m);
-        m->faceAngle[1] += 0x8000;
-        return set_mario_action(m, ACT_WALL_KICK_AIR, 0);
-    }
-
-    if (m->input & INPUT_Z_PRESSED) {
-        add_tree_leaf_particles(m);
-        m->forwardVel = -2.0f;
-        return set_mario_action(m, ACT_SOFT_BONK, 0);
-    }
-#else
     if ((m->input & INPUT_Z_PRESSED) || m->health < 0x100) {
         add_tree_leaf_particles(m);
         m->forwardVel = -2.0f;
@@ -139,7 +126,6 @@ s32 act_holding_pole(struct MarioState *m) {
         m->faceAngle[1] += 0x8000;
         return set_mario_action(m, ACT_WALL_KICK_AIR, 0);
     }
-#endif
 
     if (m->controller->stickY > 16.0f) {
         f32 poleTop = m->usedObj->hitboxHeight - 100.0f;
@@ -171,9 +157,7 @@ s32 act_holding_pole(struct MarioState *m) {
             }
         }
         play_climbing_sounds(m, 2);
-#ifdef VERSION_SH
         reset_rumble_timers();
-#endif
         set_sound_moving_speed(SOUND_BANK_MOVING, marioObj->oMarioPoleYawVel / 0x100 * 2);
     } else {
         marioObj->oMarioPoleYawVel = 0;
@@ -192,13 +176,11 @@ s32 act_climbing_pole(struct MarioState *m) {
     struct Object *marioObj = m->marioObj;
     s16 cameraAngle = m->area->camera->yaw;
 
-#ifndef VERSION_JP
     if (m->health < 0x100) {
         add_tree_leaf_particles(m);
         m->forwardVel = -2.0f;
         return set_mario_action(m, ACT_SOFT_BONK, 0);
     }
-#endif
 
     if (m->input & INPUT_A_PRESSED) {
         add_tree_leaf_particles(m);
@@ -385,13 +367,9 @@ void update_hang_stationary(struct MarioState *m) {
 }
 
 s32 act_start_hanging(struct MarioState *m) {
-#ifdef VERSION_SH
     if (m->actionTimer++ == 0) {
         queue_rumble_data(5, 80);
     }
-#else
-    m->actionTimer++;
-#endif
 
     if ((m->input & INPUT_NONZERO_ANALOG) && m->actionTimer >= 31) {
         return set_mario_action(m, ACT_HANGING, 0);
@@ -470,9 +448,7 @@ s32 act_hang_moving(struct MarioState *m) {
 
     if (m->marioObj->header.gfx.animInfo.animFrame == 12) {
         play_sound(SOUND_ACTION_HANGING_STEP, m->marioObj->header.gfx.cameraToObject);
-#ifdef VERSION_SH
         queue_rumble_data(1, 30);
-#endif
     }
 
     if (is_anim_past_end(m)) {
@@ -569,12 +545,7 @@ s32 act_ledge_grab(struct MarioState *m) {
         }
         return let_go_of_ledge(m);
     }
-#ifdef VERSION_EU
-    // On EU, you can't slow climb up ledges while holding A.
-    if (m->actionTimer == 10 && (m->input & INPUT_NONZERO_ANALOG) && !(m->input & INPUT_A_DOWN))
-#else
     if (m->actionTimer == 10 && (m->input & INPUT_NONZERO_ANALOG))
-#endif
     {
         if (intendedDYaw >= -0x4000 && intendedDYaw <= 0x4000) {
             if (hasSpaceForMario) {
@@ -662,9 +633,7 @@ s32 act_grabbed(struct MarioState *m) {
 
         m->faceAngle[1] = m->usedObj->oMoveAngleYaw;
         vec3f_copy(m->pos, m->marioObj->header.gfx.pos);
-#ifdef VERSION_SH
         queue_rumble_data(5, 60);
-#endif
 
         return set_mario_action(m, (m->forwardVel >= 0.0f) ? ACT_THROWN_FORWARD : ACT_THROWN_BACKWARD,
                                 thrown);
@@ -744,16 +713,12 @@ s32 act_in_cannon(struct MarioState *m) {
                 m->marioObj->header.gfx.node.flags |= GRAPH_RENDER_ACTIVE;
 
                 set_mario_action(m, ACT_SHOT_FROM_CANNON, 0);
-#ifdef VERSION_SH
                 queue_rumble_data(60, 70);
-#endif
                 m->usedObj->oAction = 2;
                 return FALSE;
             } else if (m->faceAngle[0] != startFacePitch || m->faceAngle[1] != startFaceYaw) {
                 play_sound(SOUND_MOVING_AIM_CANNON, m->marioObj->header.gfx.cameraToObject);
-#ifdef VERSION_SH
                 reset_rumble_timers_2(0);
-#endif
             }
     }
 
@@ -838,9 +803,7 @@ s32 act_tornado_twirling(struct MarioState *m) {
 
     vec3f_copy(m->marioObj->header.gfx.pos, m->pos);
     vec3s_set(m->marioObj->header.gfx.angle, 0, m->faceAngle[1] + m->twirlYaw, 0);
-#ifdef VERSION_SH
     reset_rumble_timers();
-#endif
 
     return FALSE;
 }

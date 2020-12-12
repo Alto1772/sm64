@@ -1,8 +1,6 @@
 #include "internal.h"
 #include "data.h"
 
-#ifdef VERSION_SH
-
 struct ReverbSettingsEU sReverbSettings[] = {
     {0x01, 0x30, 0x2fff, 0x0000, 0x0000, -1, 0x3000, 0x0000, 0x0000},
     {0x01, 0x28, 0x47ff, 0x0000, 0x0000, -1, 0x3000, 0x0000, 0x0000},
@@ -41,5 +39,3 @@ u32 D_SH_80315EF0 = 0;
 u16 D_SH_80315EF4 = 0;
 u16 D_SH_80315EF8 = 0;
 u16 D_SH_80315EFC = 0;
-
-#endif

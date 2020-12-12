@@ -255,7 +255,7 @@ lightInfo4: // 0x270
 .definelabel lightInfo6, lightInfo5 + 0x20 // 0x2b0
 .definelabel lightInfo7, lightInfo6 + 0x20 // 0x2d0
 
-.if defined(F3D_OLD) || defined(VERSION_EU)
+.if defined(F3D_OLD)
   .asciiz "RSP SW Version: 2.0D, 04-01-96"
 .elseif defined(F3D_NEW)
   .asciiz "RSP SW Version: 2.0H, 02-12-97"

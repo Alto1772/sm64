@@ -4,7 +4,6 @@
 #include "PR/os_pi.h"
 #include "os.h"
 
-#ifdef VERSION_SH
 OSPiHandle CartRomHandle;
 
 OSPiHandle *osCartRomInit(void) {
@@ -36,4 +35,3 @@ OSPiHandle *osCartRomInit(void) {
 
     return &CartRomHandle;
 }
-#endif

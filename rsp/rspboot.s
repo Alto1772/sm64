@@ -5,9 +5,6 @@
 // This file assumes CODE_FILE is set on the command line
 .create CODE_FILE, 0x04001000
 
-.if defined(VERSION_JP) || defined(VERSION_US)
-    ori   $1, $1, 0x0001
-.endif
     j     boot_04001068
      addi  $1, $zero, OSTask_addr
 boot_load_ucode:

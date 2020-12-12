@@ -5,9 +5,6 @@
 #include "surface_terrains.h"
 #include "types.h"
 
-#ifdef VERSION_EU
-#include "text_strings.h"
-#endif
 #include "make_const_nonconst.h"
 
 // 0x07000000 - 0x07000018
@@ -607,7 +604,6 @@ const Texture *const menu_hud_lut[] = {
     texture_menu_hud_char_katakana_sa,       texture_menu_hud_char_katakana_u,         texture_menu_hud_char_katakana_n, texture_menu_hud_char_kana_dakuten_do,
 };
 
-#if defined(VERSION_JP) || defined(VERSION_SH)
 UNUSED static const u64 menu_unused_0 = 0;
 
 // 0x0700AC48
@@ -1265,293 +1261,9 @@ ALIGNED8 static const Texture texture_menu_font_char_jp_exclamation[] = {
 #include "levels/menu/main_menu_seg7.0CCC8.ia8.inc.c"
 };
 
-#else
-
-// 0x0700AC40
-ALIGNED8 static const Texture texture_menu_font_char_0[] = {
-#include "levels/menu/main_menu_seg7_us.0AC40.ia8.inc.c"
-};
-
-// 0x0700AC80
-ALIGNED8 static const Texture texture_menu_font_char_1[] = {
-#include "levels/menu/main_menu_seg7_us.0AC80.ia8.inc.c"
-};
-
-// 0x0700ACC0
-ALIGNED8 static const Texture texture_menu_font_char_2[] = {
-#include "levels/menu/main_menu_seg7_us.0ACC0.ia8.inc.c"
-};
-
-// 0x0700AD00
-ALIGNED8 static const Texture texture_menu_font_char_3[] = {
-#include "levels/menu/main_menu_seg7_us.0AD00.ia8.inc.c"
-};
-
-// 0x0700AD40
-ALIGNED8 static const Texture texture_menu_font_char_4[] = {
-#include "levels/menu/main_menu_seg7_us.0AD40.ia8.inc.c"
-};
-
-// 0x0700AD80
-ALIGNED8 static const Texture texture_menu_font_char_5[] = {
-#include "levels/menu/main_menu_seg7_us.0AD80.ia8.inc.c"
-};
-
-// 0x0700ADC0
-ALIGNED8 static const Texture texture_menu_font_char_6[] = {
-#include "levels/menu/main_menu_seg7_us.0ADC0.ia8.inc.c"
-};
-
-// 0x0700AE00
-ALIGNED8 static const Texture texture_menu_font_char_7[] = {
-#include "levels/menu/main_menu_seg7_us.0AE00.ia8.inc.c"
-};
-
-// 0x0700AE40
-ALIGNED8 static const Texture texture_menu_font_char_8[] = {
-#include "levels/menu/main_menu_seg7_us.0AE40.ia8.inc.c"
-};
-
-// 0x0700AE80
-ALIGNED8 static const Texture texture_menu_font_char_9[] = {
-#include "levels/menu/main_menu_seg7_us.0AE80.ia8.inc.c"
-};
-
-// 0x0700AEC0
-ALIGNED8 static const Texture texture_menu_font_char_A[] = {
-#include "levels/menu/main_menu_seg7_us.0AEC0.ia8.inc.c"
-};
-
-// 0x0700AF00
-ALIGNED8 static const Texture texture_menu_font_char_B[] = {
-#include "levels/menu/main_menu_seg7_us.0AF00.ia8.inc.c"
-};
-
-// 0x0700AF40
-ALIGNED8 static const Texture texture_menu_font_char_C[] = {
-#include "levels/menu/main_menu_seg7_us.0AF40.ia8.inc.c"
-};
-
-#ifdef VERSION_EU
-// 0x0700AF80
-ALIGNED8 static const Texture texture_menu_font_char_D[] = {
-#include "levels/menu/main_menu_seg7_eu.0AF80.ia8.inc.c"
-};
-
-#else
-
-// 0x0700AF80
-ALIGNED8 static const Texture texture_menu_font_char_D[] = {
-#include "levels/menu/main_menu_seg7_us.0AF80.ia8.inc.c"
-};
-#endif
-
-// 0x0700AFC0
-ALIGNED8 static const Texture texture_menu_font_char_E[] = {
-#include "levels/menu/main_menu_seg7_us.0AFC0.ia8.inc.c"
-};
-
-// 0x0700B000
-ALIGNED8 static const Texture texture_menu_font_char_F[] = {
-#include "levels/menu/main_menu_seg7_us.0B000.ia8.inc.c"
-};
-
-// 0x0700B040
-ALIGNED8 static const Texture texture_menu_font_char_G[] = {
-#include "levels/menu/main_menu_seg7_us.0B040.ia8.inc.c"
-};
-
-// 0x0700B080
-ALIGNED8 static const Texture texture_menu_font_char_H[] = {
-#include "levels/menu/main_menu_seg7_us.0B080.ia8.inc.c"
-};
-
-// 0x0700B0C0
-ALIGNED8 static const Texture texture_menu_font_char_I[] = {
-#include "levels/menu/main_menu_seg7_us.0B0C0.ia8.inc.c"
-};
-
-// 0x0700B100
-ALIGNED8 static const Texture texture_menu_font_char_J[] = {
-#include "levels/menu/main_menu_seg7_us.0B100.ia8.inc.c"
-};
-
-// 0x0700B140
-ALIGNED8 static const Texture texture_menu_font_char_K[] = {
-#include "levels/menu/main_menu_seg7_us.0B140.ia8.inc.c"
-};
-
-// 0x0700B180
-ALIGNED8 static const Texture texture_menu_font_char_L[] = {
-#include "levels/menu/main_menu_seg7_us.0B180.ia8.inc.c"
-};
-
-// 0x0700B1C0
-ALIGNED8 static const Texture texture_menu_font_char_M[] = {
-#include "levels/menu/main_menu_seg7_us.0B1C0.ia8.inc.c"
-};
-
-// 0x0700B200
-ALIGNED8 static const Texture texture_menu_font_char_N[] = {
-#include "levels/menu/main_menu_seg7_us.0B200.ia8.inc.c"
-};
-
-// 0x0700B240
-ALIGNED8 static const Texture texture_menu_font_char_O[] = {
-#include "levels/menu/main_menu_seg7_us.0B240.ia8.inc.c"
-};
-
-// 0x0700B280
-ALIGNED8 static const Texture texture_menu_font_char_P[] = {
-#include "levels/menu/main_menu_seg7_us.0B280.ia8.inc.c"
-};
-
-// 0x0700B2C0
-ALIGNED8 static const Texture texture_menu_font_char_Q[] = {
-#include "levels/menu/main_menu_seg7_us.0B2C0.ia8.inc.c"
-};
-
-// 0x0700B300
-ALIGNED8 static const Texture texture_menu_font_char_R[] = {
-#include "levels/menu/main_menu_seg7_us.0B300.ia8.inc.c"
-};
-
-// 0x0700B340
-ALIGNED8 static const Texture texture_menu_font_char_S[] = {
-#include "levels/menu/main_menu_seg7_us.0B340.ia8.inc.c"
-};
-
-// 0x0700B380
-ALIGNED8 static const Texture texture_menu_font_char_T[] = {
-#include "levels/menu/main_menu_seg7_us.0B380.ia8.inc.c"
-};
-
-// 0x0700B3C0
-ALIGNED8 static const Texture texture_menu_font_char_U[] = {
-#include "levels/menu/main_menu_seg7_us.0B3C0.ia8.inc.c"
-};
-
-// 0x0700B400
-ALIGNED8 static const Texture texture_menu_font_char_V[] = {
-#include "levels/menu/main_menu_seg7_us.0B400.ia8.inc.c"
-};
-
-// 0x0700B440
-ALIGNED8 static const Texture texture_menu_font_char_W[] = {
-#include "levels/menu/main_menu_seg7_us.0B440.ia8.inc.c"
-};
-
-// 0x0700B480
-ALIGNED8 static const Texture texture_menu_font_char_X[] = {
-#include "levels/menu/main_menu_seg7_us.0B480.ia8.inc.c"
-};
-
-// 0x0700B4C0
-ALIGNED8 static const Texture texture_menu_font_char_Y[] = {
-#include "levels/menu/main_menu_seg7_us.0B4C0.ia8.inc.c"
-};
-
-// 0x0700B500
-ALIGNED8 static const Texture texture_menu_font_char_Z[] = {
-#include "levels/menu/main_menu_seg7_us.0B500.ia8.inc.c"
-};
-
-// 0x0700B540
-ALIGNED8 static const Texture texture_menu_font_char_coin[] = {
-#include "levels/menu/main_menu_seg7_us.0B540.ia8.inc.c"
-};
-
-// 0x0700B580
-ALIGNED8 static const Texture texture_menu_font_char_multiply[] = {
-#include "levels/menu/main_menu_seg7_us.0B580.ia8.inc.c"
-};
-
-// 0x0700B5C0
-ALIGNED8 static const Texture texture_menu_font_char_star_filled[] = {
-#include "levels/menu/main_menu_seg7_us.0B5C0.ia8.inc.c"
-};
-
-// 0x0700B600
-ALIGNED8 static const Texture texture_menu_font_char_dash[] = {
-#include "levels/menu/main_menu_seg7_us.0B600.ia8.inc.c"
-};
-
-#ifdef VERSION_EU
-// 0x0700B640
-ALIGNED8 static const Texture texture_menu_font_char_comma[] = {
-#include "levels/menu/main_menu_seg7_eu.0B640.ia8.inc.c"
-};
-
-// 0x0700B680
-ALIGNED8 static const Texture texture_menu_font_char_apostrophe[] = {
-#include "levels/menu/main_menu_seg7_eu.0B680.ia8.inc.c"
-};
-
-#else
-
-// 0x0700B640
-ALIGNED8 static const Texture texture_menu_font_char_comma[] = {
-#include "levels/menu/main_menu_seg7_us.0B640.ia8.inc.c"
-};
-
-// 0x0700B680
-ALIGNED8 static const Texture texture_menu_font_char_apostrophe[] = {
-#include "levels/menu/main_menu_seg7_us.0B680.ia8.inc.c"
-};
-#endif
-
-// 0x0700B6C0
-ALIGNED8 static const Texture texture_menu_font_char_exclamation[] = {
-#include "levels/menu/main_menu_seg7_us.0B6C0.ia8.inc.c"
-};
-
-// 0x0700B700
-ALIGNED8 static const Texture texture_menu_font_char_question[] = {
-#include "levels/menu/main_menu_seg7_us.0B700.ia8.inc.c"
-};
-
-// 0x0700B740
-ALIGNED8 static const Texture texture_menu_font_char_mface1[] = {
-#include "levels/menu/main_menu_seg7_us.0B740.ia8.inc.c"
-};
-
-// 0x0700B780
-ALIGNED8 static const Texture texture_menu_font_char_mface2[] = {
-#include "levels/menu/main_menu_seg7_us.0B780.ia8.inc.c"
-};
-
-// 0x0700B7C0
-ALIGNED8 static const Texture texture_menu_font_char_period[] = {
-#include "levels/menu/main_menu_seg7_us.0B7C0.ia8.inc.c"
-};
-
-// 0x0700B800
-ALIGNED8 static const Texture texture_menu_font_char_ampersand[] = {
-#include "levels/menu/main_menu_seg7_us.0B800.ia8.inc.c"
-};
-#endif
-
-#ifdef VERSION_EU
-// 0x0700B840
-ALIGNED8 static const Texture texture_menu_font_char_umlaut[] = {
-#include "levels/menu/main_menu_seg7_eu.0B840.ia8.inc.c"
-};
-
-// 0x0700B880
-ALIGNED8 static const Texture texture_menu_font_char_cedilla_mayus[] = {
-#include "levels/menu/main_menu_seg7_eu.0B880.ia8.inc.c"
-};
-
-// 0x0700B8C0
-ALIGNED8 static const Texture texture_menu_font_char_colon[] = {
-#include "levels/menu/main_menu_seg7_eu.0B8C0.ia8.inc.c"
-};
-#endif
-
 // Menu small font print table
 // 0x0700CD08
 const Texture *const menu_font_lut[] = {
-#if defined(VERSION_JP) || defined(VERSION_SH)
     texture_menu_font_char_jp_0, texture_menu_font_char_jp_1, texture_menu_font_char_jp_2, texture_menu_font_char_jp_3,
     texture_menu_font_char_jp_4, texture_menu_font_char_jp_5, texture_menu_font_char_jp_6, texture_menu_font_char_jp_7,
     texture_menu_font_char_jp_8, texture_menu_font_char_jp_9, texture_menu_font_char_jp_A, texture_menu_font_char_jp_B,
@@ -1616,78 +1328,6 @@ const Texture *const menu_font_lut[] = {
     0x0,                      0x0,                      0x0,                      0x0,
     0x0,                      texture_menu_font_char_jp_coin, texture_menu_font_char_jp_star_filled, texture_menu_font_char_jp_multiply,
     0x0,                      0x0,                      0x0,                      0x0,
-#else
-    texture_menu_font_char_0, texture_menu_font_char_1, texture_menu_font_char_2, texture_menu_font_char_3,
-    texture_menu_font_char_4, texture_menu_font_char_5, texture_menu_font_char_6, texture_menu_font_char_7,
-    texture_menu_font_char_8, texture_menu_font_char_9, texture_menu_font_char_A, texture_menu_font_char_B,
-    texture_menu_font_char_C, texture_menu_font_char_D, texture_menu_font_char_E, texture_menu_font_char_F,
-    texture_menu_font_char_G, texture_menu_font_char_H, texture_menu_font_char_I, texture_menu_font_char_J,
-    texture_menu_font_char_K, texture_menu_font_char_L, texture_menu_font_char_M, texture_menu_font_char_N,
-    texture_menu_font_char_O, texture_menu_font_char_P, texture_menu_font_char_Q, texture_menu_font_char_R,
-    texture_menu_font_char_S, texture_menu_font_char_T, texture_menu_font_char_U, texture_menu_font_char_V,
-    texture_menu_font_char_W, texture_menu_font_char_X, texture_menu_font_char_Y, texture_menu_font_char_Z,
-          0x0,       0x0,       0x0,       0x0,
-          0x0,       0x0,       0x0,       0x0,
-          0x0,       0x0,       0x0,       0x0,
-          0x0,       0x0,       0x0,       0x0,
-          0x0,       0x0,       0x0,       0x0,
-          0x0,       0x0,       0x0,       0x0,
-          0x0,       0x0, texture_menu_font_char_apostrophe, texture_menu_font_char_period,
-    texture_menu_font_char_mface1, texture_menu_font_char_mface2,       0x0,       0x0,
-          0x0,       0x0,       0x0,       0x0,
-          0x0,       0x0,       0x0,       0x0,
-          0x0,       0x0,       0x0,       0x0,
-          0x0,       0x0,       0x0,       0x0,
-          0x0,       0x0,       0x0,       0x0,
-          0x0,       0x0,       0x0,       0x0,
-          0x0,       0x0,       0x0,       0x0,
-          0x0,       0x0,       0x0,       0x0,
-          0x0,       0x0,       0x0,       0x0,
-          0x0,       0x0,       0x0,       0x0,
-          0x0,       0x0,       0x0, texture_menu_font_char_comma,
-          0x0,       0x0,       0x0,       0x0,
-          0x0,       0x0,       0x0,       0x0,
-          0x0,       0x0,       0x0,       0x0,
-          0x0,       0x0,       0x0,       0x0,
-          0x0,       0x0,       0x0,       0x0,
-          0x0,       0x0,       0x0,       0x0,
-          0x0,       0x0,       0x0,       0x0,
-          0x0,       0x0,       0x0,       0x0,
-          0x0,       0x0,       0x0,       0x0,
-          0x0,       0x0,       0x0,       0x0,
-          0x0,       0x0,       0x0,       0x0,
-          0x0,       0x0,       0x0, texture_menu_font_char_dash,
-          0x0,       0x0,       0x0,       0x0,
-          0x0,       0x0,       0x0,       0x0,
-          0x0,       0x0,       0x0,       0x0,
-          0x0,       0x0,       0x0,       0x0,
-          0x0,       0x0,       0x0,       0x0,
-          0x0,       0x0,       0x0,       0x0,
-          0x0,       0x0,       0x0,       0x0,
-          0x0,       0x0,       0x0,       0x0,
-          0x0,       0x0,       0x0,       0x0,
-          0x0,       0x0,       0x0,       0x0,
-          0x0,       0x0,       0x0,       0x0,
-          0x0,       0x0,       0x0,       0x0,
-          0x0,       0x0,       0x0,       0x0,
-          0x0,       0x0,       0x0,       0x0,
-          0x0,       0x0,       0x0,       0x0,
-          0x0,       0x0,       0x0,       0x0,
-          0x0,       0x0,       0x0,       0x0,
-#ifdef VERSION_EU
-          0x0, texture_menu_font_char_ampersand, texture_menu_font_char_colon,       0x0,
-          0x0, texture_menu_font_char_umlaut,       0x0,       0x0,
-          0x0, texture_menu_font_char_cedilla_mayus,       0x0,       0x0,
-#else
-          0x0, texture_menu_font_char_ampersand,       0x0,       0x0,
-          0x0,       0x0,       0x0,       0x0,
-          0x0,       0x0,       0x0,       0x0,
-#endif
-          0x0,       0x0, texture_menu_font_char_exclamation,       0x0,
-    texture_menu_font_char_question,       0x0,       0x0,       0x0,
-          0x0, texture_menu_font_char_coin, texture_menu_font_char_star_filled, texture_menu_font_char_multiply,
-          0x0,       0x0,       0x0,       0x0,
-#endif
 };
 
 // 0x0700D108 - 0x0700D160
@@ -1719,30 +1359,6 @@ const Gfx dl_menu_ia8_text_end[] = {
 
 UNUSED static const u64 menu_unused_1 = 0;
 
-#ifdef VERSION_EU
-
-// 0x0700BDA0 - 0x0700CDA0
-ALIGNED8 static const Texture texture_menu_course_upper[] = {
-#include "levels/menu/main_menu_seg7_eu.0BDA0.rgba16.inc.c"
-};
-
-// 0x0700CDA0 - 0x0700DDA0
-ALIGNED8 static const Texture texture_menu_niveau_upper[] = {
-#include "levels/menu/main_menu_seg7_eu.0CDA0.rgba16.inc.c"
-};
-
-// 0x0700DDA0 - 0x0700EDA0
-ALIGNED8 static const Texture texture_menu_kurs_upper[] = {
-#include "levels/menu/main_menu_seg7_eu.0DDA0.rgba16.inc.c"
-};
-
-// 0x0700EDA0 - 0x0700FDA0
-ALIGNED8 static const Texture texture_menu_course_lower[] = {
-#include "levels/menu/main_menu_seg7_eu.0EDA0.rgba16.inc.c"
-};
-
-#else
-
 // 0x0700D1A8 - 0x0700E1A8
 ALIGNED8 static const Texture texture_menu_course_upper[] = {
 #include "levels/menu/main_menu_seg7.0D1A8.rgba16.inc.c"
@@ -1752,7 +1368,6 @@ ALIGNED8 static const Texture texture_menu_course_upper[] = {
 ALIGNED8 static const Texture texture_menu_course_lower[] = {
 #include "levels/menu/main_menu_seg7.0E1A8.rgba16.inc.c"
 };
-#endif
 
 // 0x0700F1A8 - 0x0700F1E8
 static const Vtx vertex_menu_course_upper[] = {
@@ -1776,13 +1391,7 @@ const Gfx dl_menu_rgba16_wood_course[] = {
     gsDPSetCombineMode(G_CC_DECALRGBA, G_CC_DECALRGBA),
     gsSPTexture(0x8000, 0x8000, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetRenderMode(G_RM_AA_TEX_EDGE, G_RM_AA_TEX_EDGE2),
-#ifdef VERSION_EU
-    gsSPEndDisplayList(),
-};
-const Gfx dl_menu_rgba16_wood_course_end[] = {
-#else
     gsDPSetTextureImage(G_IM_FMT_RGBA, G_IM_SIZ_16b, 1, texture_menu_course_upper),
-#endif
     gsDPSetTile(G_IM_FMT_RGBA, G_IM_SIZ_16b, 0, 0, G_TX_LOADTILE, 0, G_TX_WRAP | G_TX_NOMIRROR, G_TX_NOMASK, G_TX_NOLOD, G_TX_WRAP | G_TX_NOMIRROR, G_TX_NOMASK, G_TX_NOLOD),
     gsDPLoadSync(),
     gsDPLoadBlock(G_TX_LOADTILE, 0, 0, 64 * 32 - 1, CALC_DXT(64, G_IM_SIZ_16b_BYTES)),
@@ -1804,26 +1413,6 @@ const Gfx dl_menu_rgba16_wood_course_end[] = {
     gsSPEndDisplayList(),
 };
 
-#ifdef VERSION_EU
-// 0x0700FEF0 - 0x0700FF00
-const Gfx dl_menu_texture_course_upper[] = {
-    gsDPSetTextureImage(G_IM_FMT_RGBA, G_IM_SIZ_16b, 1, texture_menu_course_upper),
-    gsSPEndDisplayList(),
-};
-
-// 0x0700FF00 - 0x0700FF10
-const Gfx dl_menu_texture_niveau_upper[] = {
-    gsDPSetTextureImage(G_IM_FMT_RGBA, G_IM_SIZ_16b, 1, texture_menu_niveau_upper),
-    gsSPEndDisplayList(),
-};
-
-// 0x0700FF10 - 0x0700FF20
-const Gfx dl_menu_texture_kurs_upper[] = {
-    gsDPSetTextureImage(G_IM_FMT_RGBA, G_IM_SIZ_16b, 1, texture_menu_kurs_upper),
-    gsSPEndDisplayList(),
-};
-#endif
-
 // 0x0700F2F8 - 0x0700F328
 const Collision main_menu_seg7_collision[] = {
     COL_INIT(),
@@ -1838,23 +1427,3 @@ const Collision main_menu_seg7_collision[] = {
     COL_TRI_STOP(),
     COL_END(),
 };
-
-#ifdef VERSION_EU
-
-// Duplicate course name tables; the main menu needs all languages loaded at
-// once since it switches language, so the copies in segment 19 aren't good
-// enough.
-
-#define COURSE_TABLE eu_course_strings_en_table
-#include "text/us/define_courses.inc.c"
-#undef COURSE_TABLE
-
-#define COURSE_TABLE eu_course_strings_fr_table
-#include "text/fr/define_courses.inc.c"
-#undef COURSE_TABLE
-
-#define COURSE_TABLE eu_course_strings_de_table
-#include "text/de/define_courses.inc.c"
-#undef COURSE_TABLE
-
-#endif

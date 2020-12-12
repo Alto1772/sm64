@@ -85,9 +85,7 @@ void my_rdp_init(void) {
     gDPSetColorDither(gDisplayListHead++, G_CD_MAGICSQ);
     gDPSetCycleType(gDisplayListHead++, G_CYC_FILL);
 
-#ifdef VERSION_SH
     gDPSetAlphaDither(gDisplayListHead++, G_AD_PATTERN);
-#endif
     gDPPipeSync(gDisplayListHead++);
 }
 
@@ -481,9 +479,7 @@ void read_controller_inputs(void) {
     if (gControllerBits) {
         osRecvMesg(&gSIEventMesgQueue, &D_80339BEC, OS_MESG_BLOCK);
         osContGetReadData(&gControllerPads[0]);
-#ifdef VERSION_SH
         release_rumble_pak_control();
-#endif
     }
     run_demo_inputs();
 
@@ -550,9 +546,7 @@ void init_controllers(void) {
             // into any port in order to play the game. this was probably
             // so if any of the ports didn't work, you can have controllers
             // plugged into any of them and it will work.
-#ifdef VERSION_SH
             gControllers[cont].port = port;
-#endif
             gControllers[cont].statusData = &gControllerStatuses[port];
             gControllers[cont++].controllerData = &gControllerPads[port];
         }
@@ -585,13 +579,9 @@ void thread5_game_loop(UNUSED void *arg) {
     struct LevelCommand *addr;
 
     setup_game_memory();
-#ifdef VERSION_SH
     init_rumble_pak_scheduler_queue();
-#endif
     init_controllers();
-#ifdef VERSION_SH
     create_thread_6();
-#endif
     save_file_load_all();
 
     set_vblank_handler(2, &gGameVblankHandler, &gGameVblankQueue, (OSMesg) 1);
@@ -614,9 +604,7 @@ void thread5_game_loop(UNUSED void *arg) {
         // if any controllers are plugged in, start read the data for when
         // read_controller_inputs is called later.
         if (gControllerBits) {
-#ifdef VERSION_SH
             block_until_rumble_pak_free();
-#endif
             osContStartReadData(&gSIEventMesgQueue);
         }
 

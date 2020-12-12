@@ -169,11 +169,9 @@ void play_menu_sounds(s16 soundMenuFlags) {
     if (soundMenuFlags & 0x100) {
         play_menu_sounds_extra(20, NULL);
     }
-#ifdef VERSION_SH
     if (soundMenuFlags & SOUND_MENU_FLAG_LETGOMARIOFACE) {
         queue_rumble_data(10, 60);
     }
-#endif
 }
 
 /**
@@ -347,11 +345,7 @@ void thread4_sound(UNUSED void *arg) {
         if (gResetTimer < 25) {
             struct SPTask *spTask;
             profiler_log_thread4_time();
-#ifdef VERSION_SH
             spTask = func_sh_802f5a80(); // The function was probably just moved to a different file. Don't kill me.
-#else
-            spTask = create_next_audio_frame_task(); 
-#endif
             if (spTask != NULL) {
                 dispatch_audio_sptask(spTask);
             }

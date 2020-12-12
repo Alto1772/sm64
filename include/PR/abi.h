@@ -42,18 +42,6 @@
 #define A_INTERLEAVE            13
 #define A_SETLOOP               15
 
-#ifndef VERSION_SH
-
-#define A_ENVMIXER              3
-#define A_LOADBUFF              4
-#define A_RESAMPLE              5
-#define A_SAVEBUFF              6
-#define A_SEGMENT               7
-#define A_SETVOL                9
-#define A_POLEF                 14
-
-#else
-
 #define A_ADDMIXER              4
 #define A_RESAMPLE_ZOH          6
 #define A_INTERL                17
@@ -67,8 +55,6 @@
 #define A_UNK_25                25
 #define A_DUPLICATE             26
 #define A_FILTER                27
-
-#endif
 
 #define ACMD_SIZE               32
 /*
@@ -656,7 +642,6 @@ typedef short ENVMIX_STATE[40];
         _a->words.w1 = (uintptr_t)(tr);                                 \
 }
 
-#ifdef VERSION_SH
 #undef aLoadBuffer
 #undef aSaveBuffer
 #undef aMix
@@ -833,8 +818,6 @@ typedef short ENVMIX_STATE[40];
                 _SHIFTL((f), 16, 8) |  _SHIFTL((g), 0, 16));            \
         _a->words.w1 = _SHIFTL((i), 16, 16) | _SHIFTL((o), 0, 16);      \
 }
-
-#endif
 
 #endif /* _LANGUAGE_C */
 

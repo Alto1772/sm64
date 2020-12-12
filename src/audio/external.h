@@ -27,9 +27,7 @@ extern u32 gAudioRandom;
 extern u8 gAudioSPTaskYieldBuffer[]; // ucode yield data ptr; only used in JP
 
 struct SPTask *create_next_audio_frame_task(void);
-#ifdef VERSION_SH
 struct SPTask *func_sh_802f5a80(void);
-#endif
 void play_sound(s32 soundBits, f32 *pos);
 void audio_signal_game_loop_tick(void);
 void seq_player_fade_out(u8 player, u16 fadeDuration);
@@ -66,9 +64,7 @@ void audio_set_sound_mode(u8 arg0);
 
 void audio_init(void); // in load.c
 
-#if defined(VERSION_EU) || defined(VERSION_SH)
 struct SPTask *unused_80321460();
 struct SPTask *unused_80321460(void);
-#endif
 
 #endif // AUDIO_EXTERNAL_H

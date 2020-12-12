@@ -11,22 +11,15 @@
 // TODO: These defines are from PR/rcp.h, but including that causes problems...
 #define IO_WRITE(addr, data) (*(vu32 *) PHYS_TO_K1(addr) = (u32)(data))
 
-#ifdef VERSION_SH
 extern OSPiHandle *__osCurrentHandle[2];
-#endif
 
 s32 osEPiRawStartDma(OSPiHandle *pihandle, s32 dir, u32 cart_addr, void *dram_addr, u32 size) {
-#ifdef VERSION_SH
     u32 status;
     u32 domain;
-#else
-    register int status;
-#endif
 
     status = HW_REG(PI_STATUS_REG, u32);
     while (status & PI_STATUS_ERROR)
         status = HW_REG(PI_STATUS_REG, u32);
-#ifdef VERSION_SH // TODO: This is the EPI_SYNC macro
     domain = pihandle->domain;
     if (__osCurrentHandle[domain] != pihandle) {
         OSPiHandle *cHandle = __osCurrentHandle[domain];
@@ -43,7 +36,6 @@ s32 osEPiRawStartDma(OSPiHandle *pihandle, s32 dir, u32 cart_addr, void *dram_ad
         }
         __osCurrentHandle[domain] = pihandle;
     }
-#endif
     HW_REG(PI_DRAM_ADDR_REG, void *) = (void *) osVirtualToPhysical(dram_addr);
     HW_REG(PI_CART_ADDR_REG, void *) = (void *) (((uintptr_t) pihandle->baseAddress | cart_addr) & 0x1fffffff);
 

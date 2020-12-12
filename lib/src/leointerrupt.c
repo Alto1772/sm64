@@ -6,7 +6,6 @@
 
 u8 leoDiskStack[OS_PIM_STACKSIZE]; //technically should have a OS_LEO_STACKSIZE or something..
 
-#ifdef VERSION_SH
 // TODO: so many magic constants :'(
 static void __osLeoResume(void);
 static void __osLeoAbnormalResume(void);
@@ -179,4 +178,3 @@ static void __osLeoResume(void) {
         __osEnqueueThread(&D_80334898, __osPopThread(&mq->mtqueue));
     }
 }
-#endif

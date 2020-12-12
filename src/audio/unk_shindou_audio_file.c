@@ -1,4 +1,3 @@
-#ifdef VERSION_SH
 
 #include <ultra64.h>
 
@@ -560,5 +559,3 @@ char shindouDebugPrint197[] = "Macro Level Over Error!\n";
 char shindouDebugPrint198[] = "Macro Level Over Error!\n";
 char shindouDebugPrint199[] = "Group:Undefine upper C0h command (%x)\n";
 char shindouDebugPrint200[] = "Group:Undefined Command\n";
-
-#endif

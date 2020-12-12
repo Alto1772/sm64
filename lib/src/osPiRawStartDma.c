@@ -28,7 +28,7 @@ s32 osPiRawStartDma(s32 dir, u32 cart_addr, void *dram_addr, size_t size) {
     return 0;
 }
 
-#ifdef VERSION_EU
+// > haha deleted and nonmatched
 /*s32 osPiRawStartDma_2(s32 dir, u32 cart_addr, void *dram_addr, size_t size) {
     register int status;
     status = HW_REG(PI_STATUS_REG, u32);
@@ -53,4 +53,3 @@ s32 osPiRawStartDma(s32 dir, u32 cart_addr, void *dram_addr, size_t size) {
     }
     return 0;
 }*/
-#endif

@@ -32,30 +32,15 @@ $(eval $(call validate-option,COMPILER,ido gcc))
 #   us - builds the 1996 North American version
 #   eu - builds the 1997 PAL version
 #   sh - builds the 1997 Japanese Shindou version, with rumble pak support
-VERSION ?= us
+#
+# NOTE: Only SH is supported.
+VERSION := sh
 $(eval $(call validate-option,VERSION,jp us eu sh))
 
-ifeq      ($(VERSION),jp)
-  DEFINES   += VERSION_JP=1
-  OPT_FLAGS := -g
-  GRUCODE   ?= f3d_old
-  VERSION_JP_US  ?= true
-else ifeq ($(VERSION),us)
-  DEFINES   += VERSION_US=1
-  OPT_FLAGS := -g
-  GRUCODE   ?= f3d_old
-  VERSION_JP_US  ?= true
-else ifeq ($(VERSION),eu)
-  DEFINES   += VERSION_EU=1
-  OPT_FLAGS := -O2
-  GRUCODE   ?= f3d_new
-  VERSION_JP_US  ?= false
-else ifeq ($(VERSION),sh)
-  DEFINES   += VERSION_SH=1
-  OPT_FLAGS := -O2
-  GRUCODE   ?= f3d_new
-  VERSION_JP_US  ?= false
-endif
+DEFINES        += VERSION_SH=1
+OPT_FLAGS      := -O2
+GRUCODE        ?= f3d_new
+VERSION_JP_US  ?= false
 
 TARGET := sm64.$(VERSION)
 

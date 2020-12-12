@@ -1,6 +1,5 @@
 #include <ultra64.h>
 
-#ifdef VERSION_SH
 // The first four debug prints are in data.c.
 char shindouDebugPrint5[] = "Warning:Kill Note  %x \n";
 char shindouDebugPrint6[] = "Kill Voice %d (ID %d) %d\n";
@@ -135,4 +134,3 @@ char shindouDebugPrint130[] = "BGLOAD Start %d\n";
 char shindouDebugPrint131[] = "Error: OverFlow Your Request\n";
 char shindouDebugPrint132[] = "---AudioSending (%d->%d) \n";
 // These continue in unk_shindou_audio_file.c
-#endif

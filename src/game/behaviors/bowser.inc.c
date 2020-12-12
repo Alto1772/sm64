@@ -75,14 +75,10 @@ void bhv_bowser_flame_spawn_loop(void) {
 void bhv_bowser_body_anchor_loop(void) {
     obj_copy_pos_and_angle(o, o->parentObj);
     if (o->parentObj->oAction == 4) {
-#ifndef VERSION_JP
         if (o->parentObj->oSubAction == 11)
             o->oInteractType = 0;
         else
             o->oInteractType = 0x800000;
-#else
-        o->oInteractType = 0x800000;
-#endif
     } else {
         o->oInteractType = 8;
         if (o->parentObj->oOpacity < 100)
@@ -202,7 +198,6 @@ void bowser_bitdw_act_controller(void) {
         o->oBowserUnk110++;
     } else {
         o->oBowserUnk110 = 0;
-#ifndef VERSION_JP
         if (!gCurrDemoInput) {
             if (rand < 0.1)
                 o->oAction = 3; // rare 1/10 chance
@@ -211,12 +206,6 @@ void bowser_bitdw_act_controller(void) {
         } else {
             o->oAction = 14; // ensure demo starts with action 14.
         }
-#else
-        if (rand < 0.1)
-            o->oAction = 3; // rare 1/10 chance
-        else
-            o->oAction = 14; // common
-#endif
     }
 }
 
@@ -284,7 +273,6 @@ void bowser_bits_act_controller(void) {
     }
 }
 
-#ifndef VERSION_JP
 void bowser_reset_fallen_off_stage(void) {
     if (o->oVelY < 0 && o->oPosY < (o->oHomeY - 300.0f)) {
         o->oPosX = o->oPosZ = 0;
@@ -293,7 +281,6 @@ void bowser_reset_fallen_off_stage(void) {
         o->oForwardVel = 0;
     }
 }
-#endif
 
 void bowser_act_unused_slow_walk(void) // unused?
 {
@@ -490,10 +477,8 @@ void bowser_act_jump(void) {
             o->oSubAction++;
         }
     } else if (o->oSubAction == 1) {
-#ifndef VERSION_JP
         if (o->oBehParams2ndByte == 2 && o->oBowserUnkF4 & 0x10000)
             bowser_reset_fallen_off_stage();
-#endif
         if (bowser_land()) {
             o->oBowserUnkF4 &= ~0x10000;
             o->oForwardVel = 0.0f;
@@ -727,15 +712,7 @@ void bowser_act_jump_onto_stage(void) {
                 if (BITFS)
                     o->oAction = 19;
             }
-#ifndef VERSION_JP
             bowser_reset_fallen_off_stage();
-#else
-            if (o->oVelY < 0.0f && o->oPosY < o->oHomeY - 300.0f) {
-                o->oPosZ = 0.0f, o->oPosX = o->oPosZ;
-                o->oPosY = o->oHomeY + 2000.0f;
-                o->oVelY = 0.0f;
-            }
-#endif
             break;
         case 3:
             if (cur_obj_check_if_near_animation_end()) {

@@ -6,17 +6,9 @@
 
 .eqv MI_INTR_MASK_REG, 0xA430000C
 
-.ifdef VERSION_EU
-.set VERSION_EU_SH, 1
-.endif
-.ifdef VERSION_SH
-.set VERSION_EU_SH, 1
-.endif
-
 .section .text, "ax"
 
 glabel osSetIntMask
-.ifdef VERSION_EU_SH
     mfc0  $t4, $12
     andi  $v0, $t4, 0xff01
     lui   $t0, %hi(__OSGlobalIntMask) # $t0, 0x8030
@@ -26,13 +18,8 @@ glabel osSetIntMask
     xor   $t0, $t3, $at
     andi  $t0, $t0, 0xff00
     or    $v0, $v0, $t0
-.else
-    mfc0  $t1, $12
-    andi  $v0, $t1, 0xff01
-.endif
     lui   $t2, %hi(MI_INTR_MASK_REG) # $t2, 0xa430
     lw    $t2, %lo(MI_INTR_MASK_REG)($t2)
-.ifdef VERSION_EU_SH
     beqz  $t2, .L80200074
     srl   $t1, $t3, 0x10
     li    $at, -1
@@ -40,14 +27,11 @@ glabel osSetIntMask
     andi  $t1, $t1, 0x3f
     or    $t2, $t2, $t1
 .L80200074:
-.endif
     sll   $t2, $t2, 0x10
     or    $v0, $v0, $t2
     lui   $at, 0x3f
     and   $t0, $a0, $at
-.ifdef VERSION_EU_SH
     and   $t0, $t0, $t3
-.endif
     srl   $t0, $t0, 0xf
     lui   $t2, %hi(D_803386D0)
     addu  $t2, $t2, $t0
@@ -55,21 +39,13 @@ glabel osSetIntMask
     lui   $at, %hi(MI_INTR_MASK_REG) # $at, 0xa430
     sw    $t2, %lo(MI_INTR_MASK_REG)($at)
     andi  $t0, $a0, 0xff01
-.ifdef VERSION_EU_SH
     andi  $t1, $t3, 0xff00
     and   $t0, $t0, $t1
-.endif
     lui   $at, (0xFFFF00FF >> 16) # lui $at, 0xffff
     ori   $at, (0xFFFF00FF & 0xFFFF) # ori $at, $at, 0xff
-.ifdef VERSION_EU_SH
     and   $t4, $t4, $at
     or    $t4, $t4, $t0
     mtc0  $t4, $12
-.else
-    and   $t1, $t1, $at
-    or    $t1, $t1, $t0
-    mtc0  $t1, $12
-.endif
     nop
     nop
     jr    $ra

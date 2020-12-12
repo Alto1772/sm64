@@ -64,14 +64,10 @@ static s32 read_eeprom_data(void *buffer, s32 size) {
         u32 offset = (u32)((u8 *) buffer - (u8 *) &gSaveBuffer) / 8;
 
         do {
-#ifdef VERSION_SH
             block_until_rumble_pak_free();
-#endif
             triesLeft--;
             status = osEepromLongRead(&gSIEventMesgQueue, offset, buffer, size);
-#ifdef VERSION_SH
             release_rumble_pak_control();
-#endif
         } while (triesLeft > 0 && status != 0);
     }
 
@@ -92,14 +88,10 @@ static s32 write_eeprom_data(void *buffer, s32 size) {
         u32 offset = (u32)((u8 *) buffer - (u8 *) &gSaveBuffer) >> 3;
 
         do {
-#ifdef VERSION_SH
             block_until_rumble_pak_free();
-#endif
             triesLeft--;
             status = osEepromLongWrite(&gSIEventMesgQueue, offset, buffer, size);
-#ifdef VERSION_SH
             release_rumble_pak_control();
-#endif
         } while (triesLeft > 0 && status != 0);
     }
 
@@ -581,18 +573,6 @@ void save_file_move_cap_to_default_location(void) {
         save_file_clear_flags(SAVE_FLAG_CAP_ON_GROUND);
     }
 }
-
-#ifdef VERSION_EU
-void eu_set_language(u16 language) {
-    gSaveBuffer.menuData[0].language = language;
-    gMainMenuDataModified = TRUE;
-    save_main_menu_data();
-}
-
-u16 eu_get_language(void) {
-    return gSaveBuffer.menuData[0].language;
-}
-#endif
 
 void disable_warp_checkpoint(void) {
     // check_warp_checkpoint() checks to see if gWarpCheckpoint.courseNum != COURSE_NONE

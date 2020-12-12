@@ -5,8 +5,6 @@
 #include "main.h"
 #include "rumble_init.h"
 
-#ifdef VERSION_SH
-
 OSThread gRumblePakThread;
 
 s32 gRumblePakPfs; // Actually an OSPfs but we don't have that header yet
@@ -297,5 +295,3 @@ void rumble_thread_update_vi(void) {
     // 0x56525443 = 'VRTC'
     osSendMesg(&gRumbleThreadVIMesgQueue, (OSMesg) 0x56525443, OS_MESG_NOBLOCK);
 }
-
-#endif

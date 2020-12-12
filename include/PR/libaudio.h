@@ -7,7 +7,6 @@ typedef struct
 {
     u8 *offset;
     s32 len;
-#ifdef VERSION_SH
     s8 magic[2]; // tbl: 0x0204, otherwise: 0x0203
 
     // for ctl (else zeros):
@@ -26,20 +25,14 @@ typedef struct
             s16 numInstrumentsAndDrums;
         } as_s16;
     } ctl;
-#endif
 } ALSeqData;
 
 typedef struct
 {
-#ifndef VERSION_SH
-    s16 revision;
-#endif
     s16 seqCount;
-#ifdef VERSION_SH
     s16 unk2;
     u8 *data;
     s32 pad[2];
-#endif
     ALSeqData seqArray[1];
 } ALSeqFile;
 

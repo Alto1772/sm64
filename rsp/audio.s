@@ -35,7 +35,6 @@ dispatchTable:
   jumpTableEntry cmd_SPNOOP
   jumpTableEntry cmd_ADPCM
   jumpTableEntry cmd_CLEARBUFF
-.ifdef VERSION_SH
   jumpTableEntry cmd_SPNOOP
 
   jumpTableEntry cmd_ADDMIXER
@@ -72,21 +71,6 @@ dispatchTable:
   jumpTableEntry cmd_SPNOOP
   jumpTableEntry cmd_SPNOOP
   jumpTableEntry cmd_SPNOOP
-.else
-  jumpTableEntry cmd_ENVMIXER
-  jumpTableEntry cmd_LOADBUFF
-  jumpTableEntry cmd_RESAMPLE
-  jumpTableEntry cmd_SAVEBUFF
-  jumpTableEntry cmd_SEGMENT
-  jumpTableEntry cmd_SETBUFF
-  jumpTableEntry cmd_SETVOL
-  jumpTableEntry cmd_DMEMMOVE
-  jumpTableEntry cmd_LOADADPCM
-  jumpTableEntry cmd_MIXER
-  jumpTableEntry cmd_INTERLEAVE
-  jumpTableEntry cmd_POLEF
-  jumpTableEntry cmd_SETLOOP
-.endif
 
 .dh 0xf000, 0x0f00, 0x00f0, 0x000f, 0x0001, 0x0010, 0x0100, 0x1000 // 0x00000030
 data0040:
@@ -98,10 +82,8 @@ data0040:
 .dh 0x0000, 0x0000, 0x0001, 0x0000, 0x0000, 0x0000, 0x0001, 0x0000 // 0x00000090
 .dh 0x0000, 0x0000, 0x0000, 0x0001, 0x0000, 0x0000, 0x0000, 0x0001 // 0x000000a0
 .dh 0x2000, 0x4000, 0x6000, 0x8000, 0xa000, 0xc000, 0xe000, 0xffff // 0x000000b0
-.ifdef VERSION_SH
 .dh 0x0000, 0xFFFF, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000
 .dh 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000
-.endif
 .dh 0x0c39, 0x66ad, 0x0d46, 0xffdf, 0x0b39, 0x6696, 0x0e5f, 0xffd8 // 0x000000c0
 .dh 0x0a44, 0x6669, 0x0f83, 0xffd0, 0x095a, 0x6626, 0x10b4, 0xffc8 // 0x000000d0
 .dh 0x087d, 0x65cd, 0x11f0, 0xffbf, 0x07ab, 0x655e, 0x1338, 0xffb6 // 0x000000e0
@@ -134,19 +116,13 @@ data0040:
 .dh 0xffb6, 0x1338, 0x655e, 0x07ab, 0xffbf, 0x11f0, 0x65cd, 0x087d // 0x00000290
 .dh 0xffc8, 0x10b4, 0x6626, 0x095a, 0xffd0, 0x0f83, 0x6669, 0x0a44 // 0x000002a0
 .dh 0xffd8, 0x0e5f, 0x6696, 0x0b39, 0xffdf, 0x0d46, 0x66ad, 0x0c39 // 0x000002b0
-.ifdef VERSION_SH
 .dh 0xFFFF, 0xDFFF, 0xBFFF, 0x9FFF, 0x7FFF, 0x5FFF, 0x3FFF, 0x1FFF
 .dh 0x0000, 0x2000, 0x4000, 0x6000, 0x8000, 0xA000, 0xC000, 0xE000
 .dh 0x0000, 0x0002, 0x0004, 0x0006, 0x0008, 0x000A, 0x000C, 0x000E
-.endif
 
 .definelabel segmentTable, 0x320
-
-.ifdef VERSION_SH
 .definelabel audioStruct, 0x320
-.else
-.definelabel audioStruct, 0x360
-.endif
+
 audio_in_buf        equ 0x00 // 0x360
 audio_out_buf       equ 0x02 // 0x362
 audio_count         equ 0x04 // 0x364
@@ -161,21 +137,14 @@ audio_rate_hi_left  equ 0x12 // 0x372 (shared)
 audio_rate_lo_left  equ 0x14 // 0x374
 audio_target_right  equ 0x16 // 0x376
 audio_rate_hi_right equ 0x18 // 0x378
-.ifdef VERSION_SH
+
 .definelabel audio_rate_lo_right, 0x04 // 0x37a
-.else
-.definelabel audio_rate_lo_right, 0x1a // 0x37a
-.endif
+
 audio_dry_gain      equ 0x1c // 0x37c
 audio_wet_gain      equ 0x1e // 0x37e
 
-.ifdef VERSION_SH
 .definelabel nextTaskEntry, 0x340
 .definelabel adpcmTable,    0x3c0
-.else
-.definelabel nextTaskEntry, 0x380 // next task entries (0x140 bytes)
-.definelabel adpcmTable,    0x4c0 // (16*8 16-bit entries)
-.endif
 
 .definelabel dmemBase,      0x5c0 // all samples stored that is transferred to DMEM
 .definelabel tmpData,       0xF90 // temporary area
@@ -203,14 +172,6 @@ audio_wet_gain      equ 0x1e // 0x37e
      nop
     jal   audio_04001150
      nop
-.ifndef VERSION_SH
-    addi  $2, $zero, 0x000f
-    addi  $1, $zero, segmentTable
-@@audio_040010c8:
-    sw    $zero, 0x00($1)
-    bgtz  $2, @@audio_040010c8
-     addi  $2, $2, -1
-.endif
 
 dma_busy:
     mfc0  $2, SP_DMA_BUSY
@@ -254,18 +215,10 @@ audio_04001150:
     addi  $5, $ra, 0x0000
     add   $2, $zero, $28
     addi  $3, $27, 0x0000
-.ifdef VERSION_SH
     addi  $4, $3, -0x80
-.else
-    addi  $4, $3, -0x0140
-.endif
     blez  $4, @@audio_0400116c
      addi  $1, $zero, nextTaskEntry
-.ifdef VERSION_SH
     addi  $3, $zero, 0x80
-.else
-    addi  $3, $zero, 0x0140
-.endif
 @@audio_0400116c:
     addi  $30, $3, 0x0000
     jal   dma_read_start
@@ -305,161 +258,28 @@ dma_write_start:
 cmd_CLEARBUFF:
     andi  $3, $25, 0xffff
     beqz  $3, cmd_SPNOOP
-.ifndef VERSION_SH
-     addi  $4, $zero, dmemBase
-.endif
     andi  $2, $26, 0xffff
-.ifndef VERSION_SH
-    add   $2, $2, $4
-.endif
-.ifdef VERSION_SH
     vxor  $v0, $v0, $v0
-.else
-    vxor  $v1, $v1, $v1
-.endif
     addi  $3, $3, -0x10
 @@audio_040011f8:
-.ifdef VERSION_SH
     sdv   $v0[0], 0x0($2)
     sdv   $v0[0], 0x8($2)
-.else
-    sdv   $v1[0], 0x0($2)
-    sdv   $v1[0], 0x8($2)
-.endif
     addi  $2, $2, 0x10
     bgtz  $3, @@audio_040011f8
      addi  $3, $3, -0x10
     j     cmd_SPNOOP
      nop
 
-.ifndef VERSION_SH
-cmd_LOADBUFF:
-    lhu   $3, (audio_count)($24)
-    beqz  $3, cmd_SPNOOP
-     sll   $2, $25, 8
-    srl   $2, $2, 8
-    srl   $4, $25, 24
-    sll   $4, $4, 2
-    lw    $5, (segmentTable)($4)
-    add   $2, $2, $5
-    lhu   $1, (audio_in_buf)($24)
-    jal   dma_read_start
-     addi  $3, $3, -1
-@@dma_read_busy:
-    mfc0  $1, SP_DMA_BUSY
-    bnez  $1, @@dma_read_busy
-     nop
-    j     cmd_SPNOOP
-     mtc0  $zero, SP_SEMAPHORE
-
-cmd_SAVEBUFF:
-    lhu   $3, (audio_count)($24)
-    beqz  $3, cmd_SPNOOP
-     sll   $2, $25, 8
-    srl   $2, $2, 8
-    srl   $4, $25, 24
-    sll   $4, $4, 2
-    lw    $5, (segmentTable)($4)
-    add   $2, $2, $5
-    lhu   $1, (audio_out_buf)($24)
-    jal   dma_write_start
-     addi  $3, $3, -1
-@@dma_write_busy:
-    mfc0  $1, SP_DMA_BUSY
-    bnez  $1, @@dma_write_busy
-     nop
-    j     cmd_SPNOOP
-     mtc0  $zero, SP_SEMAPHORE
-
-cmd_LOADADPCM:
-    sll   $2, $25, 8
-    srl   $2, $2, 8
-    srl   $4, $25, 24
-    sll   $4, $4, 2
-    lw    $5, (segmentTable)($4)
-    add   $2, $2, $5
-    addi  $1, $zero, adpcmTable
-    andi  $3, $26, 0xffff
-    jal   dma_read_start
-     addi  $3, $3, -1
-@@dma_read_busy:
-    mfc0  $1, SP_DMA_BUSY
-    bnez  $1, @@dma_read_busy
-     nop
-    j     cmd_SPNOOP
-     mtc0  $zero, SP_SEMAPHORE
-.endif
 cmd_SEGMENT:
-.ifndef VERSION_SH
-    sll   $3, $25, 8           // Least significant 24-bits offset
-    srl   $3, $3, 8
-    srl   $2, $25, 24          // Most significant 8-bits segment number
-    sll   $2, $2, 2
-    add   $4, $zero, $2
-    j     cmd_SPNOOP
-     sw    $3, (segmentTable)($4)
-.endif
 
-.ifndef VERSION_SH
-cmd_SETBUFF:
-    addi  $1, $26, dmemBase
-    srl   $2, $25, 16
-    addi  $2, $2, dmemBase
-    srl   $4, $26, 16
-    andi  $4, $4, A_AUX
-    bgtz  $4, @@audio_04001318
-     addi  $3, $25, dmemBase
-    sh    $1, (audio_in_buf)($24)
-    sh    $2, (audio_out_buf)($24)
-    j     cmd_SPNOOP
-     sh    $25, (audio_count)($24)
-@@audio_04001318:
-    sh    $3, (audio_aux_buf2)($24)
-    sh    $1, (audio_aux_buf0)($24)
-    j     cmd_SPNOOP
-     sh    $2, (audio_aux_buf1)($24)
-.endif
-
-.ifdef VERSION_SH
 cmd_SETBUFF:
     srl   $2, $25, 16
     sh    $26, 0($24)
     sh    $2, 2($24)
-.else
-cmd_SETVOL:
-    srl   $2, $26, 16
-    andi  $1, $2, A_AUX
-    beqz  $1, @@audio_04001344
-     andi  $1, $2, A_VOL
-    sh    $26, (audio_dry_gain)($24)
-    j     cmd_SPNOOP
-     sh    $25, (audio_wet_gain)($24)
-@@audio_04001344:
-    beqz  $1, @@audio_04001364
-     andi  $1, $2, A_LEFT
-    beqz  $1, @@audio_0400135c
-     nop
-    j     cmd_SPNOOP
-     sh    $26, (audio_vol_left)($24)
-@@audio_0400135c:
-    j     cmd_SPNOOP
-     sh    $26, (audio_vol_right)($24)
-@@audio_04001364:
-    beqz  $1, @@audio_0400137c
-     srl   $1, $25, 16
-    sh    $26, (audio_target_left)($24)
-    sh    $1, (audio_rate_hi_left)($24)
-    j     cmd_SPNOOP
-     sh    $25, (audio_rate_lo_left)($24)
-@@audio_0400137c:
-    sh    $26, (audio_target_right)($24)
-    sh    $1, (audio_rate_hi_right)($24)
-.endif
     j     cmd_SPNOOP
      sh    $25, (audio_rate_lo_right)($24)
 
 cmd_INTERLEAVE:
-.ifdef VERSION_SH
     andi  $a0, $k0, 0xffff
     srl   $at, $k0, 12
     andi  $at, $at, 0xff0
@@ -479,43 +299,8 @@ cmd_INTERLEAVE:
     addi  $v1, $v1, 8
     ssv   $v2[2], 0xF6($4)
     ssv   $v2[4], 0xFA($4)
-.else
-    lhu   $1, (audio_count)($24)
-    lhu   $4, (audio_out_buf)($24)
-    beqz  $1, cmd_SPNOOP
-     andi  $3, $25, 0xffff
-    addi  $3, $3, dmemBase
-    srl   $2, $25, 16
-    addi  $2, $2, dmemBase
-@@audio_040013a8:
-    lqv   $v1[0], 0x00($2)
-    lqv   $v2[0], 0x00($3)
-    ssv   $v1[0], 0x00($4)
-    ssv   $v2[0], 0x02($4)
-    ssv   $v1[2], 0x04($4)
-    ssv   $v2[2], 0x06($4)
-    ssv   $v1[4], 0x08($4)
-    ssv   $v2[4], 0x0a($4)
-    ssv   $v1[6], 0x0c($4)
-    ssv   $v2[6], 0x0e($4)
-    ssv   $v1[8], 0x10($4)
-    ssv   $v2[8], 0x12($4)
-    ssv   $v1[10], 0x14($4)
-    ssv   $v2[10], 0x16($4)
-    ssv   $v1[12], 0x18($4)
-    ssv   $v2[12], 0x1a($4)
-    ssv   $v1[14], 0x1c($4)
-    ssv   $v2[14], 0x1e($4)
-    addi  $1, $1, -0x10
-    addi  $2, $2, 0x10
-    addi  $3, $3, 0x10
-.endif
     bgtz  $1, @@audio_040013a8
-.ifdef VERSION_SH
      ssv   $v2[6], 0xFE($a0)
-.else
-     addi  $4, $4, 0x20
-.endif
     j     cmd_SPNOOP
      nop
 
@@ -523,13 +308,7 @@ cmd_DMEMMOVE:
     andi  $1, $25, 0xffff
     beqz  $1, cmd_SPNOOP
      andi  $2, $26, 0xffff
-.ifndef VERSION_SH
-    addi  $2, $2, dmemBase
-.endif
     srl   $3, $25, 16
-.ifndef VERSION_SH
-    addi  $3, $3, dmemBase
-.endif
 @@audio_04001424:
     ldv   $v1[0], 0x0($2)
     ldv   $v2[0], 0x8($2)
@@ -545,19 +324,8 @@ cmd_DMEMMOVE:
 cmd_SETLOOP:
     sll   $1, $25, 8
     srl   $1, $1, 8
-.ifndef VERSION_SH
-    srl   $3, $25, 24
-    sll   $3, $3, 2
-    lw    $2, (segmentTable)($3)
-    add   $1, $1, $2
-    sw    $1, (audio_loop_value)($24)
-.endif
     j     cmd_SPNOOP
-.ifdef VERSION_SH
      sw    $at, 0x10($t8)
-.else
-     nop
-.endif
 
 cmd_ADPCM:
     lqv   $v31[0], 0x00($zero)
@@ -571,31 +339,12 @@ cmd_ADPCM:
     vxor  $v14, $v14, $v14
     lhu   $18, (audio_count)($24)
     vxor  $v15, $v15, $v15
-.ifndef VERSION_SH
-    lui   $1, 0x00ff
-.endif
     vxor  $v16, $v16, $v16
-.ifdef VERSION_SH
     sll   $s1, $t9, 8
-.else
-    ori   $1, $1, 0xffff
-.endif
     vxor  $v17, $v17, $v17
-.ifndef VERSION_SH
-    and   $17, $25, $1
-.endif
     vxor  $v18, $v18, $v18
-.ifdef VERSION_SH
     srl   $s1, $s1, 8
-.else
-    srl   $2, $25, 24
-.endif
     vxor  $v19, $v19, $v19
-.ifndef VERSION_SH
-    sll   $2, $2, 2
-    lw    $3, (segmentTable)($2)
-    add   $17, $17, $3          // last frame addr
-.endif
     sqv   $v27[0], 0x00($19)
     sqv   $v27[0], 0x10($19)
     srl   $1, $26, 16
@@ -616,11 +365,7 @@ cmd_ADPCM:
      nop
     mtc0  $zero, SP_SEMAPHORE
 @@audio_0400150c:
-.ifdef VERSION_SH
     addi  $16, $zero, 0x0050
-.else
-    addi  $16, $zero, 0x0030
-.endif
     addi  $15, $zero, adpcmTable
     ldv   $v25[0], 0x00($16)
     ldv   $v24[8], 0x00($16)
@@ -754,132 +499,18 @@ cmd_ADPCM:
      mtc0  $zero, SP_SEMAPHORE
 
 cmd_POLEF: // unused by SM64
-.ifndef VERSION_SH
-    lqv   $v31[0], 0x0000($zero)
-    vxor  $v28, $v28, $v28
-    lhu   $21, (audio_in_buf)($24)
-    vxor  $v17, $v17, $v17
-    lhu   $20, (audio_out_buf)($24)
-    vxor  $v18, $v18, $v18
-    lhu   $19, (audio_count)($24)
-    vxor  $v19, $v19, $v19
-    beqz  $19, @@audio_04001874
-     andi  $14, $26, 0xffff
-    mtc2  $14, $v31[10]
-    sll   $14, $14, 2
-    mtc2  $14, $v16[0]
-    lui   $1, 0x00ff
-    vxor  $v20, $v20, $v20
-    ori   $1, $1, 0xffff
-    vxor  $v21, $v21, $v21
-    and   $18, $25, $1
-    vxor  $v22, $v22, $v22
-    srl   $2, $25, 24
-    vxor  $v23, $v23, $v23
-    sll   $2, $2, 2
-    lw    $3, (segmentTable)($2)
-    add   $18, $18, $3
-    slv   $v28[0], 0x00($23)
-    srl   $1, $26, 16
-    andi  $1, $1, 0x0001
-    bgtz  $1, @@audio_040017a0
-     nop
-    addi  $1, $23, 0x0000
-    addi  $2, $18, 0x0000
-    jal   dma_read_start
-     addi  $3, $zero, 7
-.endif
 @@dma_read_busy:
-.ifndef VERSION_SH
-    mfc0  $5, SP_DMA_BUSY
-    bnez  $5, @@dma_read_busy
-     nop
-    mtc0  $zero, SP_SEMAPHORE
-.endif
 @@audio_040017a0:
-.ifndef VERSION_SH
-    addi  $13, $zero, adpcmTable
-    addi  $1, $zero, 0x0004
-    mtc2  $1, $v14[0]
-    lqv   $v24[0], 0x0010($13)
-    vmudm $v16, $v24, $v16[0]
-    ldv   $v28[8], 0x00($23)
-    sqv   $v16[0], 0x10($13)
-    lqv   $v25[0], 0x00($13)
-    addi  $13, $13, -2
-    lrv   $v23[0], 0x20($13)
-    addi  $13, $13, -2
-    lrv   $v22[0], 0x20($13)
-    addi  $13, $13, -2
-    lrv   $v21[0], 0x20($13)
-    addi  $13, $13, -2
-    lrv   $v20[0], 0x20($13)
-    addi  $13, $13, -2
-    lrv   $v19[0], 0x20($13)
-    addi  $13, $13, -2
-    lrv   $v18[0], 0x20($13)
-    addi  $13, $13, -2
-    lrv   $v17[0], 0x20($13)
-    ldv   $v30[0], 0x00($21)
-    ldv   $v30[8], 0x08($21)
-.endif
 @@audio_04001800:
-.ifndef VERSION_SH
-    vmudh $v16, $v25, $v28[6]
-    addi  $21, $21, 0x10
-    vmadh $v16, $v24, $v28[7]
-    addi  $19, $19, -0x10
-    vmadh $v16, $v23, $v30[0]
-    vmadh $v16, $v22, $v30[1]
-    vmadh $v16, $v21, $v30[2]
-    vmadh $v16, $v20, $v30[3]
-    vmadh $v28, $v19, $v30[4]
-    vmadh $v16, $v18, $v30[5]
-    vmadh $v16, $v17, $v30[6]
-    vmadh $v16, $v30, $v31[5]
-    ldv   $v30[0], 0x00($21)
-    vsar  $v26, $v15, $v28[1]
-    ldv   $v30[8], 0x08($21)
-    vsar  $v28, $v15, $v28[0]
-    vmudn $v16, $v26, $v14[0]
-    vmadh $v28, $v28, $v14[0]
-    sdv   $v28[0], 0x00($20)
-    sdv   $v28[8], 0x08($20)
-    bgtz  $19, @@audio_04001800
-     addi  $20, $20, 0x10
-    addi  $1, $20, -8
-    addi  $2, $18, 0x00
-    jal   dma_write_start
-     addi  $3, $zero, 7
-.endif
 @@dma_write_busy:
-.ifndef VERSION_SH
-    mfc0  $5, SP_DMA_BUSY
-    bnez  $5, @@dma_write_busy
-     nop
-.endif
 @@audio_04001874:
-.ifndef VERSION_SH
-    j     cmd_SPNOOP
-     mtc0  $zero, SP_SEMAPHORE
-.endif
 
 cmd_RESAMPLE:
     lh    $8, (audio_in_buf)($24)
     lh    $19, (audio_out_buf)($24)
     lh    $18, (audio_count)($24)
-.ifdef VERSION_SH
     sll   $v0, $t9, 8
     srl   $v0, $v0, 8
-.else
-    lui   $4, 0x00ff
-    ori   $4, $4, 0xffff
-    and   $2, $25, $4
-    srl   $5, $25, 24
-    sll   $5, $5, 2
-    lw    $6, (segmentTable)($5)
-    add   $2, $2, $6          // physical address of state_addr
-.endif
     addi  $1, $23, 0x0000
     sw    $2, 0x40($23)       // overwrite TASK_UCODE ptr
     addi  $3, $zero, 0x1f
@@ -902,24 +533,14 @@ cmd_RESAMPLE:
 @@audio_040018e8:
     andi  $10, $7, 0x02      // A_LOOP? A_OUT?
     beqz  $10, @@audio_04001908
-.ifdef VERSION_SH
      ldv   $v16[0], 0x00($23)
     addi  $t0, $t0, -4
     ssv   $v16[0], 0x00($t0)
     ssv   $v16[4], 0x02($t0)
     j     @@audio_c410c
      nop
-.else
-     nop
-    lh    $11, 0x0a($23)
-    lqv   $v3[0], 0x10($23)
-    sdv   $v3[0], -0x10($8)
-    sdv   $v3[8], -0x08($8)
-    sub   $8, $8, $11
-.endif
 
 @@audio_04001908:
-.ifdef VERSION_SH
     andi  $t2, $a3, 4
     beqz  $t2, @@audio_c4104
      nop
@@ -935,34 +556,18 @@ cmd_RESAMPLE:
     j     @@audio_c410c
      nop
 @@audio_c4104:
-.endif
     addi  $8, $8, -8
-.ifdef VERSION_SH
     sdv   $v16[0], 0x00($8)  
-.endif
 @@audio_c410c:
     lsv   $v23[14], 0x08($23)   // saved pitch_accumulator
-.ifdef VERSION_SH
     ldv   $v16[0], 0x00($8)  
-.else
-    ldv   $v16[0], 0x00($23)    // saved next 4 unprocessed samples
-    sdv   $v16[0], 0x00($8)     // store them before the input samples
-.endif
     mtc2  $8, $v18[4]
-.ifdef VERSION_SH
     addi  $10, $zero, 0x100
-.else
-    addi  $10, $zero, 0xc0
-.endif
     mtc2  $10, $v18[6]
     mtc2  $26, $v18[8]          // pitch
     addi  $10, $zero, 0x40
     mtc2  $10, $v18[10]
-.ifdef VERSION_SH
     addi  $9, $zero, 0x60
-.else
-    addi  $9, $zero, data0040
-.endif
     lqv   $v31[0], 0x10($9)     // 0x50
     lqv   $v25[0], 0x00($9)     // 0x40
     vsub  $v25, $v25, $v31
@@ -1073,21 +678,6 @@ cmd_RESAMPLE:
     ssv   $v23[0], 0x08($23)
     ldv   $v16[0], 0x00($17)
     sdv   $v16[0], 0x00($23)
-.ifndef VERSION_SH
-    lh    $6, (audio_in_buf)($24)
-    addi  $17, $17, 8
-    sub   $5, $17, $6
-    andi  $4, $5, 0x000f
-    sub   $17, $17, $4
-    beqz  $4, @@audio_04001b04
-     addi $7, $zero, 0x10
-    sub   $4, $7, $4
-@@audio_04001b04:
-    sh    $4, 0x0a($23)
-    ldv   $v3[0], 0x00($17)
-    ldv   $v3[8], 0x08($17)
-    sqv   $v3[0], 0x10($23)
-.endif
     lw    $2, 0x40($23)
     addi  $1, $23, 0x00
     jal   dma_write_start
@@ -1099,7 +689,6 @@ cmd_RESAMPLE:
     j     cmd_SPNOOP
      mtc0  $zero, SP_SEMAPHORE
 
-.ifdef VERSION_SH
 cmd_17e4:
     srl   $t7, $k0, 16 
     andi  $t7, $t7, 0xff
@@ -1173,251 +762,7 @@ cmd_INTERL:
      addi $t6, $t6, 0x10
     j cmd_SPNOOP
      nop
-.endif
 
-.ifndef VERSION_SH
-cmd_ENVMIXER:
-    lui   $4, 0x00ff
-    ori   $4, $4, 0xffff
-    and   $2, $25, $4
-    srl   $5, $25, 24
-    sll   $5, $5, 2
-    lw    $6, (segmentTable)($5)
-    add   $2, $2, $6
-    addi  $1, $23, 0x00
-    addi  $3, $zero, 0x4f
-    vxor  $v0, $v0, $v0
-    addi  $11, $zero, 0x40
-    lqv   $v31[0], 0x10($11)    // all 0001
-    lqv   $v10[0], 0x00($zero)  // element 6 is 0x7fff
-    srl   $12, $26, 16
-    andi  $10, $12, A_INIT
-    beqz  $10, @@audio_04001b84
-     lqv   $v24[0], 0x10($24)
-    j     @@audio_04001bb0
-     nop
-@@audio_04001b84:
-    jal   dma_read_start
-     nop
-@@dma_read_busy:
-    mfc0  $5, SP_DMA_BUSY
-    bnez  $5, @@dma_read_busy
-     nop
-    mtc0  $zero, SP_SEMAPHORE
-    lqv   $v20[0], 0x00($23)
-    lqv   $v21[0], 0x10($23)
-    lqv   $v18[0], 0x20($23)
-    lqv   $v19[0], 0x30($23)
-    lqv   $v24[0], 0x40($23)
-@@audio_04001bb0:
-    lh    $13, (audio_in_buf)($24)
-    lh    $19, (audio_out_buf)($24)
-    lh    $18, (audio_aux_buf0)($24)
-    lh    $17, (audio_aux_buf1)($24)
-    lh    $16, (audio_aux_buf2)($24)
-    lh    $14, (audio_count)($24)
-    addi  $15, $zero, 0x10
-    mfc2  $21, $v24[2]
-    mfc2  $20, $v24[8]
-    andi  $9, $12, 0x0008
-    bgtz  $9, @@audio_04001bec
-     nop
-    addi  $17, $23, 0x50
-    add   $16, $zero, $17
-    addi  $15, $zero, 0
-@@audio_04001bec:
-    beqz  $10, @@audio_04001cf0
-     lqv   $v30[0], 0x70($11)
-    lqv   $v17[0], 0x00($13)
-    lqv   $v29[0], 0x00($19)
-    lqv   $v27[0], 0x00($17)
-    vxor  $v21, $v21, $v21
-    lsv   $v20[14], 0x06($24)
-    vmudm $v23, $v20, $v24[2]
-    vmadh $v22, $v20, $v24[1]
-    vmadn $v23, $v31, $v0[0]
-    vsubc $v23, $v23, $v21
-    vsub  $v22, $v22, $v20
-    vmudl $v23, $v30, $v23[7]
-    vmadn $v23, $v30, $v22[7]
-    vmadm $v22, $v31, $v0[0]
-    vmadm $v21, $v31, $v21[7]
-    vmadh $v20, $v31, $v20[7]
-    bgtz  $21, @@audio_04001c44
-     vmadn $v21, $v31, $v0[0]
-    vge   $v20, $v20, $v24[0]
-    j     @@audio_04001c48
-     nop
-@@audio_04001c44:
-    vcl   $v20, $v20, $v24[0]
-@@audio_04001c48:
-    vmulf $v16, $v20, $v24[6]
-    vmulf $v15, $v20, $v24[7]
-    vmulf $v29, $v29, $v10[6]
-    vmacf $v29, $v17, $v16
-    vmulf $v27, $v27, $v10[6]
-    vmacf $v27, $v17, $v15
-    sqv   $v29[0], 0x00($19)
-    sqv   $v27[0], 0x00($17)
-    lqv   $v28[0], 0x00($18)
-    lqv   $v26[0], 0x00($16)
-    vxor  $v19, $v19, $v19
-    lsv   $v18[14], 0x08($24)
-    vmudm $v23, $v18, $v24[5]
-    vmadh $v22, $v18, $v24[4]
-    vmadn $v23, $v31, $v0[0]
-    vsubc $v23, $v23, $v19
-    vsub  $v22, $v22, $v18
-    vmudl $v23, $v30, $v23[7]
-    vmadn $v23, $v30, $v22[7]
-    vmadm $v22, $v31, $v0[0]
-    vmadm $v19, $v31, $v19[7]
-    vmadh $v18, $v31, $v18[7]
-    bgtz  $20, @@audio_04001cb4
-     vmadn $v19, $v31, $v0[0]
-    vge   $v18, $v18, $v24[3]
-    j     @@audio_04001cb8
-     nop
-@@audio_04001cb4:
-    vcl   $v18, $v18, $v24[3]
-@@audio_04001cb8:
-    vmulf $v16, $v18, $v24[6]
-    vmulf $v15, $v18, $v24[7]
-    vmulf $v28, $v28, $v10[6]
-    vmacf $v28, $v17, $v16
-    vmulf $v26, $v26, $v10[6]
-    vmacf $v26, $v17, $v15
-    sqv   $v28[0], 0x00($18)
-    sqv   $v26[0], 0x00($16)
-    addi  $14, $14, -0x10
-    addi  $13, $13, 0x10
-    addi  $19, $19, 0x10
-    addi  $18, $18, 0x10
-    add   $17, $17, $15
-    add   $16, $16, $15
-@@audio_04001cf0:
-    vmudl $v23, $v21, $v24[2]
-    vmadm $v23, $v20, $v24[2]
-    vmadn $v23, $v21, $v24[1]
-    vmadh $v20, $v20, $v24[1]
-    vmadn $v21, $v31, $v0[0]
-@@audio_04001d04:
-    bgtz  $21, @@audio_04001d30
-     lqv   $v17[0], 0x00($13)
-    vge   $v20, $v20, $v24[0]
-    vmudl $v23, $v19, $v24[5]
-    vmadm $v23, $v18, $v24[5]
-    vmadn $v23, $v19, $v24[4]
-    lqv   $v29[0], 0x00($19)
-    vmadh $v18, $v18, $v24[4]
-    lqv   $v27[0], 0x00($17)
-    j     @@audio_04001d50
-     vmadn $v19, $v31, $v0[0]
-@@audio_04001d30:
-    vcl   $v20, $v20, $v24[0]
-    vmudl $v23, $v19, $v24[5]
-    vmadm $v23, $v18, $v24[5]
-    vmadn $v23, $v19, $v24[4]
-    lqv   $v29[0], 0x00($19)
-    vmadh $v18, $v18, $v24[4]
-    lqv   $v27[0], 0x00($17)
-    vmadn $v19, $v31, $v0[0]
-@@audio_04001d50:
-    vmulf $v16, $v20, $v24[6]
-    sqv   $v20[0], 0x00($23)
-    vmulf $v15, $v20, $v24[7]
-    sqv   $v21[0], 0x10($23)
-    vmulf $v29, $v29, $v10[6]
-    vmacf $v29, $v17, $v16
-    lqv   $v28[0], 0x00($18)
-    vmulf $v27, $v27, $v10[6]
-    lqv   $v26[0], 0x00($16)
-    vmacf $v27, $v17, $v15
-    bgtz  $20, @@audio_04001da0
-     sqv   $v29[0], 0x00($19)
-    vge   $v18, $v18, $v24[3]
-    vmudl $v23, $v21, $v24[2]
-    sqv   $v27[0], 0x00($17)
-    vmadm $v23, $v20, $v24[2]
-    vmadn $v23, $v21, $v24[1]
-    vmadh $v20, $v20, $v24[1]
-    j     @@audio_04001dbc
-     vmadn $v21, $v31, $v0[0]
-@@audio_04001da0:
-    vcl   $v18, $v18, $v24[3]
-    vmudl $v23, $v21, $v24[2]
-    sqv   $v27[0], 0x00($17)
-    vmadm $v23, $v20, $v24[2]
-    vmadn $v23, $v21, $v24[1]
-    vmadh $v20, $v20, $v24[1]
-    vmadn $v21, $v31, $v0[0]
-@@audio_04001dbc:
-    vmulf $v16, $v18, $v24[6]
-    addi  $14, $14, -0x10
-    vmulf $v15, $v18, $v24[7]
-    addi  $19, $19, 0x10
-    vmulf $v28, $v28, $v10[6]
-    add   $17, $17, $15
-    vmacf $v28, $v17, $v16
-    addi  $13, $13, 0x10
-    vmulf $v26, $v26, $v10[6]
-    vmacf $v26, $v17, $v15
-    sqv   $v28[0], 0x00($18)
-    addi  $18, $18, 0x10
-    blez  $14, @@audio_04001dfc
-     sqv   $v26[0], 0x00($16)
-    j     @@audio_04001d04
-     add   $16, $16, $15
-@@audio_04001dfc:
-    sqv   $v18[0], 0x20($23)
-    sqv   $v19[0], 0x30($23)
-    sqv   $v24[0], 0x40($23)
-    jal   dma_write_start
-     addi  $3, $zero, 0x004f
-@@dma_write_busy:
-    mfc0  $5, SP_DMA_BUSY
-    bnez  $5, @@dma_write_busy
-     nop
-    j     cmd_SPNOOP
-     mtc0  $zero, SP_SEMAPHORE
-
-cmd_MIXER:
-    lqv   $v31[0], 0x00($zero)   // element 6 is 0x7fff
-    lhu   $18, (audio_count)($24)
-    beqz  $18, @@cmd_mixer_done  // skip operation when count is 0
-     nop
-    andi  $19, $25, 0xffff
-    addi  $19, $19, dmemBase     // dmemout + DMEM_BASE
-    srl   $20, $25, 16
-    addi  $20, $20, dmemBase     // dmemin + DMEM_BASE
-    andi  $17, $26, 0xffff
-    mtc2  $17, $v30[0]
-    lqv   $v27[0], 0x00($19)
-    lqv   $v29[0], 0x00($20)
-    lqv   $v26[0], 0x10($19)
-    lqv   $v28[0], 0x10($20)
-@@audio_04001e5c:
-    vmulf $v27, $v27, $v31[6]
-    addi  $18, $18, -0x20
-    vmacf $v27, $v29, $v30[0]
-    addi  $20, $20, 0x20
-    sqv   $v27[0], 0x00($19)
-    vmulf $v26, $v26, $v31[6]
-    lqv   $v29[0], 0x00($20)
-    vmacf $v26, $v28, $v30[0]
-    lqv   $v28[0], 0x10($20)
-    sqv   $v26[0], 0x10($19)
-    addi  $19, $19, 0x20
-    lqv   $v27[0], 0x00($19)
-    bgtz  $18, @@audio_04001e5c
-     lqv   $v26[0], 0x10($19)
-@@cmd_mixer_done:
-    j     cmd_SPNOOP
-     nop
-    nop
-.endif
-
-.ifdef VERSION_SH
 cmd_ENVMIXER:
     vxor  $v4, $v4, $v4
     vxor  $v0, $v0, $v0
@@ -1891,6 +1236,5 @@ cmd_RESAMPLE_ZOH:
      nop
     jal   cmd_SPNOOP
      nop
-.endif
 
 .close // CODE_FILE
