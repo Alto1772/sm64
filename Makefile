@@ -28,19 +28,17 @@ $(eval $(call validate-option,COMPILER,ido gcc))
 
 
 # VERSION - selects the version of the game to build
-#   jp - builds the 1996 Japanese version
-#   us - builds the 1996 North American version
-#   eu - builds the 1997 PAL version
 #   sh - builds the 1997 Japanese Shindou version, with rumble pak support
-#
-# NOTE: Only SH is supported.
-VERSION := sh
-$(eval $(call validate-option,VERSION,jp us eu sh))
 
-DEFINES        += VERSION_SH=1
-OPT_FLAGS      := -O2
-GRUCODE        ?= f3d_new
-VERSION_JP_US  ?= false
+VERSION ?= sh
+
+$(eval $(call validate-option,VERSION,sh))
+#ifeq($(VERSION),sh)
+#  DEFINES += VERSION_SH=1
+#endif
+
+OPT_FLAGS := -O2
+GRUCODE ?= f3d_new
 
 TARGET := sm64.$(VERSION)
 
@@ -114,7 +112,7 @@ $(eval $(call validate-option,COMPARE,0 1))
 
 TARGET_STRING := sm64.$(VERSION).$(GRUCODE)
 # If non-default settings were chosen, disable COMPARE
-ifeq ($(filter $(TARGET_STRING), sm64.jp.f3d_old sm64.us.f3d_old sm64.eu.f3d_new sm64.sh.f3d_new),)
+ifeq ($(filter $(TARGET_STRING), sm64.sh.f3d_new),)
   COMPARE := 0
 endif
 
@@ -164,7 +162,7 @@ ifeq ($(filter clean distclean print-%,$(MAKECMDGOALS)),)
   # Make sure assets exist
   NOEXTRACT ?= 0
   ifeq ($(NOEXTRACT),0)
-    DUMMY != $(PYTHON) extract_assets.py $(VERSION) >&2 || echo FAIL
+    DUMMY != $(PYTHON) extract_assets.py sh >&2 || echo FAIL
     ifeq ($(DUMMY),FAIL)
       $(error Failed to extract assets)
     endif
@@ -200,7 +198,7 @@ LEVEL_DIRS     := $(patsubst levels/%,%,$(dir $(wildcard levels/*/header.h)))
 
 # Directories containing source files
 SRC_DIRS := src src/engine src/game src/audio src/menu src/buffers actors levels bin data assets asm lib sound
-BIN_DIRS := bin bin/$(VERSION)
+BIN_DIRS := bin
 
 ULTRA_SRC_DIRS := lib/src lib/src/math lib/asm lib/data
 ULTRA_BIN_DIRS := lib/bin
@@ -225,7 +223,7 @@ SOUND_SAMPLE_DIRS   := $(wildcard sound/samples/*)
 SOUND_SAMPLE_AIFFS  := $(foreach dir,$(SOUND_SAMPLE_DIRS),$(wildcard $(dir)/*.aiff))
 SOUND_SAMPLE_TABLES := $(foreach file,$(SOUND_SAMPLE_AIFFS),$(BUILD_DIR)/$(file:.aiff=.table))
 SOUND_SAMPLE_AIFCS  := $(foreach file,$(SOUND_SAMPLE_AIFFS),$(BUILD_DIR)/$(file:.aiff=.aifc))
-SOUND_SEQUENCE_DIRS := sound/sequences sound/sequences/$(VERSION)
+SOUND_SEQUENCE_DIRS := sound/sequences sound/sequences/sh
 # all .m64 files in SOUND_SEQUENCE_DIRS, plus all .m64 files that are generated from .s files in SOUND_SEQUENCE_DIRS
 SOUND_SEQUENCE_FILES := \
   $(foreach dir,$(SOUND_SEQUENCE_DIRS),\
@@ -248,11 +246,7 @@ DEP_FILES := $(O_FILES:.o=.d) $(ULTRA_O_FILES:.o=.d) $(GODDARD_O_FILES:.o=.d) $(
 
 # Files with GLOBAL_ASM blocks
 ifeq ($(NON_MATCHING),0)
-  ifeq ($(VERSION),sh)
-    GLOBAL_ASM_C_FILES != grep -rl 'GLOBAL_ASM(' $(wildcard src/**/*.c) $(wildcard lib/src/*.c)
-  else
-    GLOBAL_ASM_C_FILES != grep -rl 'GLOBAL_ASM(' $(wildcard src/**/*.c)
-  endif
+GLOBAL_ASM_C_FILES != grep -rl 'GLOBAL_ASM(' $(wildcard src/**/*.c) $(wildcard lib/src/*.c)
 GLOBAL_ASM_O_FILES = $(foreach file,$(GLOBAL_ASM_C_FILES),$(BUILD_DIR)/$(file:.c=.o))
 GLOBAL_ASM_DEP = $(BUILD_DIR)/src/audio/non_matching_dep
 endif
@@ -421,9 +415,7 @@ $(BUILD_DIR)/lib/rsp.o:               $(BUILD_DIR)/rsp/rspboot.bin $(BUILD_DIR)/
 $(SOUND_BIN_DIR)/sound_data.o:        $(SOUND_BIN_DIR)/sound_data.ctl.inc.c $(SOUND_BIN_DIR)/sound_data.tbl.inc.c $(SOUND_BIN_DIR)/sequences.bin.inc.c $(SOUND_BIN_DIR)/bank_sets.inc.c
 $(BUILD_DIR)/levels/scripts.o:        $(BUILD_DIR)/include/level_headers.h
 
-ifeq ($(VERSION),sh)
-  $(BUILD_DIR)/src/audio/load.o: $(SOUND_BIN_DIR)/bank_sets.inc.c $(SOUND_BIN_DIR)/sequences_header.inc.c $(SOUND_BIN_DIR)/ctl_header.inc.c $(SOUND_BIN_DIR)/tbl_header.inc.c
-endif
+$(BUILD_DIR)/src/audio/load.o: $(SOUND_BIN_DIR)/bank_sets.inc.c $(SOUND_BIN_DIR)/sequences_header.inc.c $(SOUND_BIN_DIR)/ctl_header.inc.c $(SOUND_BIN_DIR)/tbl_header.inc.c
 
 $(CRASH_TEXTURE_C_FILES): TEXTURE_ENCODING := u32
 
@@ -431,30 +423,12 @@ ifeq ($(COMPILER),gcc)
   $(BUILD_DIR)/lib/src/math/%.o: CFLAGS += -fno-builtin
 endif
 
-ifeq ($(VERSION),eu)
-  TEXT_DIRS := text/de text/us text/fr
+#ifeq ($(VERSION),sh)
+  TEXT_DIRS := text/jp
+  $(BUILD_DIR)/bin/segment2.o: $(BUILD_DIR)/text/jp/define_text.inc.c
+#endif
 
-  # EU encoded text inserted into individual segment 0x19 files,
-  # and course data also duplicated in leveldata.c
-  $(BUILD_DIR)/bin/eu/translation_en.o: $(BUILD_DIR)/text/us/define_text.inc.c
-  $(BUILD_DIR)/bin/eu/translation_de.o: $(BUILD_DIR)/text/de/define_text.inc.c
-  $(BUILD_DIR)/bin/eu/translation_fr.o: $(BUILD_DIR)/text/fr/define_text.inc.c
-  $(BUILD_DIR)/levels/menu/leveldata.o: $(BUILD_DIR)/include/text_strings.h
-  $(BUILD_DIR)/levels/menu/leveldata.o: $(BUILD_DIR)/text/us/define_courses.inc.c
-  $(BUILD_DIR)/levels/menu/leveldata.o: $(BUILD_DIR)/text/de/define_courses.inc.c
-  $(BUILD_DIR)/levels/menu/leveldata.o: $(BUILD_DIR)/text/fr/define_courses.inc.c
-else
-  ifeq ($(VERSION),sh)
-    TEXT_DIRS := text/jp
-    $(BUILD_DIR)/bin/segment2.o: $(BUILD_DIR)/text/jp/define_text.inc.c
-  else
-    TEXT_DIRS := text/$(VERSION)
-    # non-EU encoded text inserted into segment 0x02
-    $(BUILD_DIR)/bin/segment2.o: $(BUILD_DIR)/text/$(VERSION)/define_text.inc.c
-  endif
-endif
-
-ALL_DIRS := $(BUILD_DIR) $(addprefix $(BUILD_DIR)/,$(SRC_DIRS) $(GODDARD_SRC_DIRS) $(ULTRA_SRC_DIRS) $(ULTRA_BIN_DIRS) $(BIN_DIRS) $(TEXTURE_DIRS) $(TEXT_DIRS) $(SOUND_SAMPLE_DIRS) $(addprefix levels/,$(LEVEL_DIRS)) rsp include) $(MIO0_DIR) $(addprefix $(MIO0_DIR)/,$(VERSION)) $(SOUND_BIN_DIR) $(SOUND_BIN_DIR)/sequences/$(VERSION)
+ALL_DIRS := $(BUILD_DIR) $(addprefix $(BUILD_DIR)/,$(SRC_DIRS) $(GODDARD_SRC_DIRS) $(ULTRA_SRC_DIRS) $(ULTRA_BIN_DIRS) $(BIN_DIRS) $(TEXTURE_DIRS) $(TEXT_DIRS) $(SOUND_SAMPLE_DIRS) $(addprefix levels/,$(LEVEL_DIRS)) rsp include) $(MIO0_DIR) $(addprefix $(MIO0_DIR)/,sh) $(SOUND_BIN_DIR) $(SOUND_BIN_DIR)/sequences/sh
 
 # Make sure build directory exists before compiling anything
 DUMMY != mkdir -p $(ALL_DIRS)
@@ -546,7 +520,7 @@ $(ENDIAN_BITWIDTH): $(TOOLS_DIR)/determine-endian-bitwidth.c
 
 $(SOUND_BIN_DIR)/sound_data.ctl: sound/sound_banks/ $(SOUND_BANK_FILES) $(SOUND_SAMPLE_AIFCS) $(ENDIAN_BITWIDTH)
 	@$(PRINT) "$(GREEN)Generating:  $(BLUE)$@ $(NO_COL)\n"
-	$(V)$(PYTHON) $(TOOLS_DIR)/assemble_sound.py $(BUILD_DIR)/sound/samples/ sound/sound_banks/ $(SOUND_BIN_DIR)/sound_data.ctl $(SOUND_BIN_DIR)/ctl_header $(SOUND_BIN_DIR)/sound_data.tbl $(SOUND_BIN_DIR)/tbl_header $(C_DEFINES) $$(cat $(ENDIAN_BITWIDTH))
+	$(V)$(PYTHON) $(TOOLS_DIR)/assemble_sound.py $(BUILD_DIR)/sound/samples/ sound/sound_banks/ $(SOUND_BIN_DIR)/sound_data.ctl $(SOUND_BIN_DIR)/ctl_header $(SOUND_BIN_DIR)/sound_data.tbl $(SOUND_BIN_DIR)/tbl_header $$(cat $(ENDIAN_BITWIDTH))
 
 $(SOUND_BIN_DIR)/sound_data.tbl: $(SOUND_BIN_DIR)/sound_data.ctl
 	@true
@@ -653,45 +627,17 @@ ifeq ($(COMPILER),ido)
   $(BUILD_DIR)/lib/src/gu%.o:        OPT_FLAGS := -O3
   $(BUILD_DIR)/lib/src/al%.o:        OPT_FLAGS := -O3
   # For the asm-processor, since it doesn't support -O3. Probably not actually compiled with these flags.
-  ifeq ($(VERSION),sh)
-    $(BUILD_DIR)/lib/src/unk_shindou_file.o: OPT_FLAGS := -O1
-    $(BUILD_DIR)/lib/src/func_sh_80304D20.o: OPT_FLAGS := -O1
-    $(BUILD_DIR)/lib/src/_Printf.o: OPT_FLAGS := -O3
-    $(BUILD_DIR)/lib/src/contramread.o: OPT_FLAGS := -O1
-    $(BUILD_DIR)/lib/src/osPfsIsPlug.o: OPT_FLAGS := -O1
-    $(BUILD_DIR)/lib/src/osAiSetFrequency.o: OPT_FLAGS := -O1
-    $(BUILD_DIR)/lib/src/contramwrite.o: OPT_FLAGS := -O1
-    $(BUILD_DIR)/lib/src/sprintf.o: OPT_FLAGS := -O3
-    $(BUILD_DIR)/lib/src/_Litob.o: OPT_FLAGS := -O3
-    $(BUILD_DIR)/lib/src/_Ldtob.o: OPT_FLAGS := -O3
-    $(BUILD_DIR)/lib/src/osDriveRomInit.o: OPT_FLAGS := -g
-  endif
-  ifeq ($(VERSION),eu)
-    $(BUILD_DIR)/lib/src/_Litob.o:   OPT_FLAGS := -O3
-    $(BUILD_DIR)/lib/src/_Ldtob.o:   OPT_FLAGS := -O3
-    $(BUILD_DIR)/lib/src/_Printf.o:  OPT_FLAGS := -O3
-    $(BUILD_DIR)/lib/src/sprintf.o:  OPT_FLAGS := -O3
-
-    # Enable loop unrolling except for external.c (external.c might also have used
-    # unrolling, but it makes one loop harder to match).
-    # For all audio files other than external.c and port_eu.c, put string literals
-    # in .data. (In Shindou, the port_eu.c string literals also moved to .data.)
-    $(BUILD_DIR)/src/audio/%.o:        OPT_FLAGS := -O2 -use_readwrite_const
-    $(BUILD_DIR)/src/audio/port_eu.o:  OPT_FLAGS := -O2
-    $(BUILD_DIR)/src/audio/external.o: OPT_FLAGS := -O2 -Wo,-loopunroll,0
-  endif
-  ifeq ($(VERSION_JP_US),true)
-    $(BUILD_DIR)/src/audio/%.o:        OPT_FLAGS := -O2 -Wo,-loopunroll,0
-    $(BUILD_DIR)/src/audio/load.o:     OPT_FLAGS := -O2 -framepointer -Wo,-loopunroll,0
-  endif
-  ifeq ($(VERSION_JP_US),true)
-    # The source-to-source optimizer copt is enabled for audio. This makes it use
-    # acpp, which needs -Wp,-+ to handle C++-style comments.
-    # All other files than external.c should really use copt, but only a few have
-    # been matched so far.
-    $(BUILD_DIR)/src/audio/effects.o:   OPT_FLAGS := -O2 -Wo,-loopunroll,0 -sopt,-inline=sequence_channel_process_sound,-scalaroptimize=1 -Wp,-+
-    $(BUILD_DIR)/src/audio/synthesis.o: OPT_FLAGS := -O2 -sopt,-scalaroptimize=1 -Wp,-+
-  endif
+  $(BUILD_DIR)/lib/src/unk_shindou_file.o: OPT_FLAGS := -O1
+  $(BUILD_DIR)/lib/src/func_sh_80304D20.o: OPT_FLAGS := -O1
+  $(BUILD_DIR)/lib/src/_Printf.o: OPT_FLAGS := -O3
+  $(BUILD_DIR)/lib/src/contramread.o: OPT_FLAGS := -O1
+  $(BUILD_DIR)/lib/src/osPfsIsPlug.o: OPT_FLAGS := -O1
+  $(BUILD_DIR)/lib/src/osAiSetFrequency.o: OPT_FLAGS := -O1
+  $(BUILD_DIR)/lib/src/contramwrite.o: OPT_FLAGS := -O1
+  $(BUILD_DIR)/lib/src/sprintf.o: OPT_FLAGS := -O3
+  $(BUILD_DIR)/lib/src/_Litob.o: OPT_FLAGS := -O3
+  $(BUILD_DIR)/lib/src/_Ldtob.o: OPT_FLAGS := -O3
+  $(BUILD_DIR)/lib/src/osDriveRomInit.o: OPT_FLAGS := -g
 
 # Add a target for build/eu/src/audio/*.copt to make it easier to see debug
 $(BUILD_DIR)/src/audio/%.acpp: src/audio/%.c

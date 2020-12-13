@@ -14,8 +14,8 @@ A prior copy of the game is required to extract the assets.
 
 1. Install prerequisites: `sudo apt install -y build-essential git binutils-mips-linux-gnu python3`
 2. Clone the repo from within Linux: `git clone https://github.com/n64decomp/sm64.git`
-3. Place a Super Mario 64 ROM called `baserom.<VERSION>.z64` into the project folder for asset extraction, where `VERSION` can be `us`, `jp`, or `eu`.
-4. Run `make` to build. Qualify the version through `make VERSION=<VERSION>`. Add `-j4` to improve build speed (hardware dependent).
+3. Place a Super Mario 64 ROM called `baserom.sh.z64` into the project folder for asset extraction.
+4. Run `make` to build. Add `-j4` to improve build speed (hardware dependent).
 
 Ensure the repo path length does not exceed 255 characters. Long path names result in build errors.
 
@@ -86,18 +86,17 @@ For each version (jp/us/eu) for which you want to build a ROM, put an existing R
 Run `make` to build the ROM (defaults to `VERSION=us`).
 Other examples:
 ```
-make VERSION=jp -j4       # build (J) version instead with 4 jobs
-make VERSION=eu COMPARE=0 # build (EU) version but do not compare ROM hashes
+make -j4       # build the ROM but instead with 4 jobs
+make COMPARE=0 # build the ROM but do not compare ROM hashes
 ```
 
 Resulting artifacts can be found in the `build` directory.
 
 The full list of configurable variables are listed below, with the default being the first listed:
 
-* ``VERSION``: ``us``, ``jp``, ``eu``, ``sh`` (WIP)
 * ``GRUCODE``: ``f3d_old``, ``f3d_new``, ``f3dex``, ``f3dex2``, ``f3dzex``
 * ``COMPARE``: ``1`` (compare ROM hash), ``0`` (do not compare ROM hash)
-* ``NON_MATCHING``: Use functionally equivalent C implementations for non-matchings (Currently there aren't any non-matchings, but this will apply to Shindou and iQue). Also will avoid instances of undefined behavior.
+* ``NON_MATCHING``: Use functionally equivalent C implementations for non-matchings. Also will avoid instances of undefined behavior.
 * ``CROSS``: Cross-compiler tool prefix (Example: ``mips64-elf-``).
 
 ### macOS
