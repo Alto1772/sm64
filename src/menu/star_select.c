@@ -227,8 +227,6 @@ void print_course_number(void) {
     gSPDisplayList(gDisplayListHead++, dl_rgba16_text_end);
 }
 
-#define ACT_NAME_X 163
-
 /**
  * Print act selector strings, some with special checks.
  */
@@ -272,7 +270,7 @@ void print_act_selector_strings(void) {
     if (sVisibleStars != 0) {
         selectedActName = segmented_to_virtual(actNameTbl[(gCurrCourseNum - 1) * 6 + sSelectedActIndex]);
 
-        actNameX = get_str_x_pos_from_center(ACT_NAME_X, selectedActName, 8.0f);
+        actNameX = get_str_x_pos_from_center(163, selectedActName, 8.0f);
         print_menu_generic_string(actNameX, 81, selectedActName);
     }
 

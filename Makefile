@@ -28,12 +28,16 @@ $(eval $(call validate-option,COMPILER,ido gcc))
 
 
 # VERSION - selects the version of the game to build
-#   sh - builds the 1997 Japanese Shindou version, with rumble pak support
+#   sh    - builds the 1997 Japanese Shindou version, with rumble pak support
+#   sh-en - builds the above version but with English texts
 
 VERSION ?= sh
 
-$(eval $(call validate-option,VERSION,sh))
-#ifeq($(VERSION),sh)
+$(eval $(call validate-option,VERSION,sh sh-en))
+ifeq ($(VERSION),sh-en)
+  DEFINES += LOC_ENG=1
+endif
+#else ifeq($(VERSION),sh)
 #  DEFINES += VERSION_SH=1
 #endif
 
@@ -164,8 +168,14 @@ ifeq ($(filter clean distclean print-%,$(MAKECMDGOALS)),)
   ifeq ($(NOEXTRACT),0)
     DUMMY != $(PYTHON) extract_assets.py sh >&2 || echo FAIL
     ifeq ($(DUMMY),FAIL)
-      $(error Failed to extract assets)
+      $(error SH: Failed to extract assets)
     endif
+	ifeq ($(VERSION),sh-en)
+		DUMMY != $(PYTHON) extract_assets.py us >&2 || echo FAIL
+		ifeq ($(DUMMY),FAIL)
+		  $(error US: Failed to extract assets)
+		endif
+	endif
   endif
 
   # Make tools if out of date
@@ -423,10 +433,13 @@ ifeq ($(COMPILER),gcc)
   $(BUILD_DIR)/lib/src/math/%.o: CFLAGS += -fno-builtin
 endif
 
-#ifeq ($(VERSION),sh)
+ifeq ($(VERSION),sh)
   TEXT_DIRS := text/jp
   $(BUILD_DIR)/bin/segment2.o: $(BUILD_DIR)/text/jp/define_text.inc.c
-#endif
+else ifeq ($(VERSION),sh-en)
+  TEXT_DIRS := text/us
+  $(BUILD_DIR)/bin/segment2.o: $(BUILD_DIR)/text/us/define_text.inc.c
+endif
 
 ALL_DIRS := $(BUILD_DIR) $(addprefix $(BUILD_DIR)/,$(SRC_DIRS) $(GODDARD_SRC_DIRS) $(ULTRA_SRC_DIRS) $(ULTRA_BIN_DIRS) $(BIN_DIRS) $(TEXTURE_DIRS) $(TEXT_DIRS) $(SOUND_SAMPLE_DIRS) $(addprefix levels/,$(LEVEL_DIRS)) rsp include) $(MIO0_DIR) $(addprefix $(MIO0_DIR)/,sh) $(SOUND_BIN_DIR) $(SOUND_BIN_DIR)/sequences/sh
 

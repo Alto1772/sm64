@@ -20,9 +20,6 @@
 #define HUD_LUT_JPMENU 1
 #define HUD_LUT_GLOBAL 2
 
-// For file select JP HUD difference
-#define HUD_LUT_DIFF HUD_LUT_JPMENU
-
 #define RENDER_PAUSE_SCREEN       1
 #define RENDER_COURSE_DONE_SCREEN 2
 
@@ -53,6 +50,11 @@ enum SpecialFontChars {
 
 // definitions for some of the special characters defined in charmap.txt
 enum DialogSpecialChars {
+#ifdef LOC_ENG
+    DIALOG_CHAR_SLASH = 0xD0,
+    DIALOG_CHAR_MULTI_THE = 0xD1, // 'the'
+    DIALOG_CHAR_MULTI_YOU = 0xD2, // 'you'
+#endif
     DIALOG_CHAR_PERIOD = 0x6E,
     DIALOG_CHAR_COMMA = 0x6F,
     DIALOG_CHAR_SPACE = 0x9E,
