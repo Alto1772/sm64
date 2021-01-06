@@ -12,5 +12,5 @@
 
 #include "levels/castle_beta/areas/1/model.inc.c"
 #include "levels/castle_beta/areas/1/movtext.inc.c"
-//add bartest here...
+#include "levels/castle_beta/bartest/model.inc.c"
 #include "levels/castle_beta/areas/1/collision.inc.c"
