@@ -1,6 +1,6 @@
 // this goes unused... so this will not reference to headers.h
 
-static const Lights1 castle_beta_bartest_lights[] = gdSPDefLights1(
+static const Lights1 castle_beta_bartest_lights = gdSPDefLights1(
     0x00, 0x3f, 0x3f,
     0x00, 0xff, 0xff, 0x28, 0x28, 0x28
 );
