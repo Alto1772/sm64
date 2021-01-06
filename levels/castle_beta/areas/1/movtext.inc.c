@@ -1,10 +1,11 @@
-/*
- * NOTE: This goes unused... not even in the source code headers.
- *
- * pls add details here
- */
+/********************************************************************
+ *  NOTE: This goes unused... not even in the source code headers.  *
+ *                                                                  *
+ *  the collision for this is not separate, but this water graphic  *
+ *  has only two separate surfaces.                                 *
+ ********************************************************************/
 
-static Movtex castle_beta_movtex_ground_data[] = {
+static Movtex castle_beta_movtex_stream_data[] = {
     MOV_TEX_INIT_LOAD(2),
     MOV_TEX_ROT_SPEED(32),
     MOV_TEX_ROT_SCALE(25),
@@ -28,7 +29,7 @@ static Movtex castle_beta_movtex_ground_data[] = {
     MOV_TEX_END(),
 };
 
-const struct MovtexQuadCollection castle_beta_movtex_ground[] = {
-    {0, castle_beta_movtex_ground_data},
+const struct MovtexQuadCollection castle_beta_movtex_stream[] = {
+    {0, castle_beta_movtex_stream_data},
     {-1, NULL},
 };

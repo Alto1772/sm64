@@ -16,14 +16,11 @@ const GeoLayout geo_castle_beta[] = {
                 GEO_OPEN_NODE(),
                     GEO_DISPLAY_LIST(LAYER_OPAQUE, castle_beta_dl),
                     /* (hack to render water)
-                     -  uncomment (also remove this)
-                     -  and reference castle_beta's
-                     -  movtex.inc.c to moving_texture.c,
-                     -  otherwise it won't render
+                     -  uncomment (also remove this) and reference castle_beta's
+                     -  movtex.inc.c to moving_texture.c, otherwise it won't render.
                     GEO_ASM(0, geo_movtex_pause_control),
                     GEO_ASM(*specify id here*, geo_movtex_draw_water_regions),
-                     - study moving_texture.c first
-                     - and put the id here
+                     - study moving_texture.c first and put the id here
                     */
                     GEO_RENDER_OBJ(),
                     GEO_ASM(0, geo_envfx_main),
