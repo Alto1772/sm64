@@ -60,6 +60,8 @@ Explainations from above:
 * `CC=x86_64-pc-msys-gcc make` - this is because Capstone is only available on MinGW builds.
 * `source shell msys && make` - to use unix newlines (to avoid warning of CR `'\015'` on IDO from files generated from built tools) and fix buggy `patch_libultra_math`.
 
+Then continue following the directions in [step 2](#step-2-copy-baseroms-for-asset-extraction-1) below.
+
 ### Linux
 
 There are 3 steps to set up a working build.
