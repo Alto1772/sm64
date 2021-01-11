@@ -23,6 +23,8 @@ Ensure the repo path length does not exceed 255 characters. Long path names resu
 
 ### Windows
 
+#### WSL
+
 Install WSL and a distro of your choice following
 [Windows Subsystem for Linux Installation Guide for Windows 10.](https://docs.microsoft.com/en-us/windows/wsl/install-win10)
 We recommend either Debian or Ubuntu 18.04 Linux distributions under WSL.
@@ -33,7 +35,30 @@ Next, clone the SM64 repo from within the Linux shell:
 
 Then continue following the directions in the [Linux](#linux) installation section below.
 
-_NOTE: also works on MSYS2 but needs some tweaks to work it right._
+#### MSYS2
+To install build dependencies:
+```
+sudo pacman -S base-devel gcc libelf mingw-w64-x86_64-capstone mingw-w64-x86_64-gcc
+```
+Install this AUR package using `makepkg`:
+* [mips64-elf-binutils](https://aur.archlinux.org/packages/mips64-elf-binutils) (AUR)
+
+_Note: I don't know if that breaks, I ain't an expert in toolchain building._
+
+Build the tools directory first:
+```
+$ cd tools
+$ source shell mingw64
+$ cd ido5.3_recomp
+$ CC=x86_64-pc-msys-gcc make -j4
+$ cd ..
+$ source shell msys
+$ make -j4
+$ cd ..
+```
+Explainations from above:
+* `CC=x86_64-pc-msys-gcc make` - this is because Capstone is only available on MinGW builds.
+* `source shell msys && make` - to use unix newlines (to avoid warning of CR `'\015'` on IDO from files generated from built tools) and fix buggy `patch_libultra_math`.
 
 ### Linux
 
