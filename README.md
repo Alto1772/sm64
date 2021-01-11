@@ -38,14 +38,20 @@ Then continue following the directions in the [Linux](#linux) installation secti
 #### MSYS2
 To install build dependencies:
 ```
-sudo pacman -S base-devel gcc libelf mingw-w64-x86_64-capstone mingw-w64-x86_64-gcc
+pacman -S base-devel gcc libelf mingw-w64-x86_64-capstone mingw-w64-x86_64-gcc
 ```
-Install this AUR package using `makepkg`:
+Much like the [Arch Linux](#arch-linux), install this AUR package using `makepkg`:
 * [mips64-elf-binutils](https://aur.archlinux.org/packages/mips64-elf-binutils) (AUR)
 
+```
+$ git clone https://aur.archlinux.org/mips64-elf-binutils.git
+$ cd mips64-elf-binutils
+$ makepkg --install
+$ cd .. && rm -rf mips64-elf-binutils
+```
 _Note: I don't know if that breaks, I ain't an expert in toolchain building._
 
-Build the tools directory first:
+Build the tools directory first (inside this repo):
 ```
 $ cd tools
 $ source shell mingw64
