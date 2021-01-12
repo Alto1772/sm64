@@ -17,20 +17,20 @@
 const LevelScript level_athlmap_entry[] = {
     INIT_LEVEL(),
 
-    LOAD_MIO0(0x07, _athlmap_segment_7SegmentRomStart, _athlmap_segment_7SegmentRomEnd),
+    LOAD_MIO0(/*seg*/ 0x07, _athlmap_segment_7SegmentRomStart, _athlmap_segment_7SegmentRomEnd),
 
     ALLOC_LEVEL_POOL(),
-    MARIO(MODEL_MARIO, 0x00000001, bhvMario),
+    MARIO(/*model*/ MODEL_MARIO, /*behParam*/ 0x00000001, /*beh*/ bhvMario),
 
-    AREA(1, geo_athlmap),
-        TERRAIN(athlmap_collision_level),
+    AREA(/*index*/ 1, geo_athlmap),
+        TERRAIN(/*terrainData*/ athlmap_collision_level),
     END_AREA(),
 
     FREE_LEVEL_POOL(),
-    MARIO_POS(1, 0, 1000,5000,1000),
-    CALL(0, lvl_init_or_update),
-    CALL_LOOP(1, lvl_init_or_update),
+    MARIO_POS(/*area*/ 1, /*yaw*/ 0, /*pos*/ 1000, 5000, 1000),
+    CALL(/*arg*/ 0, /*func*/ lvl_init_or_update),
+    CALL_LOOP(/*arg*/ 1, /*func*/ lvl_init_or_update),
     CLEAR_LEVEL(),
-    SLEEP_BEFORE_EXIT(1),
+    SLEEP_BEFORE_EXIT(/*frames*/ 1),
     EXIT(),
 };
