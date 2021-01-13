@@ -49,7 +49,7 @@ Then continue following the directions in the [Linux](#linux) installation secti
 #### MSYS2
 To install build dependencies:
 ```
-pacman -S base-devel gcc libelf mingw-w64-x86_64-capstone mingw-w64-x86_64-gcc
+pacman -S base-devel git gcc libelf mingw-w64-x86_64-capstone mingw-w64-x86_64-gcc
 ```
 Much like the [Arch Linux](#arch-linux), install this AUR package using `makepkg`:
 * [mips64-elf-binutils](https://aur.archlinux.org/packages/mips64-elf-binutils) (AUR)
