@@ -59,8 +59,8 @@ A longer, one-line command is also available:
 ```
 $ PKG_CONFIG_PATH=/mingw64/lib/pkgconfig PATH=/mingw64/bin:$PATH CC=x86_64-pc-msys-gcc make -C tools/ido5.3_recomp -j4
 ```
-Then use the MSYS shell (not the MINGW32 or MINGW64) for using this repository:
-* to avoid warning of CR `'\015'` character on IDO compiler from C files converted from images using n64graphics,
+Use the MSYS shell (not the MINGW32 or MINGW64) for compilation:
+* to avoid warning of CR `'\015'` character on IDO compiler for files generated from tools,
 * and fix buggy `patch_libultra_math` that reads/writes the `libultra.a` file in text mode.
 
 Then continue following the directions in [step 2](#step-2-copy-baseroms-for-asset-extraction-1) below.
