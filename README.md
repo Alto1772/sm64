@@ -49,35 +49,29 @@ Then continue following the directions in the [Linux](#linux) installation secti
 #### MSYS2
 To install build dependencies:
 ```
-pacman -S base-devel git gcc libelf mingw-w64-x86_64-capstone mingw-w64-x86_64-gcc
+pacman -S gcc mingw-w64-x86_64-capstone mingw-w64-x86_64-gcc
 ```
-Much like the [Arch Linux](#arch-linux), install this AUR package using `makepkg`:
-* [mips64-elf-binutils](https://aur.archlinux.org/packages/mips64-elf-binutils) (AUR)
+Download and extract my built toolchain [here](https://mega.nz/file/jHol0CRI#rMHBCbQzyoej2O2Hk9GvBuM3RnnRK_KsRrJMADBACy4), and put it on `<MSYS2 folder>/usr/bin` folder.
 
+Build ido static recomp directory first (because Capstone is only available on Mingw builds.):
 ```
-$ git clone https://aur.archlinux.org/mips64-elf-binutils.git
-$ cd mips64-elf-binutils
-$ makepkg --install
-$ cd .. && rm -rf mips64-elf-binutils
-```
-_Note: I don't know if that breaks, I ain't an expert in toolchain building._
-
-Build the tools directory first (inside this repo):
-```
-$ cd tools
+$ cd tools/ido5.3_recomp
 $ source shell mingw64
-$ cd ido5.3_recomp
 $ CC=x86_64-pc-msys-gcc make -j4
-$ cd ..
 $ source shell msys
-$ make -j4
-$ cd ..
+$ cd ../..
 ```
-Explainations from above:
-* `CC=x86_64-pc-msys-gcc make` - this is because Capstone is only available on MinGW builds.
-* `source shell msys && make` - to use unix newlines (to avoid warning of CR `'\015'` on IDO from files generated from built tools) and fix buggy `patch_libultra_math`.
+A longer, one-line command is also available:
+```
+$ PKG_CONFIG_PATH=/mingw64/lib/pkgconfig PATH=/mingw64/bin:$PATH CC=x86_64-pc-msys-gcc make -C tools/ido5.3_recomp -j4
+```
+Then use the MSYS shell (not the MINGW32 or MINGW64) for using this repository:
+* to avoid warning of CR `'\015'` on IDO compiler from C files converted from images using n64graphics,
+* and fix buggy `patch_libultra_math` that reads the `libultra.a` file with text mode until a bugfix of these comes along.
 
 Then continue following the directions in [step 2](#step-2-copy-baseroms-for-asset-extraction-1) below.
+
+*Note: If the files in the tools/ido5.3_recomp directory is modified or if it gives an error about capstone.h being missing, rerun the commands above*
 
 ### Linux
 
