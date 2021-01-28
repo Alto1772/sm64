@@ -26,6 +26,8 @@ Ensure the repo path length does not exceed 255 characters. Long path names resu
 
 ### Windows
 
+#### WSL
+
 Install WSL and a distro of your choice following
 [Windows Subsystem for Linux Installation Guide for Windows 10.](https://docs.microsoft.com/en-us/windows/wsl/install-win10)
 We recommend either Debian or Ubuntu 18.04 Linux distributions under WSL.
@@ -35,6 +37,33 @@ Next, clone the SM64 repo from within the Linux shell:
 `git clone https://github.com/n64decomp/sm64.git`
 
 Then continue following the directions in the [Linux](#linux) installation section below.
+
+#### MSYS2
+To install build dependencies:
+```
+pacman -S gcc mingw-w64-x86_64-capstone mingw-w64-x86_64-gcc
+```
+Download and extract my built toolchain [here](https://mega.nz/file/jHol0CRI#rMHBCbQzyoej2O2Hk9GvBuM3RnnRK_KsRrJMADBACy4), and put it on `<MSYS2 folder>/usr/bin` folder.
+
+Build ido static recomp directory first (because Capstone is only available on Mingw builds.):
+```
+$ cd tools/ido5.3_recomp
+$ source shell mingw64
+$ CC=x86_64-pc-msys-gcc make -j4
+$ source shell msys
+$ cd ../..
+```
+A longer, one-line command is also available:
+```
+$ PKG_CONFIG_PATH=/mingw64/lib/pkgconfig PATH=/mingw64/bin:$PATH CC=x86_64-pc-msys-gcc make -C tools/ido5.3_recomp -j4
+```
+Then use the MSYS shell (not the MINGW32 or MINGW64) for using this repository:
+* to avoid warning of CR `'\015'` on IDO compiler from C files converted from images using n64graphics,
+* and fix buggy `patch_libultra_math` that reads the `libultra.a` file with text mode until a bugfix of these comes along.
+
+Then continue following the directions in [step 2](#step-2-copy-baseroms-for-asset-extraction-1) below.
+
+*Note: If the files in the tools/ido5.3_recomp directory is modified or if it gives an error about capstone.h being missing, rerun the commands above*
 
 ### Linux
 
