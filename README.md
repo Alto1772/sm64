@@ -2,7 +2,7 @@
 
 - This repo contains a full decompilation of Super Mario 64 (J), (U), (E), and (SH).
 - Naming and documentation of the source code and data structures are in progress.
-- It also contains the leaked levels from the original source, formatted to match the decomp's level format.
+- It also contains the missing levels from the leaked source, formatted to match the decomp's level format.
 
 This repo does not include all assets necessary for compiling the ROMs.
 A prior copy of the game is required to extract the assets.
