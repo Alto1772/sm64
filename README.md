@@ -43,7 +43,7 @@ Building on MSYS2 requires a 64-bit system.
 
 To install build dependencies:
 ```
-pacman -S gcc mingw-w64-x86_64-capstone mingw-w64-x86_64-gcc
+pacman -S base-devel gcc python mingw-w64-x86_64-capstone mingw-w64-x86_64-gcc
 ```
 Download and extract my built toolchain [here](https://mega.nz/file/jHol0CRI#rMHBCbQzyoej2O2Hk9GvBuM3RnnRK_KsRrJMADBACy4), and put it on `<MSYS2 folder>/usr/bin` folder.
 
