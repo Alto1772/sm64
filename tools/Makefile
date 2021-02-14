@@ -72,8 +72,13 @@ $(1): $($1_SOURCES)
 	$$(CC) $(CFLAGS) $($1_CFLAGS) $$^ -o $$@ $($1_LDFLAGS) $(LDFLAGS)
 endef
 
+# Msys2-specific arguments
+ifeq ($(findstring MSYS,$(shell uname 2>/dev/null || echo Unknown)),MSYS)
+MSYS_APPEND := source shell mingw64 && CC=x86_64-pc-msys-gcc
+endif
+
 ido5.3_recomp:
-	$(MAKE) -C ido5.3_recomp
+	$(MSYS_APPEND) $(MAKE) -C ido5.3_recomp
 
 $(foreach p,$(BUILD_PROGRAMS),$(eval $(call COMPILE,$(p))))
 
