@@ -18,6 +18,7 @@ WORD_BYTES = 4
 
 orderedJsonDecoder = JSONDecoder(object_pairs_hook=OrderedDict)
 
+
 class Aifc:
     def __init__(self, name, fname, data, sample_rate, book, loop):
         self.name = name
@@ -466,6 +467,8 @@ def apply_ifs(json, defines):
 
 def apply_version_diffs(json, defines):
     date_str = json.get("date")
+    if "VERSION_EU" in defines and isinstance(date_str, str):
+        json["date"] = date_str.replace("1996-03-19", "1996-06-24")
 
     ifdef_removed = set()
     for key, inst in json["instruments"].items():
@@ -939,14 +942,9 @@ def main():
         else:
             args.append(a)
 
-    # > removing ifdef key in sound bank
-    # > jsons breaks the rom checksum 
-    # > (removing one defines also breaks)
-    # > so we'll just make a hack right here
-
-    #defines_set = {d.split("=")[0] for d in defines}
-    defines_set = {"VERSION_SH"}
-    is_shindou = "VERSION_SH" in defines_set
+    defines_set = {d.split("=")[0] for d in defines}
+    # this is shindou only you know!
+    is_shindou = 1
 
     if sequences_out_file is not None and not need_help:
         write_sequences(
