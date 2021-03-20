@@ -20,6 +20,13 @@
 #define HUD_LUT_JPMENU 1
 #define HUD_LUT_GLOBAL 2
 
+// For file select JP HUD difference
+#ifndef LOC_ENG // defined(VERSION_JP) || defined(VERSION_SH)
+#define HUD_LUT_DIFF HUD_LUT_JPMENU
+#else
+#define HUD_LUT_DIFF HUD_LUT_GLOBAL
+#endif
+
 #define RENDER_PAUSE_SCREEN       1
 #define RENDER_COURSE_DONE_SCREEN 2
 
@@ -50,7 +57,7 @@ enum SpecialFontChars {
 
 // definitions for some of the special characters defined in charmap.txt
 enum DialogSpecialChars {
-#ifdef LOC_ENG
+#ifdef LOC_ENG // defined(VERSION_US) || defined(VERSION_EU)
     DIALOG_CHAR_SLASH = 0xD0,
     DIALOG_CHAR_MULTI_THE = 0xD1, // 'the'
     DIALOG_CHAR_MULTI_YOU = 0xD2, // 'you'
@@ -84,8 +91,15 @@ void print_generic_string(s16 x, s16 y, const u8 *str);
 void print_hud_lut_string(s8 hudLUT, s16 x, s16 y, const u8 *str);
 void print_menu_generic_string(s16 x, s16 y, const u8 *str);
 void handle_menu_scrolling(s8 scrollDirection, s8 *currentIndex, s8 minIndex, s8 maxIndex);
+#ifdef LOC_ENG // defined(VERSION_US) || defined(VERSION_EU)
+s16 get_str_x_pos_from_center(s16 centerPos, u8 *str, f32 scale);
+#endif
+#ifndef LOC_ENG // defined(VERSION_JP) || defined(VERSION_SH)
 #define get_str_x_pos_from_center get_str_x_pos_from_center_scale
+#endif
+//#if defined(VERSION_JP) || defined(VERSION_EU) || defined(VERSION_SH)
 s16 get_str_x_pos_from_center_scale(s16 centerPos, u8 *str, f32 scale);
+//#endif
 void print_hud_my_score_coins(s32 useCourseCoinScore, s8 fileNum, s8 courseNum, s16 x, s16 y);
 void int_to_str(s32 num, u8 *dst);
 s16 get_dialog_id(void);
